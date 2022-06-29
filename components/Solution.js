@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Solution() {
   return (
-    <div id="section-solutions" className="relative sm:pb-4 pb-12 bg-[#151d33]">
+    <div id="section-solution" className="relative sm:pb-4 pb-12 bg-[#151d33]">
       <div className="absolute z-10 flex flex-col w-full h-1/3 bg-[#151d33] top-[100px] sm:top-[-100px] sm:-skew-y-[6deg]"></div>
       <div className="relative z-10 ">
         <div className="flex sm:px-16 px-2 sm:flex-row flex-col-reverse bg-[#151d33]">

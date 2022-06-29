@@ -68,18 +68,18 @@ function Navbar() {
   const navigation = [
     {
       name: "WhyUs",
-      href: "#section-problems",
-      current: selectedRoute.endsWith("#section-problems"),
+      href: "#section-whyus",
+      current: selectedRoute.endsWith("#section-whyus"),
     },
     {
       name: "SOLUTIONS",
-      href: "#section-solutions",
-      current: selectedRoute.endsWith("#section-solutions"),
+      href: "#section-solution",
+      current: selectedRoute.endsWith("#section-solution"),
     },
     {
       name: "PROJECTS",
-      href: "#section-why_us",
-      current: selectedRoute.endsWith("#section-why_us"),
+      href: "#section-project",
+      current: selectedRoute.endsWith("#section-project"),
     },
     {
       name: "FAQS",
@@ -98,8 +98,8 @@ function Navbar() {
     // },
     {
       name: "CONTACTS",
-      href: "#contact",
-      current: selectedRoute.endsWith("#contact"),
+      href: "#section-contact",
+      current: selectedRoute.endsWith("#section-contact"),
     },
   ];
   useEffect(() => {
