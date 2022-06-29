@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Project() {
   return (
-    <div className="relative sm:pt-60">
+    <div id="section-why_us" className="relative sm:pt-60">
       <div className="flex flex-col items-center right-[10px] sm:relative">
         <label
           className="font-bold dark:text-gray-200 text-center sm:text-6xl text-2xl"

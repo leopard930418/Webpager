@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WhyUs() {
   return (
-    <div className="pt-12 sm:pt-24 sm:px-16 px-2">
+    <div  id="section-problems" className="pt-12 sm:pt-24 sm:px-16 px-2">
       <div className="flex justify-center pb-4">
         <label className="font-bold text-center dark:text-gray-200 sm:text-6xl text-3xl">
           Welcome to <br /> dcd development

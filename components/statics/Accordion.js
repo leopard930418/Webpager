@@ -23,7 +23,6 @@ function Accordion({ accordion_items }) {
                     py-4
                     px-5
                     text-base font-semibold text-[#196480]  dark:text-gray-200 text-left
-                    bg-white
                     ${
                       opened === index
                         ? "bg-gradient-to-r from-green-500 via-blue-500 to-pink-500"

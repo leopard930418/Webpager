@@ -8,6 +8,7 @@ import Link from "next/link";
 import LanguageSelector from "./LanguageSelector";
 import nl from "../../locales/nl";
 import DarkThemeSwitch from "./DarkThemeSwitch";
+import WhyUs from "../WhyUs";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -66,37 +67,37 @@ function Navbar() {
 
   const navigation = [
     {
-      name: t.problems,
+      name: "WhyUs",
       href: "#section-problems",
       current: selectedRoute.endsWith("#section-problems"),
     },
     {
-      name: t.solutions,
+      name: "SOLUTIONS",
       href: "#section-solutions",
       current: selectedRoute.endsWith("#section-solutions"),
     },
     {
-      name: t.why_us,
+      name: "PROJECTS",
       href: "#section-why_us",
       current: selectedRoute.endsWith("#section-why_us"),
     },
     {
-      name: t.faqs,
+      name: "FAQS",
       href: "#faq",
       current: selectedRoute.endsWith("#faq"),
     },
+    // {
+    //   name: t.mindset,
+    //   href: "#section-mindset",
+    //   current: selectedRoute.endsWith("#section-mindset"),
+    // },
+    // {
+    //   name: t.work,
+    //   href: "#section-work",
+    //   current: selectedRoute.endsWith("#section-work"),
+    // },
     {
-      name: t.mindset,
-      href: "#section-mindset",
-      current: selectedRoute.endsWith("#section-mindset"),
-    },
-    {
-      name: t.work,
-      href: "#section-work",
-      current: selectedRoute.endsWith("#section-work"),
-    },
-    {
-      name: t.contact,
+      name: "CONTACTS",
       href: "#contact",
       current: selectedRoute.endsWith("#contact"),
     },
@@ -140,7 +141,7 @@ function Navbar() {
                     alt="Workflow"
                   />
                   <span className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                    CODEVS SOLUTIONS
+                    DCD DEVELOPMENT
                   </span>
                 </div>
                 <div className="hidden xl:block md:ml-6 ">
