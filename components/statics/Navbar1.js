@@ -150,7 +150,7 @@ function Navbar() {
                       <div
                         className={classNames(
                           item.current && index !== 6
-                            ? "border-b-4 border-sky-500 text-sky-500  hover:bg-gray-200 hover:text-gray-700"
+                            ? ""
                             : "",
                           "h-full flex  text-md font-medium items-center text-gray-500 dark:text-gray-200 dark:hover:text-gray-100"
                         )}
