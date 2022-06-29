@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Mailsend() {
+export default function ContactInfo() {
   return (
     <section className="px-6 sm:px-16 my-8 sm:my-20">
       <div className="flex flex-col sm:flex-row justify-center items-strech m-auto w-full">

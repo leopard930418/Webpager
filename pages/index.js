@@ -16,6 +16,12 @@ import Studie from "../components/statics/Studie";
 import dynamic from "next/dynamic";
 import { hotjar } from "react-hotjar";
 
+import WhyUs from "../components/WhyUs";
+import Solution from "../components/Solution";
+import Project from "../components/Project";
+import FaqSection from "../components/FaqSection";
+import ContactInfo from "../components/ContactInfo";
+
 function Home() {
   const router = useRouter();
   const [selectedRoute, setselectedRoute] = useState("");
@@ -31,24 +37,26 @@ function Home() {
   // const t = en;
   return (
     <div>
-      <Content items={t.items}></Content>
-        <Footer ></Footer>
+      {/* <<Content items={t.items}></Content>
+      <Footer></Footer>
 
-        <Content noColor={true} items={t.items3}></Content>
-        <Contact></Contact>
-        <Content noColor={true} items={t.items5}></Content>
-        <Tabs ></Tabs>
-        <Content items={t.items2}></Content>
+      <Content noColor={true} items={t.items3}></Content>
+      <Contact></Contact>
+      <Content noColor={true} items={t.items5}></Content>
+      <Tabs></Tabs>
+      <Content items={t.items2}></Content>
 
-        <Faq
-            items={[{ img_url: "assets/back4.png" }]}
-            accordion_items={t.accordion_items}
-        ></Faq>
+      <Faq
+        items={[{ img_url: "assets/back4.png" }]}
+        accordion_items={t.accordion_items}
+      ></Faq>
 
-
-        <Studie items={t.items4}></Studie>
-
-
+      <Studie items={t.items4}></Studie> */}
+      <WhyUs></WhyUs>
+      <Solution></Solution>
+      <Project></Project>
+      <FaqSection></FaqSection>
+      <ContactInfo></ContactInfo>
       <Footer2></Footer2>
     </div>
   );

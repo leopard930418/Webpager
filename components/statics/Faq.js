@@ -4,7 +4,7 @@ import Accordion from "./Accordion";
 function Faq({ items, accordion_items }) {
   if (!items) items = [];
   return (
-    <div className="lg:px-24 pt-1 pb-24  lg:px-52   sm:px-4 ">
+    <div className="lg:px-24 pt-1 pb-24   sm:px-4 ">
       {items.map((item, index) => {
 
         return (
@@ -26,7 +26,7 @@ function Faq({ items, accordion_items }) {
             </h1>
             <div
               className="flex-1 px-6 m-auto"
-              style={{ maxWidth: "750px",  }}
+              style={{ maxWidth: "900px",  }}
             >
               <h1
                 className={

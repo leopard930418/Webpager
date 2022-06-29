@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function TringleSolution() {
+export default function Project() {
   return (
-    <section className="relative">
-      <div className="absolute flex flex-col w-full sm:h-1/2 h-1/3 bg-[#151d33] sm:-top-36 -top-24 skew-y-[8deg] sm:z-0 z-10"></div>
+    <div className="relative sm:pt-60">
       <div className="flex flex-col items-center right-[10px] sm:relative">
         <label
           className="font-bold dark:text-gray-200 text-center sm:text-6xl text-2xl"
@@ -12,7 +11,7 @@ export default function TringleSolution() {
           The right solution for <br />
           each problem.
         </label>
-        <p className="text-white text-center text-lg w-full sm:w-2/3 px-4 pt-4">
+        <p className="text-white text-center text-lg w-full sm:w-2/3 px-4 pt-4 text-opacity-70">
           There is a solution to all challenges in the development process;
           hiring an outsourcing company. It speeds up the process and relieves
           much stress, but why is that? We have done thorough research, and
@@ -30,6 +29,6 @@ export default function TringleSolution() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

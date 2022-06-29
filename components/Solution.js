@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Solutions() {
+export default function Solution() {
   return (
-    <section className="relative sm:pb-80 pb-12 bg-[#151d33]">
-      <div className="absolute z-10 flex flex-col w-full h-1/3 bg-[#151d33] top-[-100px] -skew-y-[6deg]"></div>
-      <div className="relative z-10">
+    <div className="relative sm:pb-4 pb-12 bg-[#151d33]">
+      <div className="absolute z-10 flex flex-col w-full h-1/3 bg-[#151d33] top-[100px] sm:top-[-100px] sm:-skew-y-[6deg]"></div>
+      <div className="relative z-10 ">
         <div className="flex sm:px-16 px-2 sm:flex-row flex-col-reverse bg-[#151d33]">
           <div className="flex sm:w-1/2 w-full">
             <img
@@ -17,7 +17,7 @@ export default function Solutions() {
               The right solution for <br />
               each problem.
             </label>
-            <p className="text-white text-center text-lg  pt-4">
+            <p className="text-white text-center sm:text-left text-lg  pt-4 text-opacity-70">
               Your business needs to stay ahead, and we make sure it stays at
               the top! Businesses today experience competition like never
               before. To win the race, they need out-of-the-box business
@@ -30,6 +30,7 @@ export default function Solutions() {
           </div>
         </div>
       </div>
-    </section>
+      <div className="absolute z-0 flex flex-col w-full h-0 sm:h-1/3 bg-[#151d33] top-[480px] sm:skew-y-[6deg]"></div>
+    </div>
   );
 }
