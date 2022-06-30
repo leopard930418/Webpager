@@ -122,12 +122,13 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate px-7 xl2:px-52 md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full pb-36 " +
+            " cannavigate relative px-7 md:py-6 md:my-6 pt-8 md:pt-24  md:min-w-full" +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
           }
         >
+          <div className="absolute z-0 flex flex-col w-full xl:h-1/2 lg:h-1/2 md:h-1/2 bg-[#0f172a] left-0 xl:top-[-150px] lg:top-[-100px] md:top-[-150px] sm:top-[-130px] sm:skew-y-[8deg]"></div>
           <div className={"relative"}>
             <div className="wave"></div>
           </div>
@@ -139,12 +140,12 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl">
+            <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 xl:-mt-10 lg:-mt-10 md:-mt-36 sm:text-4xl text-3xl">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
-                    : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
+                    ? "z-10 text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
+                    : "z-10 text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                 }
               >
                 {item.title}
@@ -152,8 +153,8 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-gray-600 dark:text-gray-300"
-                    : "w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-white dark:text-gray-300"
+                    ? "z-10 w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-gray-600 dark:text-gray-300"
+                    : "z-10 w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
@@ -213,13 +214,13 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative  py-6 my-6 px-7 xl2:px-52 m md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full " +
+            " cannavigate relative bg-[#151d33] px-7 mb-14 xl:pb-44 lg:pb-32 md:pb-24 pb-16 m pt-8  md:pt-24  md:min-w-full" +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
           }
         >
-          <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[red] left-0 sm:top-[-50px] sm:-skew-y-[6deg]"></div>
+          <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#151d33] left-0 sm:top-[-70px] sm:-skew-y-[6deg]"></div>
 
           <div className={"relative"}>
             <div className="wave"></div>

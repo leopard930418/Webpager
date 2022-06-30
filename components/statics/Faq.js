@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "./Accordion";
+import Accordion1 from "./Accordion";
 
 function Faq({ items, accordion_items }) {
   if (!items) items = [];
@@ -36,7 +36,7 @@ function Faq({ items, accordion_items }) {
                 }
               >
               </h1>
-              <Accordion accordion_items={accordion_items}></Accordion>
+              <Accordion1 accordion_items={accordion_items}></Accordion1>
             </div>
           </div>
         );
