@@ -62,24 +62,25 @@ function Navbar() {
       sections.forEach((section) => {
         observer.observe(section);
       });
+      console.log("AAAAAAAAAA", sections)
     }, 500);
   }, []);
 
   const navigation = [
     {
-      name: "WhyUs",
-      href: "#section-whyus",
-      current: selectedRoute.endsWith("#section-whyus"),
+      name: t.why_us,
+      href: "#section-why_us",
+      current: selectedRoute.endsWith("#section-why_us"),
     },
     {
-      name: "SOLUTIONS",
-      href: "#section-solution",
-      current: selectedRoute.endsWith("#section-solution"),
+      name: t.solutions,
+      href: "#section-solutions",
+      current: selectedRoute.endsWith("#section-solutions"),
     },
     {
-      name: "PROJECTS",
-      href: "#section-project",
-      current: selectedRoute.endsWith("#section-project"),
+      name: t.problems,
+      href: "#section-problems",
+      current: selectedRoute.endsWith("#section-problems"),
     },
     {
       name: "FAQS",
@@ -150,7 +151,7 @@ function Navbar() {
                       <div
                         className={classNames(
                           item.current && index !== 6
-                            ? ""
+                            ? "border-b-4 border-sky-500 text-sky-500  hover:bg-gray-200 hover:text-gray-700"
                             : "",
                           "h-full flex  text-md font-medium items-center text-gray-500 dark:text-gray-200 dark:hover:text-gray-100"
                         )}

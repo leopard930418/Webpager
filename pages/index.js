@@ -21,6 +21,7 @@ import Solution from "../components/Solution";
 import Project from "../components/Project";
 import FaqSection from "../components/FaqSection";
 import ContactInfo from "../components/ContactInfo";
+import Welcome from "../components/Welcome";
 
 function Home() {
   const router = useRouter();
@@ -31,7 +32,6 @@ function Home() {
     hotjar.initialize();
 
     document.addEventListener("scroll", (event) => {
-      console.log("dddd");
     });
   });
   // const t = en;
@@ -52,9 +52,10 @@ function Home() {
       ></Faq>
 
       <Studie items={t.items4}></Studie> */}
-      <WhyUs></WhyUs>
-      <Solution></Solution>
-      <Project></Project>
+      <Welcome></Welcome>
+      <Content noColor={true} items={t.items5}></Content>
+      <Content noColor={true} items={t.studie}></Content>
+      <Content noColor={true} items={t.items}></Content>
       <FaqSection></FaqSection>
       <ContactInfo></ContactInfo>
       <Footer2></Footer2>

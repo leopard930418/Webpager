@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactInfo() {
   return (
-    <div id="section-contact" className="px-6 sm:px-16 my-8 sm:my-20">
+    <div id="section-contact" className="cannavigate px-6 sm:px-16 my-8 sm:my-20">
       <div className="flex flex-col sm:flex-row justify-center items-strech m-auto w-full">
         <div className="flex justify-center bg-[#1d273f] w-full sm:w-1/3 rounded-[20px] flex-col items-center py-10 sm:py-20">
           <img className="w-[40%] mb-10" src="assets/logo.png" />
