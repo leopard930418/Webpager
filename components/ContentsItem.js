@@ -48,12 +48,12 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className="flex flex-col items-center font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl pt-10">
+            <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl pt-10">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl"
-                    : "text-white w-full sm:w-1/2 font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl"
+                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
+                    : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                 }
               >
                 {item.title}
@@ -61,22 +61,22 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "w-full sm:w-2/3 text-lg font-extralight  my-8	tracking-wide text-gray-600 dark:text-gray-300"
-                    : "w-full sm:w-2/3 text-lg font-extralight  my-8	tracking-wide text-white dark:text-gray-300"
+                    ? "w-full sm:w-2/3 text-lg font-extralight  my-2	tracking-wide text-gray-600 dark:text-gray-300"
+                    : "w-full sm:w-2/3 text-lg font-extralight  my-2	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="my-4 py-4 mb-5 w-full ">
+                <div className="w-full ">
                   <Button
                     onClick={() => handleToggle(item)}
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
-                          : "border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
-                        : "border-2 rounded-2xl rounded-br-none hover:animate-bounce "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
+                          : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
+                        : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
                     text={isOpen ? t.read_less : t.read_more}
                   ></Button>
@@ -106,7 +106,7 @@ function ContentsItem({ item, index, noColor }) {
                 ></div>
               </div>
             )}
-            <div className=" relative w-full h-full flex justify-center items-center">
+            <div className=" relative -z-10 w-full h-full flex justify-center items-center xl:-mt-44 lg:-mt-40 md:-mt-28 sm:-mt-24">
               <img
                 className={`relative h-full w-7/12 object-contain ${
                   item.name == "why_us" ? "scale-x-[-1]" : ""
@@ -122,7 +122,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate   py-6 my-6 px-7 xl2:px-52 m md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full " +
+            " cannavigate px-7 xl2:px-52 md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full pb-36 " +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -139,12 +139,12 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className="flex flex-col items-center font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl pt-10">
+            <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl"
-                    : "text-white w-full sm:w-1/2 font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl"
+                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
+                    : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                 }
               >
                 {item.title}
@@ -152,22 +152,22 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "w-full sm:w-2/3 text-lg font-extralight  my-8	tracking-wide text-gray-600 dark:text-gray-300"
-                    : "w-full sm:w-2/3 text-lg font-extralight  my-8	tracking-wide text-white dark:text-gray-300"
+                    ? "w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-gray-600 dark:text-gray-300"
+                    : "w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="my-4 py-4 mb-5 w-full ">
+                <div className="w-full ">
                   <Button
                     onClick={() => handleToggle(item)}
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
-                          : "border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
-                        : "border-2 rounded-2xl rounded-br-none hover:animate-bounce "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
+                          : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
+                        : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
                     text={isOpen ? t.read_less : t.read_more}
                   ></Button>
@@ -197,7 +197,7 @@ function ContentsItem({ item, index, noColor }) {
                 ></div>
               </div>
             )}
-            <div className=" relative w-full h-full flex justify-center items-center">
+            <div className=" relative -z-10 w-full h-full flex justify-center items-center xl:-mt-28 lg:-mt-20 md:-mt-14 sm:-mt-8">
               <img
                 className={`relative h-full w-7/12 object-contain ${
                   item.name == "why_us" ? "scale-x-[-1]" : ""
@@ -213,12 +213,14 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate   py-6 my-6 px-7 xl2:px-52 m md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full " +
+            " cannavigate relative  py-6 my-6 px-7 xl2:px-52 m md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full " +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
           }
         >
+          <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[red] left-0 sm:top-[-50px] sm:-skew-y-[6deg]"></div>
+
           <div className={"relative"}>
             <div className="wave"></div>
           </div>
@@ -230,7 +232,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className="px-6 w-full sm:w-1/2 ">
+            <div className=" z-10 px-6 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
