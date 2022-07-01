@@ -14,7 +14,6 @@ class Crisp extends React.Component {
             d.getElementsByTagName("head")[0].appendChild(s);
         })();
     }
-
     render () {
         return null;
     }

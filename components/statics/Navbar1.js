@@ -8,7 +8,6 @@ import Link from "next/link";
 import LanguageSelector from "./LanguageSelector";
 import nl from "../../locales/nl";
 import DarkThemeSwitch from "./DarkThemeSwitch";
-import WhyUs from "../WhyUs";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -19,16 +18,6 @@ function Navbar() {
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
 
   function goToLink(e) {
-    console.log("ddddddddddddd", e.target);
-    console.log("ddddddddddddd", e.target);
-    console.log("ddddddddddddd", e.target);
-    console.log("ddddddddddddd", e.target);
-    console.log("ddddddddddddd", e.target);
-    console.log("ddddddddddddd", e.target);
-    console.log("ddddddddddddd", e.target);
-    console.log(e.target);
-    console.log(e.target);
-    console.log(e.target);
 
     let a = document.getElementById(e.target.id.replace("temp", "")).offsetTop;
 
@@ -134,14 +123,14 @@ function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center h-full  md:items-stretch md:justify-between">
+              <div className="flex-1 flex items-center justify-start h-full  md:items-stretch md:justify-between">
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className=" logo block   h-8 w-auto"
                     src="/assets/logo.png"
                     alt="Workflow"
                   />
-                  <span className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
+                  <span className="ml-3 text-transparent text-2xl bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
                     DCD DEVELOPMENT
                   </span>
                 </div>
@@ -151,7 +140,7 @@ function Navbar() {
                       <div
                         className={classNames(
                           item.current && index !== 6
-                            ? "border-b-4 border-sky-500 text-sky-500  hover:bg-gray-200 hover:text-gray-700"
+                            ? "border-b-4 border-sky-500 text-sky-500   hover:text-gray-700"
                             : "",
                           "h-full flex  text-md font-medium items-center text-gray-500 dark:text-gray-200 dark:hover:text-gray-100"
                         )}

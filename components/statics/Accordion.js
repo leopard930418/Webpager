@@ -82,7 +82,7 @@ export default function Accordion1({ accordion_items }) {
           <Accordion
             expanded={expanded === `panel${index}`}
             onChange={handleChange(`panel${index}`)}
-            className={` rounded-md  text-base font-bold text-[#196480]  dark:text-gray-200  text-left bg-white bg-opacity-0 space-y-4
+            className={` rounded-md shadow-none text-base font-bold text-[#196480]  dark:text-gray-200  text-left bg-white bg-opacity-0 space-y-2
               
             }`}
           >
@@ -90,7 +90,7 @@ export default function Accordion1({ accordion_items }) {
               expandIcon={<ExpandMoreIcon className="fill-white"/>}
               aria-controls="panel1bh-content"
               id="panel1bh-header"
-              className={` rounded-md ${
+              className={` rounded-md  ${
                 expanded === `panel${index}`
                   ? "bg-gradient-to-r from-green-500 via-blue-500 to-pink-500"
                   : "dark:bg-[#1d273f]"
@@ -99,7 +99,7 @@ export default function Accordion1({ accordion_items }) {
               <Typography sx={{ flexShrink: 0 }}>{item.title}</Typography>
             </AccordionSummary>
             <AccordionDetails
-            className="bg-gray-800 rounded-md">
+            className="">
               <Typography>{item.description}</Typography>
             </AccordionDetails>
           </Accordion>

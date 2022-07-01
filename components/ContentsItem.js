@@ -31,7 +31,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate   py-6 my-6 px-7 xl2:px-52 m md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full " +
+            " cannavigate  relative py-6 my-6 px-7 xl2:px-52 m md:py-6 md:my-6 pt-8  md:pt-24  md:min-w-full " +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -39,6 +39,12 @@ function ContentsItem({ item, index, noColor }) {
         >
           <div className={"relative"}>
             <div className="wave"></div>
+          </div>
+          <div className="absolute top-0 left-0 -z-10">
+            <img src="assets/bubble.png"></img>
+          </div>
+          <div className="absolute -bottom-32 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
+            <img src="assets/dotedEffect.png"></img>
           </div>
           <div
             className={
@@ -52,7 +58,7 @@ function ContentsItem({ item, index, noColor }) {
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
+                    ? "text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
                     : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                 }
               >
@@ -108,7 +114,7 @@ function ContentsItem({ item, index, noColor }) {
             )}
             <div className=" relative -z-10 w-full h-full flex justify-center items-center xl:-mt-44 lg:-mt-40 md:-mt-28 sm:-mt-24">
               <img
-                className={`relative h-full w-7/12 object-contain ${
+                className={`relative h-full w-full sm:w-7/12 object-contain ${
                   item.name == "why_us" ? "scale-x-[-1]" : ""
                 }`}
                 // src={item.img_url}
@@ -128,24 +134,25 @@ function ContentsItem({ item, index, noColor }) {
               : "flex-row-reverse bg-cover changing_back")
           }
         >
-          <div className="absolute z-0 flex flex-col w-full xl:h-1/2 lg:h-1/2 md:h-1/2 bg-[#0f172a] left-0 xl:top-[-150px] lg:top-[-100px] md:top-[-150px] sm:top-[-130px] sm:skew-y-[8deg]"></div>
-          <div className={"relative"}>
-            <div className="wave"></div>
+          <div className="absolute bottom-0 right-0 h-1/2 z-10 ">
+            <img src="assets/bubble1.png"></img>
           </div>
+          <div className="absolute z-0 w-full h-1/6 sm:h-1/4 bg-[#0f172a] left-0  top-[-70px] sm:top-[-130px] skew-y-[8deg]"></div>
+
           <div
             className={
-              "flex  justify-center " +
+              "relative flex justify-center " +
               (index % 2 === 0 || noColor
                 ? "flex-col"
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 xl:-mt-10 lg:-mt-10 md:-mt-36 sm:text-4xl text-3xl">
+            <div className="relative flex flex-col items-center font-semibold text-center dark:text-gray-200 xl:-mt-10 lg:-mt-10 md:-mt-36 sm:text-4xl text-3xl">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "z-10 text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
-                    : "z-10 text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
+                    ? "z-10 text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
+                    : "z-10 text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
                 }
               >
                 {item.title}
@@ -198,14 +205,8 @@ function ContentsItem({ item, index, noColor }) {
                 ></div>
               </div>
             )}
-            <div className=" relative -z-10 w-full h-full flex justify-center items-center xl:-mt-28 lg:-mt-20 md:-mt-14 sm:-mt-8">
-              <img
-                className={`relative h-full w-7/12 object-contain ${
-                  item.name == "why_us" ? "scale-x-[-1]" : ""
-                }`}
-                // src={item.img_url}
-                src="assets/section-4.png"
-              />
+            <div className=" relative -z-10 w-11/12 h-full flex justify-center items-center xl:-mt-28 lg:-mt-20 md:-mt-14 sm:-mt-8">
+              <img src="assets/section-4.png" />
             </div>
           </div>
         </div>
@@ -220,7 +221,7 @@ function ContentsItem({ item, index, noColor }) {
               : "flex-row-reverse bg-cover changing_back")
           }
         >
-          <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#151d33] left-0 sm:top-[-70px] sm:-skew-y-[6deg]"></div>
+          <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#151d33] left-0 top-[-70px] -skew-y-[6deg]"></div>
 
           <div className={"relative"}>
             <div className="wave"></div>
@@ -246,8 +247,8 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-extralight  my-8	tracking-wide text-gray-600 dark:text-gray-300"
-                    : "text-lg font-extralight  my-8	tracking-wide text-white dark:text-gray-300"
+                    ? "text-lg font-extralight  my-4	tracking-wide text-gray-600 dark:text-gray-300"
+                    : "text-lg font-extralight  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
@@ -259,9 +260,9 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/3 w-1/2 m-3 "
-                          : "border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
-                        : "border-2 rounded-2xl rounded-br-none hover:animate-bounce "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
+                        : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
                     text={isOpen ? t.read_less : t.read_more}
                   ></Button>

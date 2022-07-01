@@ -12,13 +12,16 @@ export default function FaqSection() {
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
 
   return (
-    <div className="sm:px-8 pt-4 sm:pt-12">
+    <div id="faq" className="relative sm:px-8 pt-4 sm:pt-12">
       <div className="flex flex-col md:place-items-center  mt-4">
-        <label className="font-bold dark:text-gray-200 text-4xl sm:text-7xl text-white text-center">
+        <label className="font-bold dark:text-gray-200 text-2xl sm:text-5xl text-white text-center">
           Frequently ask questions
         </label>
       </div>
       <Faq items={[{ img_url: "" }]} accordion_items={t.accordion_items}></Faq>
+      <div className="absolute bottom-0 right-0 h-1/2 -z-10">
+            <img src="assets/bubble2.png"></img>
+          </div>
     </div>
   );
 }

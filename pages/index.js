@@ -16,9 +16,6 @@ import Studie from "../components/statics/Studie";
 import dynamic from "next/dynamic";
 import { hotjar } from "react-hotjar";
 
-import WhyUs from "../components/WhyUs";
-import Solution from "../components/Solution";
-import Project from "../components/Project";
 import FaqSection from "../components/FaqSection";
 import ContactInfo from "../components/ContactInfo";
 import Welcome from "../components/Welcome";

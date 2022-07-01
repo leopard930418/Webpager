@@ -16,7 +16,7 @@ export default function Welcome() {
     //   </div>
     // </div>
     <div className="pt-10">
-      <div className="font-bold text-center dark:text-gray-200 sm:text-5xl text-3xl">
+      <div className="font-bold text-center dark:text-gray-200 sm:text-7xl text-3xl">
         <label>
           Welcome to <br /> dcd development
         </label>
@@ -24,11 +24,12 @@ export default function Welcome() {
       <div className="relative w-full h-full flex justify-center items-center">
         <img
           src="assets/logo.png"
-          className="absolute w-1/2 sm:2/3 right-12 top-0 object-contain object-scale-down"
+          className="absolute w-1/2 sm:2/3 right-12 top-0 object-contain opacity-70 scale-90"
         />
         <img
-          src="assets/section-1.png"
+          src="/assets/section-1.png"
           className="relative h-full w-7/12 object-contain"
+          layout='fill'
         />
       </div>
     </div>

@@ -11,7 +11,7 @@ const en = {
             name: "solutions",
             title: "The RIGHT Solution for Each Problem.",
             description: "There is a solution to all challenges in the development process; hiring an outsourcing company. It speeds up the process and relieves much stress, but why is that? We have done thorough research, and therefore we know that hiring an outsourcing company is the solution.",
-            img_url: "assets/section-3.png",
+            img_url: "assets/mindset.png",
             long_description: {
                 content: "<div class='text-white'><ul class='live'>\n" +
                     "    <li>\n" +
@@ -81,7 +81,7 @@ const en = {
             name: "problems",
             title: "Challenges in the Development Process",
             description: "Development is a complex process. Throughout the process, you are often confronted with technical and non-technical challenges. The biggest challenge is finding skilled people who understand what needs to be done and the specific business requirements. In addition to finding the right people, a few other issues make it increasingly challenging to get the best possible results in IT. However, expert and dedicated development teams can directly address these challenges.",
-            img_url: "assets/section-4.png",
+            img_url: "assets/back1.png",
             long_description: {
                 content:
                     "<ul class=\"live type2\">\n" +
@@ -671,7 +671,7 @@ const en = {
             name: "solutions",
             title: "The RIGHT Solution for Each Problem.",
             description: "There is a solution to all challenges in the development process; hiring an outsourcing company. It speeds up the process and relieves much stress, but why is that? We have done thorough research, and therefore we know that hiring an outsourcing company is the solution.",
-            img_url: "assets/section-3.png",
+            img_url: "assets/mindset.png",
             long_description: {
                 content: "<div class=''><ul class='live type2'>\n" +
                     "    <li>\n" +
@@ -798,7 +798,7 @@ const en = {
 
             title: "We provide a solution with results.",
             description: "We understand that building a good development team is difficult. The best solution for many companies is to join the current team or let us do the whole development. In this way, we make work easier for you.",
-            img_url: "assets/section-2.png",
+            img_url: "assets/back2.png",
             long_description: {
                 content: "<ul style={maxWidth:'80vw !important'} class=\"live\">\n" +
                     "    <li>\n" +
