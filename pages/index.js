@@ -19,6 +19,7 @@ import { hotjar } from "react-hotjar";
 import FaqSection from "../components/FaqSection";
 import ContactInfo from "../components/ContactInfo";
 import Welcome from "../components/Welcome";
+import Title from "../components/Title";
 
 function Home() {
   const router = useRouter();
@@ -28,8 +29,7 @@ function Home() {
   useEffect(() => {
     hotjar.initialize();
 
-    document.addEventListener("scroll", (event) => {
-    });
+    document.addEventListener("scroll", (event) => {});
   });
   // const t = en;
   return (
@@ -50,9 +50,14 @@ function Home() {
 
       <Studie items={t.items4}></Studie> */}
       <Welcome></Welcome>
-      <Content noColor={true} items={t.items5}></Content>
-      <Content noColor={true} items={t.studie}></Content>
       <Content noColor={true} items={t.items}></Content>
+      <Content noColor={true} items={t.items3}></Content>
+      <Content noColor={true} items={t.items5}></Content>
+      <Content noColor={true} items={t.items2}></Content>
+      <Content noColor={true} items={t.items6}></Content>
+      <Title></Title>
+      <Studie items={t.items4}></Studie>
+
       <FaqSection></FaqSection>
       <ContactInfo></ContactInfo>
       <Footer2></Footer2>

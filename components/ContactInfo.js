@@ -4,7 +4,7 @@ export default function ContactInfo() {
   return (
     <div id="section-contact" className="cannavigate px-6 pt-0 sm:pt-20 sm:px-16 my-8 sm:my-20">
       <div className="flex flex-col sm:flex-row justify-center items-strech m-auto w-full">
-        <div className="flex justify-center bg-[#1d273f] w-full  sm:w-1/3 h-[440px] rounded-[20px] flex-col items-center py-10 sm:py-20">
+        <div className="flex justify-center bg-gradient-to-r from-[#1ee9a2] to-[#75aefc] dark:bg-[#151d33] dark:bg-none w-full  sm:w-1/3 h-[440px] rounded-[20px] flex-col items-center py-10 sm:py-20">
           <img className="w-[40%] mb-10" src="assets/logo.png" />
           <label className="font-bold dark:text-gray-200 text-5xl text-white text-center mb-2">
             Contact us!
@@ -13,37 +13,37 @@ export default function ContactInfo() {
             send us an email kkkkkk
           </label>
         </div>
-        <div className="flex flex-col bg-[#0b1124] w-full sm:w-1/3 h-[440px] mt-0 sm:mt-10 rounded-[20px]">
+        <div className="flex flex-col bg-gray-50 dark:bg-[#0b1124] w-full sm:w-1/3 h-[440px] mt-0 sm:mt-10 rounded-[20px]">
           <div className="px-10">
             <div className="flex flex-col items-start mt-10">
-              <label className="font-bold dark:text-gray-200 text-1xl text-white text-center mb-2">
+              <label className="font-normal text-black dark:text-gray-200 text-1xl  text-center mb-2">
                 FULL NAME
               </label>
               <input
-                className="w-full h-[50px] rounded-[5px] bg-[#1d273f] p-5"
+                className="w-full h-[50px] rounded-[5px] bg-gray-200 dark:bg-[#1d273f] p-5"
                 placeholder="Enter your name"
               />
             </div>
             <div className="flex flex-col items-start mt-5">
-              <label className="font-bold dark:text-gray-200 text-1xl text-white text-center mb-2">
+              <label className="font-normal text-black dark:text-gray-200 text-1xl text-center mb-2">
                 EMAIL
               </label>
               <input
-                className="w-full h-[50px] rounded-[5px] bg-[#1d273f] p-5"
+                className="w-full h-[50px] rounded-[5px] bg-gray-200 dark:bg-[#1d273f] p-5"
                 placeholder="Enter your name"
               />
             </div>
             <div className="flex flex-col items-start mt-5">
-              <label className="font-bold dark:text-gray-200 text-1xl text-white text-center mb-2">
+              <label className="font-normal text-black dark:text-gray-200 text-1xl  text-center mb-2">
                 MESSAGE
               </label>
               <textarea
-                className="w-full h-[80px] rounded-[5px] bg-[#1d273f] pl-5 pt-3"
+                className="w-full h-[80px] rounded-[5px] bg-gray-200 dark:bg-[#1d273f] pl-5 pt-3"
                 placeholder="Enter your name"
               />
             </div>
             <div className="flex justify-center mt-6">
-              <button className="font-bold dark:text-gray-200 text-1xl text-white  bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-[20px] w-full h-[40px]">
+              <button className="font-normal text-black dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-[20px] w-full h-[40px]">
                 SUBMIT NOW
               </button>
             </div>

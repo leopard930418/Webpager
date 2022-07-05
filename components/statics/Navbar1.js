@@ -18,7 +18,6 @@ function Navbar() {
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
 
   function goToLink(e) {
-
     let a = document.getElementById(e.target.id.replace("temp", "")).offsetTop;
 
     window.scrollTo({
@@ -51,15 +50,14 @@ function Navbar() {
       sections.forEach((section) => {
         observer.observe(section);
       });
-      console.log("AAAAAAAAAA", sections)
     }, 500);
   }, []);
 
   const navigation = [
     {
-      name: t.why_us,
-      href: "#section-why_us",
-      current: selectedRoute.endsWith("#section-why_us"),
+      name: t.problems,
+      href: "#section-problems",
+      current: selectedRoute.endsWith("#section-problems"),
     },
     {
       name: t.solutions,
@@ -67,30 +65,31 @@ function Navbar() {
       current: selectedRoute.endsWith("#section-solutions"),
     },
     {
-      name: t.problems,
-      href: "#section-problems",
-      current: selectedRoute.endsWith("#section-problems"),
+      name: t.why_us,
+      href: "#section-why_us",
+      current: selectedRoute.endsWith("#section-why_us"),
     },
+
     {
       name: "FAQS",
       href: "#faq",
       current: selectedRoute.endsWith("#faq"),
     },
-    // {
-    //   name: t.mindset,
-    //   href: "#section-mindset",
-    //   current: selectedRoute.endsWith("#section-mindset"),
-    // },
-    // {
-    //   name: t.work,
-    //   href: "#section-work",
-    //   current: selectedRoute.endsWith("#section-work"),
-    // },
     {
-      name: "CONTACTS",
-      href: "#section-contact",
-      current: selectedRoute.endsWith("#section-contact"),
+      name: t.mindset,
+      href: "#section-mindset",
+      current: selectedRoute.endsWith("#section-mindset"),
     },
+    {
+      name: t.work,
+      href: "#section-work",
+      current: selectedRoute.endsWith("#section-work"),
+    },
+    // {
+    //   name: "CONTACTS",
+    //   href: "#section-contact",
+    //   current: selectedRoute.endsWith("#section-contact"),
+    // },
   ];
   useEffect(() => {
     const onHashChangeStart = (url) => {
@@ -130,7 +129,7 @@ function Navbar() {
                     src="/assets/logo.png"
                     alt="Workflow"
                   />
-                  <span className="ml-3 text-transparent text-2xl bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
+                  <span className="ml-3 text-transparent text-2xl bg-clip-text bg-gray-500 dark:bg-white">
                     DCD DEVELOPMENT
                   </span>
                 </div>
@@ -142,10 +141,9 @@ function Navbar() {
                           item.current && index !== 6
                             ? "border-b-4 border-sky-500 text-sky-500   hover:text-gray-700"
                             : "",
-                          "h-full flex  text-md font-medium items-center text-gray-500 dark:text-gray-200 dark:hover:text-gray-100"
+                          "h-full flex  text-md font-medium uppercase items-center text-gray-500 dark:text-gray-200 dark:hover:text-gray-100"
                         )}
                       >
-                        {console.log(item.name, item.current)}
                         <Link key={item.name} href={item.href}>
                           <a
                             className={classNames(
@@ -161,12 +159,12 @@ function Navbar() {
                         </Link>
                       </div>
                     ))}
-                    <div className="hidden xl:block absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                    <div className="hidden xl:block absolute inset-y-0 right-0 items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
                       <LanguageSelector
                         additional_classes={""}
                       ></LanguageSelector>
                     </div>
-                    {/*<DarkThemeSwitch />*/}
+                    <DarkThemeSwitch />
                   </div>
                 </div>
               </div>

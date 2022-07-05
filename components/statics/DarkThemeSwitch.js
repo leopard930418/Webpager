@@ -23,7 +23,7 @@ function DarkThemeSwitch({ additional_classes }) {
     >
       <input
         onChange={handleToggleTheme}
-        className="form-check-input appearance-none w-12 -ml-10 rounded-full float-left h-6 align-top bg-white checked:bg-slate-600 bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+        className="form-check-input appearance-none w-12 -ml-10 rounded-full float-left h-6 align-top checked:bg-slate-600 bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
         type="checkbox"
         role="switch"
         id="flexSwitchCheckDefault"

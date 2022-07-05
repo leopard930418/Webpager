@@ -14,7 +14,7 @@ export default function FaqSection() {
   return (
     <div id="faq" className="relative sm:px-8 pt-4 sm:pt-12">
       <div className="flex flex-col md:place-items-center  mt-4">
-        <label className="font-bold dark:text-gray-200 text-2xl sm:text-5xl text-white text-center">
+        <label className="font-bold text-black dark:text-gray-200 text-2xl sm:text-5xl text-center">
           Frequently ask questions
         </label>
       </div>
