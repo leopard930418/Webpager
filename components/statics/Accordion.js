@@ -25,7 +25,7 @@
 //                     text-base font-semibold text-[#196480]  dark:text-gray-200 text-left
 //                     ${
 //                       opened === index
-//                         ? "bg-gradient-to-r from-green-500 via-blue-500 to-pink-500"
+//                         ? "bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] "
 //                         : "dark:bg-slate-800"
 //                     }
 //                     border-0
@@ -49,7 +49,7 @@
 //                 aria-labelledby={`heading${index}`}
 //                 data-bs-parent="#accordionExample"
 //               >
-//                 <div className="accordion-body font-extralight  py-4 px-5 dark:text-gray-300">
+//                 <div className="accordion-body font-normal  py-4 px-5 dark:text-gray-300">
 //                   {item.description}
 //                 </div>
 //               </div>
@@ -82,25 +82,40 @@ export default function Accordion1({ accordion_items }) {
           <Accordion
             expanded={expanded === `panel${index}`}
             onChange={handleChange(`panel${index}`)}
-            className={` rounded-md shadow-none text-base font-bold text-[#196480]  dark:text-gray-200  text-left bg-white bg-opacity-0 space-y-2
+            className={`text-base font-bold text-[#196480]  dark:text-gray-200  text-left bg-white bg-opacity-0 space-y-4 shadow-none
               
             }`}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className="fill-white"/>}
+              expandIcon={
+                <ExpandMoreIcon 
+                // className="fill-black dark:fill-white" 
+                className={`${
+                  expanded === `panel${index}`
+                    ? "fill-white "
+                    : "fill-black dark:fill-white"
+                }`}
+                />
+              }
               aria-controls="panel1bh-content"
               id="panel1bh-header"
-              className={` rounded-md  ${
+              className={` rounded-md font-bold shadow-md ${
                 expanded === `panel${index}`
-                  ? "bg-gradient-to-r from-green-500 via-blue-500 to-pink-500"
+                  ? "bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] text-white "
                   : "dark:bg-[#1d273f]"
               }`}
             >
-              <Typography sx={{ flexShrink: 0 }}>{item.title}</Typography>
+              <Typography
+                sx={{ flexShrink: 0 }}
+                className=" text-lg font-semibold"
+              >
+                {item.title}
+              </Typography>
             </AccordionSummary>
-            <AccordionDetails
-            className="">
-              <Typography>{item.description}</Typography>
+            <AccordionDetails className="">
+              <Typography className="text-gray-600  dark:text-gray-400">
+                {item.description}
+              </Typography>
             </AccordionDetails>
           </Accordion>
         ))}

@@ -112,7 +112,7 @@ function Footer2() {
 
       <div className="bg-white dark:bg-[#0f172a] flex flex-col sm:flex-row justify-between items-center text-center p-5 space-y-2 ">
         <div>
-          <h1 className=" text-center sm:text-left text-gray-500 dark:text-gray-200 font-normal">
+          <h1 className=" text-center sm:text-left font-bold text-gray-900 dark:text-gray-200 ">
             © 2021-2022 All rights reserved
           </h1>
         </div>

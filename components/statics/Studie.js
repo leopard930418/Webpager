@@ -152,7 +152,7 @@ function Studie({ items }) {
       <div id="anc" className={" max-w-[100vw] absolute"}>
         <div
           className={
-            "min-h-[50px] max-h-[50px]  w-[100%]   w-full bg-green-100  changing_back3  flex items-center p-5 m-auto "
+            "min-h-[50px] max-h-[50px]  w-full bg-green-100  changing_back3  flex items-center p-5 m-auto "
           }
         >
           <div
@@ -350,7 +350,7 @@ function Studie({ items }) {
                 <div className={"p-5 bg-white mt-6 shadow rounded"}>
                   <div
                     className={
-                      "doc text-lg font-extralight  my-8	tracking-wide text-gray-600"
+                      "doc text-lg font-normal  my-8	tracking-wide text-gray-600"
                     }
                     dangerouslySetInnerHTML={{
                       __html: item.long_description.content,

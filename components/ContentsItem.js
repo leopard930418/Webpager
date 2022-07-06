@@ -1,5 +1,6 @@
+import { Box, Modal } from "@mui/material";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import React, { useState } from "react";
 import en from "../locales/en";
 import fr from "../locales/fr";
 import nl from "../locales/nl";
@@ -26,6 +27,40 @@ function ContentsItem({ item, index, noColor }) {
       });
     }, 300);
   };
+
+  const [openModalpro, setOpenModalpro] = useState(false);
+  const handleOpenModalpro = () => setOpenModalpro(true);
+  const handleCloseModalpro = () => setOpenModalpro(false);
+
+  const [openModalsol, setOpenModalsol] = useState(false);
+  const handleOpenModalsol = () => setOpenModalsol(true);
+  const handleCloseModalsol = () => setOpenModalsol(false);
+
+  const [openModalwhy, setOpenModalwhy] = useState(false);
+  const handleOpenModalwhy = () => setOpenModalwhy(true);
+  const handleCloseModalwhy = () => setOpenModalwhy(false);
+
+  const [openModalmind, setOpenModalmind] = useState(false);
+  const handleOpenModalmind = () => setOpenModalmind(true);
+  const handleCloseModalmind = () => setOpenModalmind(false);
+
+  const [openModalwork, setOpenModalwork] = useState(false);
+  const handleOpenModalwork = () => setOpenModalwork(true);
+  const handleCloseModalwork = () => setOpenModalwork(false);
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    overflow: "auto",
+    // background: "#0F172A",
+    borderRadius: "30px",
+    // bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+  };
   return (
     <>
       {item.name == "problems" ? (
@@ -40,7 +75,6 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover changing_back")
             }
           >
-            
             <TriangleDiv
               className="w-full h-[90px] sm:h-48 absolute  bottom-0 dark:border-b-[#151d33]"
               color="#151d33"
@@ -65,11 +99,11 @@ function ContentsItem({ item, index, noColor }) {
                   : "flex-row-reverse bg-cover ")
               }
             >
-              <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl pt-10">
+              <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl pt-10 px-4 sm:px-12">
                 <label
                   className={
                     index % 2 === 0 || noColor
-                      ? "text-black w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
+                      ? "text-black w-3/4 sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
                       : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                   }
                 >
@@ -78,8 +112,8 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-lg font-extralight  my-2	tracking-wide text-gray-800 dark:text-gray-300"
-                      : "w-full sm:w-2/3 text-lg font-extralight  my-2	tracking-wide text-white dark:text-gray-300"
+                      ? "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-gray-800 dark:text-gray-300"
+                      : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
                   {item.description}
@@ -87,11 +121,12 @@ function ContentsItem({ item, index, noColor }) {
                 {item.long_description && (
                   <div className="w-full ">
                     <Button
-                      onClick={() => handleToggle(item)}
+                      // onClick={() => handleToggle(item)}
+                      onClick={handleOpenModalpro}
                       className={
                         index % 2 === 0 || noColor
                           ? index === 0
-                            ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
+                            ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
                             : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                           : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                       }
@@ -100,8 +135,48 @@ function ContentsItem({ item, index, noColor }) {
                   </div>
                 )}
               </div>
-
-              {item.long_description && (
+              <Modal
+                open={openModalpro}
+                onClose={handleCloseModalpro}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style} className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:[#0F172A]">
+                  <div>
+                    <div
+                      id={`longdescription-${item.name}`}
+                      className={`w-full lg:px-6	py-4   ${
+                        openModalpro ? "" : "hidden"
+                      }`}
+                    >
+                      <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                        {item.name}
+                      </div>
+                      <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                        {item.long_description.title}
+                      </div>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: item.long_description.content,
+                        }}
+                        className={
+                          index % 2 === 0
+                            ? " text-lg font-normal tracking-wide text-gray-600 dark:text-gray-300 "
+                            : " text-lg font-normal text-white  tracking-wide  dark:text-gray-300"
+                        }
+                      ></div>
+                    </div>
+                    <div className="flex justify-center">
+                      <img
+                        className="h-full w-full sm:w-7/12 object-contain"
+                        // src={item.img_url}
+                        src="assets/problems.png"
+                      />
+                    </div>
+                  </div>
+                </Box>
+              </Modal>
+              {/* {item.long_description && (
                 <div
                   id={`longdescription-${item.name}`}
                   className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
@@ -117,12 +192,12 @@ function ContentsItem({ item, index, noColor }) {
                     }}
                     className={
                       index % 2 === 0
-                        ? " text-lg font-extralight lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                        : " text-lg font-extralight lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                        ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                        : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                     }
                   ></div>
                 </div>
-              )}
+              )} */}
               <div className=" relative -z-20 w-full h-full flex justify-center items-center xl:-mt-24 lg:-mt-40 md:-mt-28 sm:-mt-24">
                 <img
                   className="relative h-full w-full sm:w-7/12 object-contain"
@@ -171,8 +246,8 @@ function ContentsItem({ item, index, noColor }) {
         //       <p
         //         className={
         //           index % 2 === 0 || noColor
-        //             ? "z-10 w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-gray-600 dark:text-gray-300"
-        //             : "z-10 w-full sm:w-2/3 text-lg font-extralight  my-1	tracking-wide text-white dark:text-gray-300"
+        //             ? "z-10 w-full sm:w-2/3 text-lg font-normal  my-1	tracking-wide text-gray-600 dark:text-gray-300"
+        //             : "z-10 w-full sm:w-2/3 text-lg font-normal  my-1	tracking-wide text-white dark:text-gray-300"
         //         }
         //       >
         //         {item.description}
@@ -184,7 +259,7 @@ function ContentsItem({ item, index, noColor }) {
         //             className={
         //               index % 2 === 0 || noColor
         //                 ? index === 0
-        //                   ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
+        //                   ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
         //                   : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
         //                 : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
         //             }
@@ -210,8 +285,8 @@ function ContentsItem({ item, index, noColor }) {
         //           }}
         //           className={
         //             index % 2 === 0
-        //               ? " text-lg font-extralight lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-        //               : " text-lg font-extralight lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+        //               ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+        //               : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
         //           }
         //         ></div>
         //       </div>
@@ -246,8 +321,8 @@ function ContentsItem({ item, index, noColor }) {
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  xl:text-4xl  md:text-left dark:text-gray-200"
-                    : "text-white font-semibold  text-2xl lg:text-4xl   md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200"
+                    : "text-white font-semibold  text-2xl sm:text-5xl   md:text-left dark:text-gray-200"
                 }
               >
                 {item.title}
@@ -255,8 +330,8 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-extralight  my-4	tracking-wide text-gray-800 dark:text-gray-300"
-                    : "text-lg font-extralight  my-4	tracking-wide text-white dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
@@ -268,7 +343,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -305,8 +380,8 @@ function ContentsItem({ item, index, noColor }) {
                 }}
                 className={
                   index % 2 === 0
-                    ? " text-lg font-extralight lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                    : " text-lg font-extralight lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                    ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                    : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                 }
               ></div>
             </div>
@@ -341,7 +416,7 @@ function ContentsItem({ item, index, noColor }) {
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  xl:text-4xl  md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200"
                     : "text-white font-semibold  text-2xl lg:text-4xl   md:text-left dark:text-gray-200"
                 }
               >
@@ -350,8 +425,8 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-extralight  my-4	tracking-wide text-gray-800 dark:text-gray-300"
-                    : "text-lg font-extralight  my-4	tracking-wide text-white dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
@@ -363,7 +438,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -400,8 +475,8 @@ function ContentsItem({ item, index, noColor }) {
                 }}
                 className={
                   index % 2 === 0
-                    ? " text-lg font-extralight lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                    : " text-lg font-extralight lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                    ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                    : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                 }
               ></div>
             </div>
@@ -433,7 +508,7 @@ function ContentsItem({ item, index, noColor }) {
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  xl:text-4xl  md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200"
                     : "text-white font-semibold  text-2xl lg:text-4xl   md:text-left dark:text-gray-200"
                 }
               >
@@ -442,8 +517,8 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-extralight  my-4	tracking-wide text-gray-800 dark:text-gray-300"
-                    : "text-lg font-extralight  my-4	tracking-wide text-white dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
@@ -455,7 +530,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -492,8 +567,8 @@ function ContentsItem({ item, index, noColor }) {
                 }}
                 className={
                   index % 2 === 0
-                    ? " text-lg font-extralight lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                    : " text-lg font-extralight lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                    ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                    : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                 }
               ></div>
             </div>
@@ -527,8 +602,8 @@ function ContentsItem({ item, index, noColor }) {
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  xl:text-5xl  md:text-left dark:text-gray-200"
-                    : "text-white font-semibold  text-2xl lg:text-5xl   md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl  xl:text-5xl  md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
+                    : "text-white font-semibold  text-2xl lg:text-5xl   md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
                 }
               >
                 {item.title}
@@ -536,8 +611,8 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-extralight  my-4	tracking-wide text-gray-800 dark:text-gray-300"
-                    : "text-lg font-extralight  my-4	tracking-wide text-white dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
@@ -549,7 +624,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -586,8 +661,8 @@ function ContentsItem({ item, index, noColor }) {
                 }}
                 className={
                   index % 2 === 0
-                    ? " text-lg font-extralight lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                    : " text-lg font-extralight lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                    ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                    : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                 }
               ></div>
             </div>
