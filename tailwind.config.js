@@ -14,6 +14,8 @@ module.exports = {
       backgroundImage: {
         'section1_backrgound': "url('/assets/logo.png')",
         'triangle': "linear-gradient(to right, #1ee9a2, #75aefc)",
+        'contact_background':"linear-gradient(149.71deg, #19F18F 5.05%, #4EC1F6 47.37%, #E582FC 90.99%)",
+        'intro_background': "linear-gradient(45.71deg, #19F18F 5.05%, #4EC1F6 47.37%, #E582FC 90.99%)",
       },
       
       backgroundSize: {
