@@ -112,7 +112,7 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-gray-800 dark:text-gray-300"
+                      ? "w-full sm:w-2/3 text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
                       : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
@@ -300,7 +300,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] sm:pt-24 xl:pb-44 lg:pb-32 md:pb-24 pb-16 md:min-w-full " +
+            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] pt-10 sm:pt-24 xl:pb-44 lg:pb-32 md:pb-24 pb-16 md:min-w-full " +
             (index % 2 === 0 || noColor ? "" : "bg-cover changing_back")
           }
         >
@@ -317,7 +317,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-6 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 sm:pl-24 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -354,11 +354,11 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div
               className={
-                " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
+                " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-5/6 sm:w-1/2  vertical-align: top;"
               }
             >
               <img
-                className={"vertical-align max-w-[90%]  m-auto"}
+                className={""}
                 // src={item.img_url}
                 src="assets/whyus.svg"
               />
@@ -392,7 +392,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-white dark:bg-[#0f172a] sm:pt-24  md:min-w-full" +
+            " cannavigate relative bg-white dark:bg-[#0f172a] pb-4 pt-10 sm:pt-24  md:min-w-full" +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -412,7 +412,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-6 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 sm:pr-24 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -453,7 +453,7 @@ function ContentsItem({ item, index, noColor }) {
               }
             >
               <img
-                className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
+                className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
                 src="assets/mindset.svg"
               />
@@ -487,7 +487,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] sm:pt-24  md:min-w-full " +
+            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] pt-10 sm:pt-24  md:min-w-full " +
             (index % 2 === 0 || noColor ? "" : "bg-cover changing_back")
           }
         >
@@ -504,7 +504,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-6 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 sm:pl-24 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -579,7 +579,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-white dark:bg-[#0f172a] sm:pt-24  md:min-w-full" +
+            " cannavigate relative bg-white dark:bg-[#0f172a] pt-10 sm:pt-24  md:min-w-full" +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -598,7 +598,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-6 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 sm:pr-28 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
