@@ -112,7 +112,7 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                      ? "w-full sm:w-2/3 text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
                       : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
@@ -126,7 +126,7 @@ function ContentsItem({ item, index, noColor }) {
                       className={
                         index % 2 === 0 || noColor
                           ? index === 0
-                            ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
+                            ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
                             : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                           : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                       }
@@ -161,7 +161,7 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className={
                           index % 2 === 0
-                            ? " text-lg font-normal tracking-wide text-gray-600 dark:text-gray-300 "
+                            ? " text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
                             : " text-lg font-normal text-white  tracking-wide  dark:text-gray-300"
                         }
                       ></div>
@@ -330,7 +330,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -343,7 +343,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -425,7 +425,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -438,7 +438,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -517,7 +517,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -530,7 +530,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -611,7 +611,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-gray-800 dark:text-gray-300"
+                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -624,7 +624,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }

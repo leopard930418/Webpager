@@ -15,7 +15,7 @@ function Footer() {
             src="assets/footer1.svg"
             alt=""
           />
-          <p className={"m-auto text-white text-center dark:text-gray-300"}>
+          <p className={"m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
             {" "}
             Thie si a piece of text that need to be filled with real text but
             beacuw we dont have this on ethe moet we vcan nor spdjdgtdb this{" "}
@@ -29,7 +29,7 @@ function Footer() {
             src="assets/footer2.svg"
             alt=""
           />
-          <p className={"m-auto text-white text-center dark:text-gray-300"}>
+          <p className={"m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
             {" "}
             Thie si a piece of text that need to be filled with real text but
             beacuw we dont have this on ethe moet we vcan nor spdjdgtdb this{" "}
@@ -43,7 +43,7 @@ function Footer() {
             src="assets/footer3.svg"
             alt=""
           />
-          <p className={" m-auto text-white text-center dark:text-gray-300"}>
+          <p className={" m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
             {" "}
             Thie si a piece of text that need to be filled with real text but
             beacuw we dont have this on ethe moet we vcan nor spdjdgtdb this{" "}

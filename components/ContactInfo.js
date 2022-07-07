@@ -44,7 +44,7 @@ export default function ContactInfo() {
               />
             </div>
             <div className="flex justify-center mt-6">
-              <button className="font-normal text-black dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-[20px] w-full h-[40px]">
+              <button className=" btnShadow font-normal text-black dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-[20px] w-full h-[40px]">
                 SUBMIT NOW
               </button>
             </div>
