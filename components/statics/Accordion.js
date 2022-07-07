@@ -82,7 +82,7 @@ export default function Accordion1({ accordion_items }) {
           <Accordion
             expanded={expanded === `panel${index}`}
             onChange={handleChange(`panel${index}`)}
-            className={`text-base font-bold text-[#196480]  dark:text-gray-200  text-left bg-white bg-opacity-0 space-y-4 shadow-none
+            className={`text-base font-bold text-[#196480]  dark:text-gray-200  text-left bg-gray-50 bg-opacity-0 space-y-4 shadow-none
               
             }`}
           >
@@ -102,7 +102,7 @@ export default function Accordion1({ accordion_items }) {
               className={` rounded-md font-bold shadow-md ${
                 expanded === `panel${index}`
                   ? "bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] text-white "
-                  : "dark:bg-[#1d273f]"
+                  : "bg-white dark:bg-[#1d273f]"
               }`}
             >
               <Typography

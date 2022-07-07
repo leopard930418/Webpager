@@ -9,9 +9,9 @@ export default function Welcome() {
     //     </label>
     //   </div>
     //   <div className="relative flex flex-col mt-4 sm:place-items-center items-center">
-    //     <img className="absolute z-10 w-3/4 pb-24" src="assets/section-1.png" />
+    //     <img className="absolute z-10 w-3/4 pb-24" src="assets/section-1.svg" />
     //     <div className="absolute z-0 w-1/2 pb-24 sm:right-0 right-2">
-    //       <img src="assets/logo.png" alt="" />
+    //       <img src="assets/logo.svg" alt="" />
     //     </div>
     //   </div>
     // </div>
@@ -23,12 +23,12 @@ export default function Welcome() {
       </div>
       <div className="relative w-full h-full flex justify-center items-center">
         <img
-          src="assets/logo.png"
-          className="absolute w-1/2 sm:2/3 right-12 top-0 object-contain opacity-70 scale-90"
+          src="assets/logo.svg"
+          className="absolute w-2/3 sm:w-1/2 right-0 sm:right-12 top-0 object-contain opacity-70 scale-90"
         />
         <img
-          src="/assets/section-1.png"
-          className="relative h-full w-7/12 object-contain"
+          src="/assets/section-1.svg"
+          className="relative h-full w-5/6 sm:w-7/12 object-contain"
           layout='fill'
         />
       </div>

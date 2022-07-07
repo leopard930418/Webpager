@@ -86,10 +86,10 @@ function ContentsItem({ item, index, noColor }) {
               <div className="wave"></div>
             </div>
             <div className="absolute top-0 left-0 -z-10">
-              <img src="assets/bubble.png"></img>
+              <img src="assets/bubble.svg"></img>
             </div>
-            <div className="absolute -bottom-32 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
-              <img src="assets/dotedEffect.png"></img>
+            <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
+              <img src="assets/dotedEffect.svg"></img>
             </div>
             <div
               className={
@@ -141,7 +141,7 @@ function ContentsItem({ item, index, noColor }) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
               >
-                <Box sx={style} className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:[#0F172A]">
+                <Box sx={style} className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]">
                   <div>
                     <div
                       id={`longdescription-${item.name}`}
@@ -170,7 +170,7 @@ function ContentsItem({ item, index, noColor }) {
                       <img
                         className="h-full w-full sm:w-7/12 object-contain"
                         // src={item.img_url}
-                        src="assets/problems.png"
+                        src="assets/problems.svg"
                       />
                     </div>
                   </div>
@@ -202,7 +202,7 @@ function ContentsItem({ item, index, noColor }) {
                 <img
                   className="relative h-full w-full sm:w-7/12 object-contain"
                   // src={item.img_url}
-                  src="assets/problems.png"
+                  src="assets/problems.svg"
                 />
               </div>
             </div>
@@ -221,7 +221,7 @@ function ContentsItem({ item, index, noColor }) {
         //   }
         // >
         //   <div className="absolute bottom-0 right-0 h-1/2 z-10 ">
-        //     <img src="assets/bubble1.png"></img>
+        //     <img src="assets/bubble1.svg"></img>
         //   </div>
         //   <div className="absolute z-0 w-full h-1/6 sm:h-1/4 bg-[#0f172a] left-0  top-[-70px] sm:top-[-130px] skew-y-[8deg]"></div>
 
@@ -292,7 +292,7 @@ function ContentsItem({ item, index, noColor }) {
         //       </div>
         //     )}
         //     <div className=" relative -z-10 w-11/12 h-full flex justify-center items-center xl:-mt-28 lg:-mt-20 md:-mt-14 sm:-mt-8">
-        //       <img src="assets/section-4.png" />
+        //       <img src="assets/section-4.svg" />
         //     </div>
         //   </div>
         // </div>
@@ -360,7 +360,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
-                src="assets/whyus.png"
+                src="assets/whyus.svg"
               />
             </div>
           </div>
@@ -455,7 +455,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
                 // src={item.img_url}
-                src="assets/mindset.png"
+                src="assets/mindset.svg"
               />
             </div>
           </div>
@@ -547,7 +547,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
-                src="assets/work.png"
+                src="assets/work.svg"
               />
             </div>
           </div>
@@ -641,7 +641,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
                 // src={item.img_url}
-                src="assets/solutions.png"
+                src="assets/solutions.svg"
               />
             </div>
           </div>

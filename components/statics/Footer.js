@@ -12,7 +12,7 @@ function Footer() {
             className={
               "w-1/5 md:w-1/4 xl:w-1/4 m-auto mb-7 brightness-[700] dark:brightness-100"
             }
-            src="assets/footer1.png"
+            src="assets/footer1.svg"
             alt=""
           />
           <p className={"m-auto text-white text-center dark:text-gray-300"}>
@@ -26,7 +26,7 @@ function Footer() {
             className={
               "w-1/4 xl:w-1/4 m-auto mb-7 brightness-[700] dark:brightness-100"
             }
-            src="assets/footer2.png"
+            src="assets/footer2.svg"
             alt=""
           />
           <p className={"m-auto text-white text-center dark:text-gray-300"}>
@@ -40,7 +40,7 @@ function Footer() {
             className={
               "w-1/5 md:w-1/4 xl:w-1/4 m-auto mb-7 brightness-[700] dark:brightness-100"
             }
-            src="assets/footer3.png"
+            src="assets/footer3.svg"
             alt=""
           />
           <p className={" m-auto text-white text-center dark:text-gray-300"}>

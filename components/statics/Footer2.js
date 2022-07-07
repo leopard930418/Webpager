@@ -16,7 +16,7 @@ function Footer2() {
           <p className="flex flex-col text-gray-800  dark:text-gray-300  font-bold text-3xl">
             <img
               className="block  mx-auto   h-40 w-auto"
-              src="/assets/logo.png"
+              src="/assets/logo.svg"
               alt="Workflow"
             />
             <span className="pl-2 font-normal  text-2xl text-transparent bg-clip-text bg-gray-700 dark:bg-white">

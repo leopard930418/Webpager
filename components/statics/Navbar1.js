@@ -126,7 +126,7 @@ function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className=" logo block   h-8 w-auto"
-                    src="/assets/logo.png"
+                    src="/assets/logo.svg"
                     alt="Workflow"
                   />
                   <span className="ml-3 text-transparent text-2xl bg-clip-text bg-gray-500 dark:bg-white">
