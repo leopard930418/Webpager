@@ -5,7 +5,7 @@ function Button({ text, className, onClick }) {
     <button
       onClick={onClick}
       className={
-        " px-4 py-2 font-semibold text-base  text-white rounded-full shadow-sm   " +
+        " px-6 py-3 font-semibold text-base  text-white rounded-full shadow-sm   " +
         className
       }
     >

@@ -76,7 +76,7 @@ function ContentsItem({ item, index, noColor }) {
             }
           >
             <TriangleDiv
-              className="w-full h-[90px] sm:h-48 absolute  bottom-0 dark:border-b-[#151d33]"
+              className="w-full h-[89px] sm:h-48 absolute  bottom-0 dark:border-b-[#151d33]"
               color="#151d33"
               direction="left"
               upDown={false}
@@ -88,9 +88,10 @@ function ContentsItem({ item, index, noColor }) {
             <div className="absolute top-0 left-0 -z-10">
               <img src="assets/bubble.svg"></img>
             </div>
-            <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
+            {/* <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 "> */}
+            {/* <div className="absolute top-[45rem] sm:top-[40rem] right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
               <img src="assets/dotedEffect.svg"></img>
-            </div>
+            </div> */}
             <div
               className={
                 "flex  justify-center " +
@@ -126,7 +127,7 @@ function ContentsItem({ item, index, noColor }) {
                       className={
                         index % 2 === 0 || noColor
                           ? index === 0
-                            ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
+                            ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl "
                             : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                           : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                       }
@@ -141,7 +142,10 @@ function ContentsItem({ item, index, noColor }) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
               >
-                <Box sx={style} className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]">
+                <Box
+                  sx={style}
+                  className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
+                >
                   <div>
                     <div
                       id={`longdescription-${item.name}`}
@@ -198,13 +202,16 @@ function ContentsItem({ item, index, noColor }) {
                   ></div>
                 </div>
               )} */}
-              <div className=" relative -z-20 w-full h-full flex justify-center items-center xl:-mt-24 lg:-mt-40 md:-mt-28 sm:-mt-24">
-                <img
-                  className="relative h-full w-full sm:w-7/12 object-contain"
-                  // src={item.img_url}
-                  src="assets/problems.svg"
-                />
-              </div>
+            </div>
+            <div className=" relative  w-full h-full flex justify-center items-center">
+              <img
+                className="absolute top-15 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
+                src="assets/dotedEffect.svg"
+              ></img>
+              <img
+                className="relative -z-20 px-8 sm:px-0 h-full w-full sm:w-7/12 object-contain"
+                src="assets/problems.svg"
+              />
             </div>
           </div>
           <Footer></Footer>
@@ -343,7 +350,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl"
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -438,7 +445,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl"
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -530,7 +537,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl "
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
@@ -624,7 +631,7 @@ function ContentsItem({ item, index, noColor }) {
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
-                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:w-1/3 w-1/2  "
+                          ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl"
                           : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                         : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                     }
