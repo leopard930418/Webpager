@@ -205,7 +205,7 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div className=" relative  w-full h-full flex justify-center items-center">
               <img
-                className="absolute top-15 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
+                className="absolute top-20 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
                 src="assets/dotedEffect.svg"
               ></img>
               <img
