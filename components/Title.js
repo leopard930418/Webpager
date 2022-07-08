@@ -1,11 +1,17 @@
 import Button from "./statics/Button";
 import React from "react";
+import { TriangleDivBottom } from "./statics/TriangleDivBottom";
 
 export default function Title() {
   return (
     <div className="relative w-full bg-white dark:bg-[#0f172a] pt-12">
-      <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div>
-        <div className="flex flex-col sm:flex-row justify-center items-center w-full ">
+      {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
+      <TriangleDivBottom
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            direction="right"
+            upDown={false}
+          />
+        <div className="flex flex-col sm:flex-row justify-center items-start w-full ">
           <div className={"flex flex-col w-full sm:w-5/12"}>
             <div className=" z-10 px-4 sm:pl-24 ">
               <label className="text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200">

@@ -15,7 +15,7 @@ const en = {
       img_url: "assets/mindset.png",
       long_description: {
         content:
-          "<div class='text-white'><ul class='live'>\n" +
+          "<div class=''><ul class='live'>\n" +
           "    <li>\n" +
           "        <h4>Years of experience:</h4>" +
           "        <p>Development companies have spent years perfecting the process to get your custom software up and running in no time with minimal investment.</p>\n" +
@@ -1027,7 +1027,7 @@ const en = {
       img_url: "assets/werkwijze.png",
       long_description: {
         content:
-          "<div class='text-white'>" +
+          "<div class=''>" +
           "<p>Our workflow starts with mapping the existing process within a project. This evaluation phase allows us to devise the most suitable solution for each project. If a plan is already in the works before we come in, we can provide ideas and insights to make the planned changes a reality. This flexibility helps us to achieve the expected goals within the timeframe agreed.</p>\n" +
           "<p>&nbsp;</p>\n" +
           "<p>We're here to make a business better, and as such, we're beyond excited to explore all the possibilities to achieve that improvement. Our mission is based on the spirit of guiding the project thoroughly. We will be there and ready to act from the planning stage to the fruitful results. It's not just about achieving technical milestones; we are about making real, beneficial, and lasting changes for a company.</p>\n" +

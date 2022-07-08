@@ -748,15 +748,15 @@
 }
 
 
-#crisp-chatbox a .cc-1s3d {
-  background-image: url("/assets/mail.svg") !important;
-  background-color: transparent !important;
-  background-repeat: no-repeat !important;
+// #crisp-chatbox a .cc-1s3d {
+//   background-image: url("/assets/mail.svg") !important;
+//   background-color: transparent !important;
+//   background-repeat: no-repeat !important;
 
-  .cc-3ycs {
-    display: none !important;
-  }
-}
+//   .cc-3ycs {
+//     display: none !important;
+//   }
+// }
 
 .css-8zfq7-MuiTypography-root{
   width: 100%;
@@ -768,7 +768,7 @@
   border-right: 0;
   border-bottom: 20vh solid; 
   border-bottom-color: #f0f4ff;
-  @media screen and (max-width: 497px) {
+  @media screen and (max-width: 640px) {
     border-bottom: 10vh solid;
     border-bottom-color: #f0f4ff;
   }
@@ -780,7 +780,7 @@
   border-left: 0;
   border-bottom: 20vh solid;
   border-bottom-color: white;
-  @media screen and (max-width: 497px) {
+  @media screen and (max-width: 640px) {
     border-bottom: 10vh solid;
     border-bottom-color: white;
   }

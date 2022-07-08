@@ -7,6 +7,8 @@ import nl from "../locales/nl";
 import Button from "./statics/Button";
 import Footer from "./statics/Footer";
 import { TriangleDiv } from "./statics/TriangleDiv";
+import { TriangleDivBottom } from "./statics/TriangleDivBottom";
+import { TriangleDivTop } from "./statics/TriangleDivTop";
 
 function ContentsItem({ item, index, noColor }) {
   const router = useRouter();
@@ -57,7 +59,7 @@ function ContentsItem({ item, index, noColor }) {
     // background: "#0F172A",
     borderRadius: "30px",
     // bgcolor: "background.paper",
-    border: "2px solid #000",
+    // border: "2px solid #000",
     boxShadow: 24,
     p: 4,
   };
@@ -104,7 +106,7 @@ function ContentsItem({ item, index, noColor }) {
                 <label
                   className={
                     index % 2 === 0 || noColor
-                      ? "text-black w-3/4 sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
+                      ? "text-black w-3/4 md:w-2/3 lg:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
                       : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                   }
                 >
@@ -312,7 +314,12 @@ function ContentsItem({ item, index, noColor }) {
           }
         >
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
-          <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div>
+          {/* <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div> */}
+          <TriangleDivTop
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            direction="left"
+            upDown={false}
+          />
           <div className={"relative"}>
             <div className="wave"></div>
           </div>
@@ -343,10 +350,51 @@ function ContentsItem({ item, index, noColor }) {
               >
                 {item.description}
               </p>
+              <Modal
+                open={openModalpro}
+                onClose={handleCloseModalpro}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box
+                  sx={style}
+                  className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
+                >
+                  <div>
+                    <div
+                      id={`longdescription-${item.name}`}
+                      className={`w-full lg:px-6	py-4   ${
+                        openModalpro ? "" : "hidden"
+                      }`}
+                    >
+                      <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                        {item.name}
+                      </div>
+                      <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                        {item.long_description.title}
+                      </div>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: item.long_description.content,
+                        }}
+                        className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
+                      ></div>
+                    </div>
+                    <div className="flex justify-center">
+                      <img
+                        className="h-full w-full sm:w-7/12 object-contain"
+                        // src={item.img_url}
+                        src="assets/whyus.svg"
+                      />
+                    </div>
+                  </div>
+                </Box>
+              </Modal>
               {item.long_description && (
                 <div className="my-4 py-4 mb-5 w-full ">
                   <Button
-                    onClick={() => handleToggle(item)}
+                    // onClick={() => handleToggle(item)}
+                    onClick={handleOpenModalpro}
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
@@ -371,7 +419,7 @@ function ContentsItem({ item, index, noColor }) {
               />
             </div>
           </div>
-          {item.long_description && (
+          {/* {item.long_description && (
             <div
               id={`longdescription-${item.name}`}
               className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
@@ -392,7 +440,7 @@ function ContentsItem({ item, index, noColor }) {
                 }
               ></div>
             </div>
-          )}
+          )} */}
         </div>
       ) : item.name == "mindset" ? (
         <div
@@ -407,7 +455,12 @@ function ContentsItem({ item, index, noColor }) {
         >
           {console.log("items.name", item.name)}
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
-          <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div>
+          {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
+          <TriangleDivBottom
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            direction="right"
+            upDown={false}
+          />
           <div className={"relative"}>
             <div className="wave"></div>
           </div>
@@ -441,7 +494,8 @@ function ContentsItem({ item, index, noColor }) {
               {item.long_description && (
                 <div className="my-4 py-4 mb-5 w-full ">
                   <Button
-                    onClick={() => handleToggle(item)}
+                    // onClick={() => handleToggle(item)}
+                    onClick={handleOpenModalpro}
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
@@ -466,7 +520,47 @@ function ContentsItem({ item, index, noColor }) {
               />
             </div>
           </div>
-          {item.long_description && (
+          <Modal
+            open={openModalpro}
+            onClose={handleCloseModalpro}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box
+              sx={style}
+              className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
+            >
+              <div>
+                <div
+                  id={`longdescription-${item.name}`}
+                  className={`w-full lg:px-6	py-4   ${
+                    openModalpro ? "" : "hidden"
+                  }`}
+                >
+                  <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                    {item.name}
+                  </div>
+                  <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                    {item.long_description.title}
+                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: item.long_description.content,
+                    }}
+                    className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
+                  ></div>
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    className="h-full w-full sm:w-7/12 object-contain"
+                    // src={item.img_url}
+                    src="assets/mindset.svg"
+                  />
+                </div>
+              </div>
+            </Box>
+          </Modal>
+          {/* {item.long_description && (
             <div
               id={`longdescription-${item.name}`}
               className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
@@ -487,7 +581,7 @@ function ContentsItem({ item, index, noColor }) {
                 }
               ></div>
             </div>
-          )}
+          )} */}
         </div>
       ) : item.name == "work" ? (
         <div
@@ -499,7 +593,12 @@ function ContentsItem({ item, index, noColor }) {
           }
         >
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
-          <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div>
+          {/* <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div> */}
+          <TriangleDivTop
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            direction="left"
+            upDown={false}
+          />
           <div className={"relative"}>
             <div className="wave"></div>
           </div>
@@ -533,12 +632,13 @@ function ContentsItem({ item, index, noColor }) {
               {item.long_description && (
                 <div className="my-4 py-4 mb-5 w-full ">
                   <Button
-                    onClick={() => handleToggle(item)}
+                    // onClick={() => handleToggle(item)}
+                    onClick={handleOpenModalpro}
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
                           ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl "
-                          : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounc "
+                          : "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl"
                         : "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl "
                     }
                     text={isOpen ? t.read_less : t.read_more}
@@ -558,7 +658,47 @@ function ContentsItem({ item, index, noColor }) {
               />
             </div>
           </div>
-          {item.long_description && (
+          <Modal
+            open={openModalpro}
+            onClose={handleCloseModalpro}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box
+              sx={style}
+              className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
+            >
+              <div>
+                <div
+                  id={`longdescription-${item.name}`}
+                  className={`w-full lg:px-6	py-4   ${
+                    openModalpro ? "" : "hidden"
+                  }`}
+                >
+                  <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                    {item.name}
+                  </div>
+                  <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                    {item.long_description.title}
+                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: item.long_description.content,
+                    }}
+                    className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
+                  ></div>
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    className="h-full w-full sm:w-7/12 object-contain"
+                    // src={item.img_url}
+                    src="assets/work.svg"
+                  />
+                </div>
+              </div>
+            </Box>
+          </Modal>
+          {/* {item.long_description && (
             <div
               id={`longdescription-${item.name}`}
               className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
@@ -579,7 +719,7 @@ function ContentsItem({ item, index, noColor }) {
                 }
               ></div>
             </div>
-          )}
+          )} */}
         </div>
       ) : (
         <div
@@ -593,7 +733,12 @@ function ContentsItem({ item, index, noColor }) {
           }
         >
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
-          <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] md:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div>
+          {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
+          <TriangleDivBottom
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            direction="right"
+            upDown={false}
+          />
           <div className={"relative"}>
             <div className="wave"></div>
           </div>
@@ -605,11 +750,11 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 sm:pr-28 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 sm:pr-14 lg:pr-28 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  xl:text-5xl  md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
+                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
                     : "text-white font-semibold  text-2xl lg:text-5xl   md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
                 }
               >
@@ -627,7 +772,8 @@ function ContentsItem({ item, index, noColor }) {
               {item.long_description && (
                 <div className="my-4 py-4 mb-5 w-full ">
                   <Button
-                    onClick={() => handleToggle(item)}
+                    // onClick={() => handleToggle(item)}
+                    onClick={handleOpenModalpro}
                     className={
                       index % 2 === 0 || noColor
                         ? index === 0
@@ -652,28 +798,47 @@ function ContentsItem({ item, index, noColor }) {
               />
             </div>
           </div>
-          {item.long_description && (
-            <div
-              id={`longdescription-${item.name}`}
-              className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
-                isOpen ? "" : "hidden"
-              }`}
+
+          <Modal
+            open={openModalpro}
+            onClose={handleCloseModalpro}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box
+              sx={style}
+              className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
             >
-              <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
-                {item.long_description.title}
+              <div>
+                <div
+                  id={`longdescription-${item.name}`}
+                  className={`w-full lg:px-6	py-4   ${
+                    openModalpro ? "" : "hidden"
+                  }`}
+                >
+                  <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                    {item.name}
+                  </div>
+                  <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                    {item.long_description.title}
+                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: item.long_description.content,
+                    }}
+                    className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
+                  ></div>
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    className="h-full w-full sm:w-7/12 object-contain"
+                    // src={item.img_url}
+                    src="assets/solutions.svg"
+                  />
+                </div>
               </div>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: item.long_description.content,
-                }}
-                className={
-                  index % 2 === 0
-                    ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                    : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
-                }
-              ></div>
-            </div>
-          )}
+            </Box>
+          </Modal>
         </div>
       )}
     </>
