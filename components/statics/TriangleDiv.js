@@ -55,12 +55,19 @@ export function TriangleDiv({
   }, []);
 
   return (
-    <div ref={containerRef} className={className}>
+    <div
+      ref={containerRef}
+      className={className}
+      style={{ overflow: "hidden" }}
+    >
       <svg width={w} height={h}>
         <defs>
-          <linearGradient id="CustomGradient">
+          <linearGradient id="CustomGradient" limitingConeAngle={35}>
             <stop offset="0%" stop-color="#1ee9a2" />
             <stop offset="100%" stop-color="#75aefc" />
+            {/* <stop offset="0%" stop-color="#19F18F" />
+            <stop offset="50%" stop-color="#4EC1F6" />
+            <stop offset="100%" stop-color="#E582FC" /> */}
           </linearGradient>
         </defs>
         <polygon

@@ -17,7 +17,7 @@ export default function LanguageSelector({ additional_classes }) {
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex">
         <Menu.Button
-          className={`inline-flex  w-full py-2 mt-4 lg:mt-0 text-sm font-medium text-gray-500 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500  ${additional_classes}`}
+          className={`inline-flex  w-full py-2 mt-4 lg:mt-0 text-sm font-medium text-gray-500 dark:text-gray-200  ${additional_classes}`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

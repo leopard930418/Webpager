@@ -76,7 +76,7 @@ function ContentsItem({ item, index, noColor }) {
             }
           >
             <TriangleDiv
-              className="w-full h-[89px] sm:h-48 absolute  bottom-0 dark:border-b-[#151d33]"
+              className="w-full h-[50px] sm:h-48 absolute  bottom-0 translate-y-0.5"
               color="#151d33"
               direction="left"
               upDown={false}
@@ -85,7 +85,7 @@ function ContentsItem({ item, index, noColor }) {
             <div className={"relative"}>
               <div className="wave"></div>
             </div>
-            <div className="absolute top-0 left-0 -z-10">
+            <div className="absolute top-10 left-0 -z-10">
               <img src="assets/bubble.svg"></img>
             </div>
             {/* <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 "> */}
@@ -538,8 +538,8 @@ function ContentsItem({ item, index, noColor }) {
                       index % 2 === 0 || noColor
                         ? index === 0
                           ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl "
-                          : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
-                        : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
+                          : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounc "
+                        : "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] rounded-3xl "
                     }
                     text={isOpen ? t.read_less : t.read_more}
                   ></Button>
