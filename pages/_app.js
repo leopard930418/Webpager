@@ -21,7 +21,6 @@ export default function MyApp({ Component, pageProps }) {
     <Layout>
       <CrispWithNoSSR />
       <Component {...pageProps} />
-      {console.log("deploy test")}
     </Layout>
   );
 }
