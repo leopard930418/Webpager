@@ -34,21 +34,6 @@ function ContentsItem({ item, index, noColor }) {
   const handleOpenModalpro = () => setOpenModalpro(true);
   const handleCloseModalpro = () => setOpenModalpro(false);
 
-  const [openModalsol, setOpenModalsol] = useState(false);
-  const handleOpenModalsol = () => setOpenModalsol(true);
-  const handleCloseModalsol = () => setOpenModalsol(false);
-
-  const [openModalwhy, setOpenModalwhy] = useState(false);
-  const handleOpenModalwhy = () => setOpenModalwhy(true);
-  const handleCloseModalwhy = () => setOpenModalwhy(false);
-
-  const [openModalmind, setOpenModalmind] = useState(false);
-  const handleOpenModalmind = () => setOpenModalmind(true);
-  const handleCloseModalmind = () => setOpenModalmind(false);
-
-  const [openModalwork, setOpenModalwork] = useState(false);
-  const handleOpenModalwork = () => setOpenModalwork(true);
-  const handleCloseModalwork = () => setOpenModalwork(false);
 
   const style = {
     position: "absolute",
@@ -102,11 +87,11 @@ function ContentsItem({ item, index, noColor }) {
                   : "flex-row-reverse bg-cover ")
               }
             >
-              <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl pt-10 px-4 sm:px-12">
+              <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 pt-10 px-4 sm:px-12">
                 <label
                   className={
                     index % 2 === 0 || noColor
-                      ? "text-black w-3/4 md:w-2/3 lg:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
+                      ? "text-black w-3/4 md:w-2/3 lg:w-1/2 font-semibold text-center dark:text-gray-200  text-2xl sm:text-3xl xl:text-5xl"
                       : "text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-4xl text-3xl"
                   }
                 >
@@ -115,7 +100,7 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
+                      ? "w-full sm:w-2/3 text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
                       : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
@@ -148,7 +133,13 @@ function ContentsItem({ item, index, noColor }) {
                   sx={style}
                   className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
                 >
-                  <div>
+                  <div className="relative">
+                    <div
+                      className="absolute top-0 right-0 scale-150"
+                      onClick={handleCloseModalpro}
+                    >
+                      <img src="assets/closeIcon.svg"></img>
+                    </div>
                     <div
                       id={`longdescription-${item.name}`}
                       className={`w-full lg:px-6	py-4   ${
@@ -219,92 +210,6 @@ function ContentsItem({ item, index, noColor }) {
           <Footer></Footer>
         </>
       ) : item.name == "why_us" ? (
-        // <div
-        //   id={`section-${item.name}`}
-        //   key={`section-${index}`}
-        //   className={
-        //     " cannavigate relative px-7 md:py-6 md:my-6 pt-8 md:pt-24  md:min-w-full" +
-        //     (index % 2 === 0 || noColor
-        //       ? "flex-row"
-        //       : "flex-row-reverse bg-cover changing_back")
-        //   }
-        // >
-        //   <div className="absolute bottom-0 right-0 h-1/2 z-10 ">
-        //     <img src="assets/bubble1.svg"></img>
-        //   </div>
-        //   <div className="absolute z-0 w-full h-1/6 sm:h-1/4 bg-[#0f172a] left-0  top-[-70px] sm:top-[-130px] skew-y-[8deg]"></div>
-
-        //   <div
-        //     className={
-        //       "relative flex justify-center " +
-        //       (index % 2 === 0 || noColor
-        //         ? "flex-col"
-        //         : "flex-row-reverse bg-cover ")
-        //     }
-        //   >
-        //     <div className="relative flex flex-col items-center font-semibold text-center dark:text-gray-200 xl:-mt-10 lg:-mt-10 md:-mt-36 sm:text-4xl text-3xl">
-        //       <label
-        //         className={
-        //           index % 2 === 0 || noColor
-        //             ? "z-10 text-[#1ca0e2] w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
-        //             : "z-10 text-white w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 sm:text-5xl text-2xl"
-        //         }
-        //       >
-        //         {item.title}
-        //       </label>
-        //       <p
-        //         className={
-        //           index % 2 === 0 || noColor
-        //             ? "z-10 w-full sm:w-2/3 text-lg font-normal  my-1	tracking-wide text-gray-600 dark:text-gray-300"
-        //             : "z-10 w-full sm:w-2/3 text-lg font-normal  my-1	tracking-wide text-white dark:text-gray-300"
-        //         }
-        //       >
-        //         {item.description}
-        //       </p>
-        //       {item.long_description && (
-        //         <div className="w-full ">
-        //           <Button
-        //             onClick={() => handleToggle(item)}
-        //             className={
-        //               index % 2 === 0 || noColor
-        //                 ? index === 0
-        //                   ? "z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl h-[50px] sm:m-6 sm:w-1/6 w-1/2 m-3"
-        //                   : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
-        //                 : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
-        //             }
-        //             text={isOpen ? t.read_less : t.read_more}
-        //           ></Button>
-        //         </div>
-        //       )}
-        //     </div>
-
-        //     {item.long_description && (
-        //       <div
-        //         id={`longdescription-${item.name}`}
-        //         className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
-        //           isOpen ? "" : "hidden"
-        //         }`}
-        //       >
-        //         <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
-        //           {item.long_description.title}
-        //         </div>
-        //         <div
-        //           dangerouslySetInnerHTML={{
-        //             __html: item.long_description.content,
-        //           }}
-        //           className={
-        //             index % 2 === 0
-        //               ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-        //               : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
-        //           }
-        //         ></div>
-        //       </div>
-        //     )}
-        //     <div className=" relative -z-10 w-11/12 h-full flex justify-center items-center xl:-mt-28 lg:-mt-20 md:-mt-14 sm:-mt-8">
-        //       <img src="assets/section-4.svg" />
-        //     </div>
-        //   </div>
-        // </div>
         <div
           id={`section-${item.name}`}
           key={`section-${index}`}
@@ -331,11 +236,11 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 sm:pl-24 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pl-12 xl:pl-24 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl  md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200"
                     : "text-white font-semibold  text-2xl sm:text-5xl   md:text-left dark:text-gray-200"
                 }
               >
@@ -344,7 +249,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -360,7 +265,13 @@ function ContentsItem({ item, index, noColor }) {
                   sx={style}
                   className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
                 >
-                  <div>
+                  <div className="relative">
+                    <div
+                      className="absolute top-0 right-0 scale-150"
+                      onClick={handleCloseModalpro}
+                    >
+                      <img src="assets/closeIcon.svg"></img>
+                    </div>
                     <div
                       id={`longdescription-${item.name}`}
                       className={`w-full lg:px-6	py-4   ${
@@ -391,7 +302,7 @@ function ContentsItem({ item, index, noColor }) {
                 </Box>
               </Modal>
               {item.long_description && (
-                <div className="my-4 py-4 mb-5 w-full ">
+                <div className="w-full ">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -453,7 +364,6 @@ function ContentsItem({ item, index, noColor }) {
               : "flex-row-reverse bg-cover changing_back")
           }
         >
-          {console.log("items.name", item.name)}
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
@@ -472,11 +382,11 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 sm:pr-24 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pr-8 xl:pr-24  w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl  md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200"
                     : "text-white font-semibold  text-2xl lg:text-4xl   md:text-left dark:text-gray-200"
                 }
               >
@@ -485,14 +395,14 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="my-4 py-4 mb-5 w-full ">
+                <div className=" w-full ">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -530,14 +440,20 @@ function ContentsItem({ item, index, noColor }) {
               sx={style}
               className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
             >
-              <div>
+              <div className="relative">
+                <div
+                  className="absolute top-0 right-0 scale-150"
+                  onClick={handleCloseModalpro}
+                >
+                  <img src="assets/closeIcon.svg"></img>
+                </div>
                 <div
                   id={`longdescription-${item.name}`}
                   className={`w-full lg:px-6	py-4   ${
                     openModalpro ? "" : "hidden"
                   }`}
                 >
-                  <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                  <div className="  text-3xl sm:text-5xl text-left  pb-4 dark:text-gray-200	 ">
                     {item.name}
                   </div>
                   <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
@@ -610,11 +526,11 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 sm:pl-24 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pl-12 xl:pl-24w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200"
+                    ? "text-black font-semibold text-2xl md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200"
                     : "text-white font-semibold  text-2xl lg:text-4xl   md:text-left dark:text-gray-200"
                 }
               >
@@ -623,14 +539,14 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="my-4 py-4 mb-5 w-full ">
+                <div className="w-full ">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -668,14 +584,20 @@ function ContentsItem({ item, index, noColor }) {
               sx={style}
               className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
             >
-              <div>
+              <div className="relative">
+                <div
+                  className="absolute top-0 right-0 scale-150"
+                  onClick={handleCloseModalpro}
+                >
+                  <img src="assets/closeIcon.svg"></img>
+                </div>
                 <div
                   id={`longdescription-${item.name}`}
                   className={`w-full lg:px-6	py-4   ${
                     openModalpro ? "" : "hidden"
                   }`}
                 >
-                  <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                  <div className="  text-3xl sm:text-5xl text-left  pb-4  dark:text-gray-200	 ">
                     {item.name}
                   </div>
                   <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
@@ -750,11 +672,11 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 sm:pr-14 lg:pr-28 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pr-12 xl:pr-24 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-black font-semibold text-2xl  sm:text-5xl  md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
+                    ? "text-black font-semibold text-2xl  md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
                     : "text-white font-semibold  text-2xl lg:text-5xl   md:text-left dark:text-gray-200 w-3/4 sm:w-4/5"
                 }
               >
@@ -763,14 +685,14 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="my-4 py-4 mb-5 w-full ">
+                <div className=" w-full ">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -809,7 +731,13 @@ function ContentsItem({ item, index, noColor }) {
               sx={style}
               className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
             >
-              <div>
+              <div className="relative">
+                <div
+                  className="absolute top-0 right-0 scale-150"
+                  onClick={handleCloseModalpro}
+                >
+                  <img src="assets/closeIcon.svg"></img>
+                </div>
                 <div
                   id={`longdescription-${item.name}`}
                   className={`w-full lg:px-6	py-4   ${

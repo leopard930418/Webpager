@@ -110,7 +110,7 @@ function Footer2() {
         className="bg-gray-300 dark:bg-white dark:bg-opacity-20"
       ></Divider>
 
-      <div className="bg-white dark:bg-[#0f172a] flex flex-col sm:flex-row justify-between items-center text-center p-5 space-y-2 ">
+      <div className="bg-white dark:bg-[#0f172a] flex flex-col sm:flex-row justify-between items-center text-center py-5 px-4 sm:px-24 space-y-2 ">
         <div>
           <h1 className=" text-center sm:text-left font-bold text-gray-900 dark:text-gray-200 ">
             © 2021-2022 All rights reserved
