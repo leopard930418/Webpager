@@ -35,14 +35,14 @@ export default function Title() {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center w-full sm:w-7/12 space-y-8 sm:space-y-0 space-x-0 sm:space-x-8 px-4 md:pr-12 xl:pr-24">
             <div className="flex flex-col rounded-2xl  justify-center items-center bg-white dark:bg-[#151d33] w-full sm:w-1/2 px-8 py-20 shadow-xl dark:shadow-none">
-              <img className="w-1/3" src="assets/footer1.svg" alt="" />
+              <img className="w-1/3" src="assets/footer1.png" alt="" />
               <p className="text-lg text-center font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
                 This is A Piece Of Text That Need To Be Filled with Real Text
                 But
               </p>
             </div>
             <div className="flex flex-col rounded-2xl  justify-center items-center bg-white dark:bg-[#151d33] w-full sm:w-1/2 px-8 py-20 shadow-xl dark:shadow-none">
-              <img className="w-1/3" src="assets/footer1.svg" alt="" />
+              <img className="w-1/3" src="assets/footer1.png" alt="" />
               <p className="text-lg text-center font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
                 This is A Piece Of Text That Need To Be Filled with Real Text
                 But
@@ -51,7 +51,7 @@ export default function Title() {
           </div>
         </div>
 
-        <div className="flex  justify-center flex-col">
+        <div className="flex  justify-center flex-col pb-8">
           <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 pt-10">
             <label className="text-black w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 text-2xl md:text-3xl xl:text-5xl ">
               This is A Title
@@ -63,7 +63,7 @@ export default function Title() {
               quis felis at, auctor accumsan est. Sed sit amet sodales lacus.
               Etiam aliquam in arcu eget egestas. s
             </p>
-            <div className=" w-full ">
+            <div className="pb-12 w-full ">
               <Button
                 className="btnShadow z-10 font-bold text-white bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl shadow-md h-[50px] "
                 text="CONTACT US"

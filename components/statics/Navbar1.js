@@ -70,11 +70,7 @@ function Navbar() {
       current: selectedRoute.endsWith("#section-why_us"),
     },
 
-    {
-      name: "FAQS",
-      href: "#faq",
-      current: selectedRoute.endsWith("#faq"),
-    },
+    
     {
       name: t.mindset,
       href: "#section-mindset",
@@ -84,6 +80,11 @@ function Navbar() {
       name: t.work,
       href: "#section-work",
       current: selectedRoute.endsWith("#section-work"),
+    },
+    {
+      name: "FAQS",
+      href: "#faq",
+      current: selectedRoute.endsWith("#faq"),
     },
     // {
     //   name: "CONTACTS",

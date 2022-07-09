@@ -73,7 +73,7 @@ function ContentsItem({ item, index, noColor }) {
               <div className="wave"></div>
             </div>
             <div className="absolute top-10 left-0 -z-10">
-              <img src="assets/bubble.svg"></img>
+              <img src="assets/bubble.png"></img>
             </div>
             {/* <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 "> */}
             {/* <div className="absolute top-[45rem] sm:top-[40rem] right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
@@ -100,7 +100,7 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
+                      ? "w-full sm:w-2/3 text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
                       : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
@@ -199,7 +199,7 @@ function ContentsItem({ item, index, noColor }) {
             <div className=" relative  w-full h-full flex justify-center items-center">
               <img
                 className="absolute top-20 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
-                src="assets/dotedEffect.svg"
+                src="assets/dotedEffect.png"
               ></img>
               <img
                 className="relative -z-20 px-8 sm:px-0 h-full w-full sm:w-7/12 object-contain"
@@ -249,7 +249,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -295,7 +295,7 @@ function ContentsItem({ item, index, noColor }) {
                       <img
                         className="h-full w-full sm:w-7/12 object-contain"
                         // src={item.img_url}
-                        src="assets/whyus.svg"
+                        src="assets/whyus.png"
                       />
                     </div>
                   </div>
@@ -326,7 +326,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={""}
                 // src={item.img_url}
-                src="assets/whyus.svg"
+                src="assets/whyus.png"
               />
             </div>
           </div>
@@ -395,7 +395,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -426,7 +426,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
-                src="assets/mindset.svg"
+                src="assets/mindset.png"
               />
             </div>
           </div>
@@ -470,7 +470,7 @@ function ContentsItem({ item, index, noColor }) {
                   <img
                     className="h-full w-full sm:w-7/12 object-contain"
                     // src={item.img_url}
-                    src="assets/mindset.svg"
+                    src="assets/mindset.png"
                   />
                 </div>
               </div>
@@ -539,7 +539,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -570,7 +570,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
-                src="assets/work.svg"
+                src="assets/work.png"
               />
             </div>
           </div>
@@ -614,7 +614,7 @@ function ContentsItem({ item, index, noColor }) {
                   <img
                     className="h-full w-full sm:w-7/12 object-contain"
                     // src={item.img_url}
-                    src="assets/work.svg"
+                    src="assets/work.png"
                   />
                 </div>
               </div>
@@ -685,7 +685,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -716,7 +716,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
                 // src={item.img_url}
-                src="assets/solutions.svg"
+                src="assets/solutions.png"
               />
             </div>
           </div>
@@ -761,7 +761,7 @@ function ContentsItem({ item, index, noColor }) {
                   <img
                     className="h-full w-full sm:w-7/12 object-contain"
                     // src={item.img_url}
-                    src="assets/solutions.svg"
+                    src="assets/solutions.png"
                   />
                 </div>
               </div>

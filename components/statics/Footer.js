@@ -13,7 +13,7 @@ function Footer() {
             className={
               "w-1/5 md:w-1/4 xl:w-1/4 m-auto mb-7 brightness-[700] dark:brightness-100"
             }
-            src="assets/footer1.svg"
+            src="assets/footer1.png"
             alt=""
           />
           <p className={"m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
@@ -27,7 +27,7 @@ function Footer() {
             className={
               "w-1/4 xl:w-1/4 m-auto mb-7 brightness-[700] dark:brightness-100"
             }
-            src="assets/footer2.svg"
+            src="assets/footer2.png"
             alt=""
           />
           <p className={"m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
@@ -41,7 +41,7 @@ function Footer() {
             className={
               "w-1/5 md:w-1/4 xl:w-1/4 m-auto mb-7 brightness-[700] dark:brightness-100"
             }
-            src="assets/footer3.svg"
+            src="assets/footer3.png"
             alt=""
           />
           <p className={" m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
