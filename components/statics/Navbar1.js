@@ -21,7 +21,7 @@ function Navbar() {
     let a = document.getElementById(e.target.id.replace("temp", "")).offsetTop;
 
     window.scrollTo({
-      top: a - 480,
+      top: a - 400,
       behavior: "smooth",
     });
   }
