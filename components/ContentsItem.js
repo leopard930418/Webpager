@@ -176,7 +176,7 @@ function ContentsItem({ item, index, noColor }) {
                       <img
                         className="h-full w-full sm:w-7/12 object-contain"
                         // src={item.img_url}
-                        src="assets/problems.svg"
+                        src="assets/problems.png"
                       />
                     </div>
                   </div>
@@ -212,7 +212,7 @@ function ContentsItem({ item, index, noColor }) {
               ></img>
               <img
                 className="relative -z-20 px-8 sm:px-0 h-full w-full sm:w-7/12 object-contain"
-                src="assets/problems.svg"
+                src="assets/problems.png"
               />
             </div>
           </div>
@@ -457,7 +457,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 "
             direction="right"
             upDown={false}
           />
@@ -735,7 +735,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 "
             direction="right"
             upDown={false}
           />
