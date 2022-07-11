@@ -7,7 +7,6 @@ function Content({ items, noColor }) {
   return (
     <div>
       {items.map((item, index) => {
-        {console.log("+++++++",item)}
         return (
           <ContentsItem
             key={item.name}

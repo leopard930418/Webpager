@@ -5,6 +5,7 @@ import fr from "../../locales/fr";
 import nl from "../../locales/nl";
 import en from "../../locales/en";
 import { useRouter } from "next/router";
+import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function Studie({ items }) {
   const router = useRouter();
@@ -16,33 +17,13 @@ function Studie({ items }) {
     category: "unset",
   });
 
-  function filterNow(e) {
-    let temp2 = filterObj;
-    temp2[e.target.id] = e.target.innerHTML;
-    setFilterObj(temp2);
-    let temp = items.filter((x) => {
-      console.log(e.target.innerHTML);
-      if (x.industrie && x.category) {
-        if (
-          (x.industrie.includes(filterObj.industries) ||
-            filterObj.industries === "unset") &&
-          (x.category.includes(filterObj.category) ||
-            filterObj.category === "unset")
-        ) {
-          return true;
-        }
-      }
-    });
-    setItemArr(temp);
-  }
-
   function closeOverlay() {
     document.getElementById("overlay").style.height = "0px";
     let l = window.scrollY;
     let k =
       document.getElementById("anc").getBoundingClientRect().top +
       window.scrollY;
-    console.log(k);
+    // console.log(k);
 
     window.scrollTo({
       top: k - 100,
@@ -67,9 +48,9 @@ function Studie({ items }) {
         arr.forEach((x) => {
           if (divTop - x.placement > -50 && divTop - x.placement < 10) {
             if (x.item && c) {
-              console.log(
-                document.getElementById(x.item.replace("doc", "preview"))
-              );
+              // console.log(
+              //   document.getElementById(x.item.replace("doc", "preview"))
+              // );
               let elementTop2 = document.getElementById(
                 x.item.replace("doc", "preview")
               ).offsetTop;
@@ -133,11 +114,38 @@ function Studie({ items }) {
       });
     }
   }, []);
+  const [industries, setIndustries] = useState("unset");
+  const [category, setCategory] = useState("unset");
+
+  const handleChange1 = (event) => {
+    setIndustries(event.target.value);
+  };
+  const handleChange2 = (event) => {
+    setCategory(event.target.value);
+  };
+
+  useEffect(() => {
+    let temp = items.filter((x) => {
+      // console.log(e.target.innerHTML);
+      if (x.industrie && x.category) {
+        if (
+          (x.industrie.includes(industries) ||
+          industries === "unset") &&
+          (x.category.includes(category) ||
+            category === "unset")
+        ) {
+          return true;
+        }
+      }
+    });
+
+    setItemArr(temp);
+  }, [industries, category]);
 
   return (
     <div className={"relative mt-10 min-h-[100vh]"}>
       {/*<div className={'mt'}></div>*/}
-      <div
+      {/* <div
         id="overlay"
         onClick={closeOverlay}
         className={" x absolute overlay flex justify-center items-center"}
@@ -148,171 +156,60 @@ function Studie({ items }) {
           src="assets/eye.png"
           alt=""
         />
-      </div>
+      </div> */}
       <div id="anc" className={" max-w-[100vw] absolute"}>
         <div
           className={
-            "min-h-[50px] max-h-[50px]  w-full bg-green-100  changing_back3  flex items-center p-5 m-auto "
+            "min-h-[50px] max-h-[50px]  w-full bg-white dark:bg-[#0F172A]  flex justify-center items-center p-5 m-auto "
           }
         >
           <div
             className={
-              "min-h-[50px] max-h-[50px] flex  lg:min-w-[25vw]   xl:min-w-[20vw]  2xl:min-w-[15vw] max-w-[100vw] items-center "
+              "min-h-[50px] max-h-[50px] flex  justify-center lg:min-w-[25vw]   xl:min-w-[20vw]  2xl:min-w-[15vw] max-w-[100vw] items-center "
             }
           >
-            <div className="flex justify-center mr-5">
-              <div>
-                <div className="dropdown relative">
-                  <button
-                    className="
-                               dropdown-toggle
-                               px-6
-                               py-2.5
-                               bg-blue-600
-                               text-white
-                               font-medium
-                               text-xs
-                               leading-tight
-                               uppercase
-                               rounded
-                               shadow-md
-                               hover:bg-blue-700 hover:shadow-lg
-                               focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-                               active:bg-blue-800 active:shadow-lg active:text-white
-                               transition
-                               duration-150
-                               ease-in-out
-                               flex
-                               items-center
-                               whitespace-nowrap
-                               bg-gradient-to-r from-cyan-500 to-blue-500
-                               "
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    {filterObj.industries === "unset"
-                      ? "industries"
-                      : filterObj.industries}
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="caret-down"
-                      className="w-2 ml-2"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 320 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                      ></path>
-                    </svg>
-                  </button>
-                  <ul
-                    className=" dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
-                    aria-labelledby="dropdownMenuButton1"
-                  >
-                    <li>
-                      <div
-                        id="industries"
-                        onClick={filterNow}
-                        className=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 "
-                      >
-                        unset
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        id="industries"
-                        onClick={filterNow}
-                        className=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 "
-                      >
-                        Marketing
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div>
-                <div className="dropdown relative">
-                  <button
-                    className="
-                               dropdown-toggle
-                               px-6
-                               py-2.5
-                               bg-blue-600
-                               text-white
-                               font-medium
-                               text-xs
-                               leading-tight
-                               uppercase
-                               rounded
-                               shadow-md
-                               hover:bg-blue-700 hover:shadow-lg
-                               focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-                               active:bg-blue-800 active:shadow-lg active:text-white
-                               transition
-                               duration-150
-                               ease-in-out
-                               flex
-                               items-center
-                               whitespace-nowrap
-                               bg-gradient-to-r from-cyan-500 to-blue-500"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    {filterObj.category === "unset"
-                      ? "category"
-                      : filterObj.category}
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="caret-down"
-                      className="w-2 ml-2"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 320 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                      ></path>
-                    </svg>
-                  </button>
-                  <ul
-                    className=" dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
-                    aria-labelledby="dropdownMenuButton1"
-                  >
-                    <li>
-                      <div
-                        id="category"
-                        onClick={filterNow}
-                        className=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 "
-                      >
-                        unset
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        id="category"
-                        onClick={filterNow}
-                        className=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 "
-                      >
-                        Fullstack
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+              <InputLabel
+                id="demo-simple-select-standard-label"
+                className="text-black dark:text-white"
+              >
+                {filterObj.industries === "unset"
+                  ? "industries"
+                  : filterObj.industries}
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-standard-label"
+                id="demo-simple-select-standard"
+                value={industries}
+                onChange={handleChange1}
+                label="Age"
+                className="text-black dark:text-white"
+              >
+                <MenuItem value={"unset"}>unset</MenuItem>
+                <MenuItem value={"Marketing"}>Marketing</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+              <InputLabel
+                id="demo-simple-select-standard-label"
+                className="text-black dark:text-white"
+              >
+                {filterObj.category === "unset"
+                  ? "category"
+                  : filterObj.category}
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-standard-label"
+                id="demo-simple-select-standard"
+                value={category}
+                onChange={handleChange2}
+                label="Age"
+                className="text-black dark:text-white"
+              >
+                <MenuItem value={"unset"}>unset</MenuItem>
+                <MenuItem value={"Fullstack"}>Fullstack</MenuItem>
+              </Select>
+            </FormControl>
           </div>
           {/*<span><img className={'relative max-h-[50px]  -align-right'} src="assets/eye.png" alt=""/></span>*/}
         </div>
@@ -324,7 +221,7 @@ function Studie({ items }) {
           <div
             id="previewer"
             className={
-              " hidden lg:block scrollbar overflow-y-auto  p-5 w-[30%] cursor-pointer bg-gray-100"
+              " hidden lg:block scrollbar overflow-y-auto  p-5 w-[30%] cursor-pointer bg-white dark:bg-[#0F172A]"
             }
           >
             <div className="force-overflow"></div>
@@ -343,11 +240,17 @@ function Studie({ items }) {
           </div>
           <div
             id="doc"
-            className={"overflow-y-auto p-5 w-[100%] lg:w-[70%] bg-gray-100"}
+            className={
+              "overflow-y-auto p-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
+            }
           >
             {itemArr.map((item) => {
               return (
-                <div className={"p-5 bg-white mt-6 shadow rounded"}>
+                <div
+                  className={
+                    "p-5 bg-white dark:bg-[#0F172A] mt-6 shadow rounded"
+                  }
+                >
                   <div
                     className={
                       "doc text-lg font-normal  my-8	tracking-wide text-gray-600"

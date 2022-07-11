@@ -7,7 +7,7 @@ export default function Title() {
     <div className="relative w-full bg-white dark:bg-[#0f172a] pt-12">
       {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
       <TriangleDivBottom
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 "
+            className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[50px] md:-top-24 lg:-top-36 xl:-top-48"
             direction="right"
             upDown={false}
           />
@@ -17,7 +17,7 @@ export default function Title() {
               <label className="text-black font-semibold text-2xl  md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200">
                 This is A Title
               </label>
-              <p className="text-sm md:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
+              <p className="text-sm xl:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
                 aggagaggagLorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Nunc viverra porta enim quis faucibus. Etiam nisl ante,
                 cursus et nisi sit amet, posuere iaculis lacus. Etiam odio nisi,
@@ -51,12 +51,12 @@ export default function Title() {
           </div>
         </div>
 
-        <div className="flex  justify-center flex-col pb-8">
+        <div className="flex  justify-center flex-col pt-10 pb-8">
           <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 pt-10">
             <label className="text-black w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 text-2xl md:text-3xl xl:text-5xl ">
               This is A Title
             </label>
-            <p className="w-full sm:w-3/4 text-sm md:text-lg font-normal  my-2	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 px-4 sm:px-8">
+            <p className="w-full sm:w-3/4 text-sm xl:text-lg font-normal  my-2	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 px-4 sm:px-8">
               aggagaggagLorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nunc viverra porta enim quis faucibus. Etiam nisl ante, cursus et
               nisi sit amet, posuere iaculis lacus. Etiam odio nisi, laoreet

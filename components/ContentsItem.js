@@ -63,7 +63,7 @@ function ContentsItem({ item, index, noColor }) {
             }
           >
             <TriangleDiv
-              className="w-full h-[50px] sm:h-48 absolute  bottom-0 translate-y-0.5"
+              className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  bottom-0 translate-y-0.5"
               color="#151d33"
               direction="left"
               upDown={false}
@@ -100,7 +100,7 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
+                      ? "w-full sm:w-2/3 text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
                       : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
@@ -214,14 +214,14 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] pt-10 sm:pt-24 xl:pb-44 lg:pb-32 md:pb-24 pb-16 md:min-w-full " +
+            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] py-10 sm:py-24 xl:pb-44 lg:pb-32 md:pb-24 pb-16 md:min-w-full " +
             (index % 2 === 0 || noColor ? "" : "bg-cover changing_back")
           }
         >
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div> */}
           <TriangleDivTop
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            className="w-full h-[60px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[60px] md:-top-24 lg:-top-36 xl:-top-48 translate-y-0.5"
             direction="left"
             upDown={false}
           />
@@ -249,7 +249,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -358,7 +358,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-white dark:bg-[#0f172a] pb-4 pt-10 sm:pt-24  md:min-w-full" +
+            " cannavigate relative bg-white dark:bg-[#0f172a]  py-10 sm:py-24  md:min-w-full" +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -367,7 +367,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 "
+            className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[50px] md:-top-24 lg:-top-36 xl:-top-48 "
             direction="right"
             upDown={false}
           />
@@ -395,7 +395,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -504,14 +504,14 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] pt-10 sm:pt-24  md:min-w-full " +
+            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] py-10 sm:py-24  md:min-w-full " +
             (index % 2 === 0 || noColor ? "" : "bg-cover changing_back")
           }
         >
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div> */}
           <TriangleDivTop
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 translate-y-0.5"
+            className="w-full h-[60px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[60px] md:-top-24 lg:-top-36 xl:-top-48 translate-y-0.5"
             direction="left"
             upDown={false}
           />
@@ -526,7 +526,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 md:pl-12 xl:pl-24w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pl-12 xl:pl-24 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -539,7 +539,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >
@@ -648,7 +648,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-white dark:bg-[#0f172a] pt-10 sm:pt-24  md:min-w-full" +
+            " cannavigate relative bg-white dark:bg-[#0f172a] py-10 sm:py-24  md:min-w-full " +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -657,7 +657,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
-            className="w-full h-[60px] sm:h-48 absolute  -top-[60px] sm:-top-48 "
+            className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[50px] md:-top-24 lg:-top-36 xl:-top-48 translate-y-0.5"
             direction="right"
             upDown={false}
           />
@@ -685,7 +685,7 @@ function ContentsItem({ item, index, noColor }) {
               <p
                 className={
                   index % 2 === 0 || noColor
-                    ? "text-sm md:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
+                    ? "text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300"
                     : "text-lg font-normal  my-4	tracking-wide text-white dark:text-gray-300"
                 }
               >

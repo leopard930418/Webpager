@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 function Footer() {
   return (
     <>
-      <div className="flex-col sm:flex-row bg-gradient-to-r from-[#1ee9a2] to-[#75aefc] dark:bg-[#151d33] dark:bg-none lg:min-h-[350px]  w-full flex justify-around items-center lg:px-12 pb-56 text-lg font-normal tracking-wide text-white dark:text-gray-300 ">
+      <div className="flex-col sm:flex-row bg-gradient-to-r from-[#1ee9a2] to-[#75aefc] dark:bg-[#151d33] dark:bg-none lg:min-h-[350px]  w-full flex justify-around items-center lg:px-12 pb-12 md:pb-36 lg:pb-56 text-lg font-normal tracking-wide text-white dark:text-gray-300 ">
       {/* <div className="flex-col sm:flex-row bg-intro_background dark:bg-[#151d33] dark:bg-none lg:min-h-[350px]  w-full flex justify-around items-center lg:px-12 pb-56 text-lg font-normal tracking-wide text-white dark:text-gray-300 "> */}
         <div className={"w-full sm:w-1/3 p-10 rounded "}>
           <img

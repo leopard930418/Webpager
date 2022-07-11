@@ -1,20 +1,22 @@
-import { Fragment, useEffect, useState } from "react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import en from "../../locales/en";
 import fr from "../../locales/fr";
-import Link from "next/link";
-import LanguageSelector from "./LanguageSelector";
 import nl from "../../locales/nl";
 import DarkThemeSwitch from "./DarkThemeSwitch";
+import LanguageSelector from "./LanguageSelector";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 function Navbar() {
   const router = useRouter();
+
   const [selectedRoute, setselectedRoute] = useState("");
+
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
 
   function goToLink(e) {
@@ -26,13 +28,30 @@ function Navbar() {
     });
   }
 
+  const handleNavigation = (value, valueindex) => {
+    console.log(window.isManualHash);
+    window.isManualHash = true;
+    setTimeout(() => {
+      window.isManualHash = false;
+    }, 3000);
+  };
+
+  useEffect(() => {
+    router.push(router.asPath);
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       // simple function to use for callback in the intersection observer
       const changeNav = (entries, observer) => {
         entries.forEach((entry) => {
           // verify the element is intersecting
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+          if (
+            entry.isIntersecting &&
+            entry.intersectionRatio >= 0.55 &&
+            !window.isManualHash
+          ) {
+            console.log(window.isManualHash);
             setselectedRoute(`#${entry.target.id}`);
           }
         });
@@ -53,6 +72,18 @@ function Navbar() {
     }, 500);
   }, []);
 
+  useEffect(() => {
+    const onHashChangeStart = (url) => {
+      setselectedRoute(url);
+    };
+
+    router.events.on("hashChangeStart", onHashChangeStart);
+
+    return () => {
+      router.events.off("hashChangeStart", onHashChangeStart);
+    };
+  }, [router.events]);
+
   const navigation = [
     {
       name: t.problems,
@@ -70,7 +101,6 @@ function Navbar() {
       current: selectedRoute.endsWith("#section-why_us"),
     },
 
-    
     {
       name: t.mindset,
       href: "#section-mindset",
@@ -92,17 +122,6 @@ function Navbar() {
     //   current: selectedRoute.endsWith("#section-contact"),
     // },
   ];
-  useEffect(() => {
-    const onHashChangeStart = (url) => {
-      setselectedRoute(url);
-    };
-
-    router.events.on("hashChangeStart", onHashChangeStart);
-
-    return () => {
-      router.events.off("hashChangeStart", onHashChangeStart);
-    };
-  }, [router.events]);
   return (
     <Disclosure
       as="nav"
@@ -138,21 +157,18 @@ function Navbar() {
                   <div className="flex items-center space-x-4 h-full">
                     {navigation.map((item, index) => (
                       <div
+                        key={item.name}
+                        onClick={() => handleNavigation(item, index)}
                         className={classNames(
-                          item.current && index !== 6
-                            ? "border-b-4 border-sky-500 text-sky-500   hover:text-gray-700"
-                            : "",
-                          "h-full flex  text-md font-medium uppercase items-center text-gray-500 dark:text-gray-200 dark:hover:text-gray-100"
+                          item.current
+                            ? "text-sky-500 dark:text-sky-500 font-bold"
+                            : "text-gray-500 dark:text-gray-200",
+                          "h-full flex  font-medium uppercase items-center"
                         )}
                       >
-                        <Link key={item.name} href={item.href}>
+                        <Link href={item.href}>
                           <a
-                            className={classNames(
-                              index === 6
-                                ? "bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl rounded-br-none text-white"
-                                : "",
-                              "px-3 py-2"
-                            )}
+                            className={classNames("px-3 py-2")}
                             aria-current={item.current ? "page" : undefined}
                           >
                             {item.name}
@@ -190,8 +206,8 @@ function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <div className="py-2 px-3">
-                <p className="mr-8 text-gray-500  dark:text-gray-200">
+              <div className="flex flex-row items-center py-2 px-3">
+                <p className="mr-8 text-gray-500 dark:text-gray-400">
                   {" "}
                   Language :
                 </p>
@@ -199,15 +215,15 @@ function Navbar() {
                   additional_classes={"w-48  inline-block mr-0 "}
                 ></LanguageSelector>
               </div>
-              {/*<div className="py-2 px-3">*/}
-              {/*  <span className="mr-8 text-gray-500  dark:text-gray-200">*/}
-              {/*    {" "}*/}
-              {/*    Theme :*/}
-              {/*  </span>*/}
-              {/*  <DarkThemeSwitch*/}
-              {/*    additional_classes={" inline-block mr-0 "}*/}
-              {/*  ></DarkThemeSwitch>*/}
-              {/*</div>*/}
+              <div className="flex flex-row py-2 px-3">
+                <span className="mr-8 text-gray-500 dark:text-gray-400">
+                  {" "}
+                  Theme :
+                </span>
+                <DarkThemeSwitch
+                  additional_classes={" inline-block mr-0 "}
+                ></DarkThemeSwitch>
+              </div>
             </div>
           </Disclosure.Panel>
         </>

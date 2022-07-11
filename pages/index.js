@@ -56,7 +56,7 @@ function Home() {
       <Content noColor={true} items={t.items2}></Content>
       <Content noColor={true} items={t.items6}></Content>
       <Title></Title>
-      {/* <Studie items={t.items4}></Studie> */}
+      <Studie items={t.items4}></Studie>
 
       <FaqSection></FaqSection>
       <ContactInfo></ContactInfo>
