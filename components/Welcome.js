@@ -15,7 +15,7 @@ export default function Welcome() {
     //     </div>
     //   </div>
     // </div>
-    <div className="pt-10">
+    <div className="pt-10 h-screen">
       <div className="font-bold text-center dark:text-gray-200 sm:text-7xl text-3xl">
         <label>
           Welcome to <br /> dcd development
