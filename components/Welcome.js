@@ -21,7 +21,7 @@ export default function Welcome() {
           Welcome to <br /> dcd development
         </label>
       </div>
-      <div className="relative w-full h-full flex justify-center items-center">
+      <div className="relative w-full flex justify-center items-center">
         <img
           src="assets/logo.svg"
           className="absolute w-2/3 sm:w-1/2 right-0 sm:right-12 top-3 sm:-top-5 object-contain opacity-70 scale-90"
