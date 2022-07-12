@@ -142,73 +142,67 @@ function Studie({ items }) {
     <div className={"relative mt-10 min-h-[100vh]"}>
       {/*<div className={'mt'}></div>*/}
       <div
+        className={
+          " w-full bg-white dark:bg-[#0F172A]  flex justify-center items-center p-5 m-auto "
+        }
+      >
+        <div className={" flex  justify-center  items-center py-4 space-x-8"}>
+          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel
+              id="demo-simple-select-standard-label"
+              className="text-black dark:text-white"
+            >
+              {filterObj.industries === "unset"
+                ? "industries"
+                : filterObj.industries}
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={industries}
+              onChange={handleChange1}
+              label="Age"
+              className="text-black dark:text-white"
+            >
+              <MenuItem value={"unset"}>unset</MenuItem>
+              <MenuItem value={"Marketing"}>Marketing</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel
+              id="demo-simple-select-standard-label"
+              className="text-black dark:text-white"
+            >
+              {filterObj.category === "unset" ? "category" : filterObj.category}
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={category}
+              onChange={handleChange2}
+              label="Age"
+              className="text-black dark:text-white"
+            >
+              <MenuItem value={"unset"}>unset</MenuItem>
+              <MenuItem value={"Fullstack"}>Fullstack</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+        {/*<span><img className={'relative max-h-[50px]  -align-right'} src="assets/eye.png" alt=""/></span>*/}
+      </div>
+      <div
         id="overlay"
         onClick={closeOverlay}
-        className={" x absolute overlay flex justify-center items-center"}
+        className={" x absolute overlay flex justify-center items-center bg-white dark:bg-[#0F172A]"}
       >
         <img
           id="icon"
-          className={"z-50 overlay opacity-100 max-h-[20%] "}
+          className={"z-50 brightness-100 dark:brightness-[700] max-h-[20%] "}
           src="assets/eye.png"
           alt=""
         />
       </div>
       <div id="anc" className={" max-w-[100vw] absolute"}>
-        <div
-          className={
-            " w-full bg-white dark:bg-[#0F172A]  flex justify-center items-center p-5 m-auto "
-          }
-        >
-          <div
-            className={
-              " flex  justify-center  items-center py-4 space-x-8"
-            }
-          >
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-              <InputLabel
-                id="demo-simple-select-standard-label"
-                className="text-black dark:text-white"
-              >
-                {filterObj.industries === "unset"
-                  ? "industries"
-                  : filterObj.industries}
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-standard-label"
-                id="demo-simple-select-standard"
-                value={industries}
-                onChange={handleChange1}
-                label="Age"
-                className="text-black dark:text-white"
-              >
-                <MenuItem value={"unset"}>unset</MenuItem>
-                <MenuItem value={"Marketing"}>Marketing</MenuItem>
-              </Select>
-            </FormControl>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-              <InputLabel
-                id="demo-simple-select-standard-label"
-                className="text-black dark:text-white"
-              >
-                {filterObj.category === "unset"
-                  ? "category"
-                  : filterObj.category}
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-standard-label"
-                id="demo-simple-select-standard"
-                value={category}
-                onChange={handleChange2}
-                label="Age"
-                className="text-black dark:text-white"
-              >
-                <MenuItem value={"unset"}>unset</MenuItem>
-                <MenuItem value={"Fullstack"}>Fullstack</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          {/*<span><img className={'relative max-h-[50px]  -align-right'} src="assets/eye.png" alt=""/></span>*/}
-        </div>
         <div
           className={
             "rounded  mb-20 flex justify-center w-[100%]  min-h-[70vh] max-h-[70vh]  m-auto"
