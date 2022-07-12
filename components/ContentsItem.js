@@ -107,7 +107,7 @@ function ContentsItem({ item, index, noColor }) {
                   {item.description}
                 </p>
                 {item.long_description && (
-                  <div className="w-full ">
+                  <div className="w-full mb-5 sm:mb-0 ">
                     <Button
                       // onClick={() => handleToggle(item)}
                       onClick={handleOpenModalpro}
@@ -302,7 +302,7 @@ function ContentsItem({ item, index, noColor }) {
                 </Box>
               </Modal>
               {item.long_description && (
-                <div className="w-full ">
+                <div className="w-full mb-5 sm:mb-0 ">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -402,7 +402,7 @@ function ContentsItem({ item, index, noColor }) {
                 {item.description}
               </p>
               {item.long_description && (
-                <div className=" w-full ">
+                <div className=" w-full mb-5 sm:mb-0">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -546,7 +546,7 @@ function ContentsItem({ item, index, noColor }) {
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="w-full ">
+                <div className="w-full mb-5 sm:mb-0">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
@@ -692,7 +692,7 @@ function ContentsItem({ item, index, noColor }) {
                 {item.description}
               </p>
               {item.long_description && (
-                <div className=" w-full ">
+                <div className=" w-full mb-5 sm:mb-0">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={handleOpenModalpro}
