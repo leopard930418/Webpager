@@ -307,7 +307,7 @@ function ContentsItem({ item, index, noColor }) {
                   {item.long_description && (
                     <div
                       id={`longdescription-${item.name}`}
-                      className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
+                      className={`w-[90%] md:max-w-[70%] 	 px-6	py-12   ${
                         isOpen ? "" : "hidden"
                       }`}
                     >
