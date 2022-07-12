@@ -141,7 +141,7 @@ function Studie({ items }) {
   return (
     <div className={"relative mt-10 min-h-[100vh]"}>
       {/*<div className={'mt'}></div>*/}
-      {/* <div
+      <div
         id="overlay"
         onClick={closeOverlay}
         className={" x absolute overlay flex justify-center items-center"}
@@ -152,7 +152,7 @@ function Studie({ items }) {
           src="assets/eye.png"
           alt=""
         />
-      </div> */}
+      </div>
       <div id="anc" className={" max-w-[100vw] absolute"}>
         <div
           className={
