@@ -133,7 +133,7 @@ function Navbar() {
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 right-0 flex items-center xl:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md  dark:text-gray-200   text-gray-600 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md  dark:text-gray-200   text-gray-600 hover:text-white hover:bg-gray-800 ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -188,7 +188,7 @@ function Navbar() {
             </div>
           </div>
           {/* mobile responsive design */}
-          <Disclosure.Panel className="xl:hidden focus-visible">
+          <Disclosure.Panel className="xl:hidden">
             <div className="px-2 pt-2 pb-3  space-y-1">
               {navigation.map((item) => (
                 <Disclosure.Button

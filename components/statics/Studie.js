@@ -127,15 +127,11 @@ function Studie({ items }) {
   useEffect(() => {
     let temp = items.filter((x) => {
       // console.log(e.target.innerHTML);
-      if (x.industrie && x.category) {
-        if (
-          (x.industrie.includes(industries) ||
-          industries === "unset") &&
-          (x.category.includes(category) ||
-            category === "unset")
-        ) {
-          return true;
-        }
+      if (
+        (x?.industrie?.includes(industries) || industries === "unset") &&
+        (x?.category?.includes(category) || category === "unset")
+      ) {
+        return true;
       }
     });
 
@@ -160,12 +156,12 @@ function Studie({ items }) {
       <div id="anc" className={" max-w-[100vw] absolute"}>
         <div
           className={
-            "min-h-[50px] max-h-[50px]  w-full bg-white dark:bg-[#0F172A]  flex justify-center items-center p-5 m-auto "
+            " w-full bg-white dark:bg-[#0F172A]  flex justify-center items-center p-5 m-auto "
           }
         >
           <div
             className={
-              "min-h-[50px] max-h-[50px] flex  justify-center lg:min-w-[25vw]   xl:min-w-[20vw]  2xl:min-w-[15vw] max-w-[100vw] items-center "
+              " flex  justify-center  items-center py-4 space-x-8"
             }
           >
             <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
@@ -229,7 +225,7 @@ function Studie({ items }) {
               return (
                 <div
                   className={
-                    "text-lg font-medium  my-8 tracking-wide text-gray-600 docOverview"
+                    " text-lg font-medium  my-8 tracking-wide text-gray-600 dark:text-gray-300 docOverview"
                   }
                   dangerouslySetInnerHTML={{
                     __html: item.long_description.content,
@@ -241,7 +237,7 @@ function Studie({ items }) {
           <div
             id="doc"
             className={
-              "overflow-y-auto p-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
+              " overflow-y-auto scrollbar p-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
             }
           >
             {itemArr.map((item) => {
@@ -253,7 +249,7 @@ function Studie({ items }) {
                 >
                   <div
                     className={
-                      "doc text-lg font-normal  my-8	tracking-wide text-gray-600"
+                      "doc text-lg font-normal  my-8	tracking-wide text-gray-600 dark:text-gray-300"
                     }
                     dangerouslySetInnerHTML={{
                       __html: item.long_description.content,
