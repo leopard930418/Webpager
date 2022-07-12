@@ -54,7 +54,14 @@
 /*
  *  STYLE 3
  */
-
+//responsive button issue
+ input,
+ textarea,
+ button,
+ select,
+ a {
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
 
 .test{
 

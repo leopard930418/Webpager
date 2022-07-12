@@ -119,7 +119,7 @@ function ContentsItem({ item, index, noColor }) {
                       className={
                         index % 2 === 0 || noColor
                           ? index === 0
-                            ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl "
+                            ? "btnShadow z-10 font-bold dark:text-gray-200 text-1xl bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl focus:outline-none"
                             : "z-10 border-2 border-[#1CA0E2] rounded-2xl rounded-br-none text-[#1CA0E2] hover:animate-bounce "
                           : "z-10 border-2 rounded-2xl rounded-br-none hover:animate-bounce "
                       }
