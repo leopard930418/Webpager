@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="dark">
         <Head>
             <script
                 src="https://code.jquery.com/jquery-3.6.0.min.js"

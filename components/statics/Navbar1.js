@@ -188,7 +188,7 @@ function Navbar() {
             </div>
           </div>
           {/* mobile responsive design */}
-          <Disclosure.Panel className="xl:hidden">
+          <Disclosure.Panel className="xl:hidden focus-visible">
             <div className="px-2 pt-2 pb-3  space-y-1">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -197,7 +197,7 @@ function Navbar() {
                   id={item.href.replace("#", "") + "temp"}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white dark:text-gray-200 dark:bg-gray-500"
+                      ? " text-white dark:text-gray-200"
                       : "text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-300  ",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
