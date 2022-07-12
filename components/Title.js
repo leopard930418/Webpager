@@ -11,8 +11,8 @@ export default function Title() {
             direction="right"
             upDown={false}
           />
-        <div className="flex flex-col sm:flex-row justify-center items-start w-full ">
-          <div className={"flex flex-col w-full sm:w-5/12"}>
+        <div className="flex flex-col lg:flex-row justify-center items-start w-full ">
+          <div className={"flex flex-col w-full lg:w-5/12"}>
             <div className=" z-10 px-4 md:pl-12 xl:pl-24 ">
               <label className="text-black font-semibold text-2xl  md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200">
                 This is A Title
@@ -33,7 +33,7 @@ export default function Title() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center w-full sm:w-7/12 space-y-8 sm:space-y-0 space-x-0 sm:space-x-8 px-4 md:pr-12 xl:pr-24">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full lg:w-7/12 space-y-8 sm:space-y-0 space-x-0 sm:space-x-8 px-4 md:pr-12 xl:pr-24">
             <div className="flex flex-col rounded-2xl  justify-center items-center bg-white dark:bg-[#151d33] w-full sm:w-1/2 px-8 py-20 shadow-xl dark:shadow-none">
               <img className="w-1/3" src="assets/footer1.png" alt="" />
               <p className="text-lg text-center font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">

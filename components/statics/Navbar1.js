@@ -23,7 +23,7 @@ function Navbar() {
     let a = document.getElementById(e.target.id.replace("temp", "")).offsetTop;
 
     window.scrollTo({
-      top: a - 400,
+      top: a - 450,
       behavior: "smooth",
     });
   }
