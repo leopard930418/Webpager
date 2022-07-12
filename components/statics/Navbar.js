@@ -143,7 +143,7 @@ function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className=" logo block   h-8 w-auto"
-                    src="/assets/logo.png"
+                    src="/assets/logo.webp"
                     alt="Workflow"
                   />
                   <span className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">

@@ -74,7 +74,7 @@ function ContentsItem({ item, index, noColor }) {
               <div className="wave"></div>
             </div>
             <div className="absolute top-10 left-0 -z-10">
-              <img src="assets/bubble.png"></img>
+              <img src="assets/bubble.webp"></img>
             </div>
             {/* <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 "> */}
             {/* <div className="absolute top-[45rem] sm:top-[40rem] right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
@@ -133,11 +133,11 @@ function ContentsItem({ item, index, noColor }) {
             <div className=" relative  w-full h-full flex justify-center items-center">
               <img
                 className="absolute top-20 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
-                src="assets/dotedEffect.png"
+                src="assets/dotedEffect.webp"
               ></img>
               <img
                 className="relative -z-20 px-8 sm:px-0 h-full w-full sm:w-7/12 object-contain"
-                src="assets/problems.png"
+                src="assets/problems.webp"
               />
             </div>
             {isPhoneMode ? (
@@ -210,7 +210,7 @@ function ContentsItem({ item, index, noColor }) {
                             <img
                               className="h-full w-full sm:w-7/12 object-contain"
                               // src={item.img_url}
-                              src="assets/problems.png"
+                              src="assets/problems.webp"
                             />
                           </div>
                         </div>
@@ -299,7 +299,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={""}
                 // src={item.img_url}
-                src="assets/whyus.png"
+                src="assets/whyus.webp"
               />
             </div>
             {isPhoneMode ? (
@@ -369,7 +369,7 @@ function ContentsItem({ item, index, noColor }) {
                             <img
                               className="h-full w-full sm:w-7/12 object-contain"
                               // src={item.img_url}
-                              src="assets/whyus.png"
+                              src="assets/whyus.webp"
                             />
                           </div>
                         </div>
@@ -457,7 +457,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
-                src="assets/mindset.png"
+                src="assets/mindset.webp"
               />
             </div>
           </div>
@@ -529,7 +529,7 @@ function ContentsItem({ item, index, noColor }) {
                         <img
                           className="h-full w-full sm:w-7/12 object-contain"
                           // src={item.img_url}
-                          src="assets/mindset.png"
+                          src="assets/mindset.webp"
                         />
                       </div>
                     </div>
@@ -614,7 +614,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
                 // src={item.img_url}
-                src="assets/work.png"
+                src="assets/work.webp"
               />
             </div>
           </div>
@@ -686,7 +686,7 @@ function ContentsItem({ item, index, noColor }) {
                         <img
                           className="h-full w-full sm:w-7/12 object-contain"
                           // src={item.img_url}
-                          src="assets/work.png"
+                          src="assets/work.webp"
                         />
                       </div>
                     </div>
@@ -773,7 +773,7 @@ function ContentsItem({ item, index, noColor }) {
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
                 // src={item.img_url}
-                src="assets/solutions.png"
+                src="assets/solutions.webp"
               />
             </div>
           </div>
@@ -844,7 +844,7 @@ function ContentsItem({ item, index, noColor }) {
                         <img
                           className="h-full w-full sm:w-7/12 object-contain"
                           // src={item.img_url}
-                          src="assets/solutions.png"
+                          src="assets/solutions.webp"
                         />
                       </div>
                     </div>

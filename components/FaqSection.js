@@ -20,7 +20,7 @@ export default function FaqSection() {
       </div>
       <Faq items={[{ img_url: "" }]} accordion_items={t.accordion_items}></Faq>
       <div className="absolute bottom-0 right-0 h-1/2 -z-10">
-            <img src="assets/bubble2.png"></img>
+            <img src="assets/bubble2.webp"></img>
           </div>
     </div>
   );

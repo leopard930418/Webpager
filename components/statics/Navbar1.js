@@ -198,7 +198,7 @@ function Navbar() {
                   className={classNames(
                     item.current
                       ? " text-white dark:text-gray-200"
-                      : "text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-300  ",
+                      : "text-gray-500 dark:text-gray-400  ",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

@@ -73,7 +73,7 @@ function Contact() {
                 <div className="flex lg:px-6 pt-10 changing_back11">
                     <div className=" ml-5 lg:ml-[20%] mr-[8%]">
                         <div className={' w-[250px] xl:w-[300px]'}>
-                        <img  src="assets/back3.png" alt=""/>
+                        <img  src="assets/back3.webp" alt=""/>
                         </div>
                     </div>
                     <div className="text-gray-700 mt-12  dark:text-gray-300">

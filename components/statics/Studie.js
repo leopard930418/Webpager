@@ -198,7 +198,7 @@ function Studie({ items }) {
         <img
           id="icon"
           className={"z-50 brightness-100 dark:brightness-[700] max-h-[20%] "}
-          src="assets/eye.png"
+          src="assets/eye.webp"
           alt=""
         />
       </div>
