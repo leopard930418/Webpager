@@ -139,7 +139,7 @@ function Studie({ items }) {
   }, [industries, category]);
 
   return (
-    <div className={"relative mt-10 min-h-[100vh]"}>
+    <div className={"relative mt-5 min-h-[100vh]"}>
       {/*<div className={'mt'}></div>*/}
       <div
         className={
@@ -205,13 +205,13 @@ function Studie({ items }) {
       <div id="anc" className={" max-w-[100vw] absolute"}>
         <div
           className={
-            "rounded  mb-20 flex justify-center w-[100%]  min-h-[70vh] max-h-[70vh]  m-auto"
+            "rounded  mb-10 flex justify-center w-[100%]  min-h-[70vh] max-h-[70vh]  m-auto"
           }
         >
           <div
             id="previewer"
             className={
-              " hidden lg:block scrollbar overflow-y-auto  p-5 w-[30%] cursor-pointer bg-white dark:bg-[#0F172A]"
+              " hidden lg:block scrollbar overflow-y-auto  px-5 w-[30%] cursor-pointer bg-white dark:bg-[#0F172A]"
             }
           >
             <div className="force-overflow"></div>
@@ -219,7 +219,7 @@ function Studie({ items }) {
               return (
                 <div
                   className={
-                    " text-lg font-medium  my-8 tracking-wide text-gray-600 dark:text-gray-300 docOverview"
+                    " text-lg font-medium tracking-wide text-gray-600 dark:text-gray-300 docOverview"
                   }
                   dangerouslySetInnerHTML={{
                     __html: item.long_description.content,
@@ -231,19 +231,19 @@ function Studie({ items }) {
           <div
             id="doc"
             className={
-              " overflow-y-auto scrollbar p-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
+              " overflow-y-auto scrollbar px-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
             }
           >
             {itemArr.map((item) => {
               return (
                 <div
                   className={
-                    "p-5 bg-white dark:bg-[#0F172A] mt-6 shadow rounded"
+                    "px-5 bg-white dark:bg-[#0F172A] shadow rounded"
                   }
                 >
                   <div
                     className={
-                      "doc text-lg font-normal  my-8	tracking-wide text-gray-600 dark:text-gray-300"
+                      "doc text-lg font-normal  	tracking-wide text-gray-600 dark:text-gray-300"
                     }
                     dangerouslySetInnerHTML={{
                       __html: item.long_description.content,
