@@ -149,7 +149,7 @@ function ContentsItem({ item, index, noColor }) {
                         isOpen ? "" : "hidden"
                       }`}
                     >
-                      <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
+                      <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
                         {item.long_description.title}
                       </div>
                       <div
@@ -158,8 +158,8 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className={
                           index % 2 === 0
-                            ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                            : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                            ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                            : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                         }
                       ></div>
                     </div>
@@ -311,7 +311,7 @@ function ContentsItem({ item, index, noColor }) {
                         isOpen ? "" : "hidden"
                       }`}
                     >
-                      <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
+                      <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
                         {item.long_description.title}
                       </div>
                       <div
@@ -320,8 +320,8 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className={
                           index % 2 === 0
-                            ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                            : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                            ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                            : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                         }
                       ></div>
                     </div>
@@ -471,7 +471,7 @@ function ContentsItem({ item, index, noColor }) {
                     isOpen ? "" : "hidden"
                   }`}
                 >
-                  <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
+                  <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
                     {item.long_description.title}
                   </div>
                   <div
@@ -480,8 +480,8 @@ function ContentsItem({ item, index, noColor }) {
                     }}
                     className={
                       index % 2 === 0
-                        ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                        : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                        ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                        : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                     }
                   ></div>
                 </div>
@@ -628,7 +628,7 @@ function ContentsItem({ item, index, noColor }) {
                     isOpen ? "" : "hidden"
                   }`}
                 >
-                  <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
+                  <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
                     {item.long_description.title}
                   </div>
                   <div
@@ -637,8 +637,8 @@ function ContentsItem({ item, index, noColor }) {
                     }}
                     className={
                       index % 2 === 0
-                        ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                        : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                        ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                        : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                     }
                   ></div>
                 </div>
@@ -786,7 +786,7 @@ function ContentsItem({ item, index, noColor }) {
                     isOpen ? "" : "hidden"
                   }`}
                 >
-                  <div className="  text-3xl my-6  text-left dark:text-gray-200	 ">
+                  <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
                     {item.long_description.title}
                   </div>
                   <div
@@ -795,8 +795,8 @@ function ContentsItem({ item, index, noColor }) {
                     }}
                     className={
                       index % 2 === 0
-                        ? " text-lg font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                        : " text-lg font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                        ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                        : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
                     }
                   ></div>
                 </div>
