@@ -13,6 +13,7 @@ export default function ContactInfo() {
           <img
             className="w-[40%] mb-10 brightness-[700] dark:brightness-100"
             src="assets/logo.svg"
+            loading="lazy"
           />
           <label className="font-bold dark:text-gray-200 text-5xl text-white text-center mb-2">
             Contact us!

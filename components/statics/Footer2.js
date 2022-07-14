@@ -18,6 +18,8 @@ function Footer2() {
               className="block  mx-auto   h-40 w-auto"
               src="/assets/logo.svg"
               alt="Workflow"
+              loading="lazy"
+
             />
             <span className="pl-2 font-normal  text-2xl text-transparent bg-clip-text bg-gray-700 dark:bg-white">
               DCD DEVELOPMENT

@@ -15,6 +15,8 @@ function Footer() {
             }
             src="assets/footer1.webp"
             alt=""
+            loading="lazy"
+
           />
           <p className={"m-auto text-white text-center text-opacity-70 dark:text-opacity-70 dark:text-gray-300"}>
             {" "}
