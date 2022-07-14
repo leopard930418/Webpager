@@ -13,9 +13,17 @@ const CrispWithNoSSR = dynamic(() => import("../components/crisp"), {
 });
 
 export default function MyApp({ Component, pageProps }) {
+
   useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
+    var hour = new Date().getHours();
+    if (hour > 5 && hour < 19) {
+      document.documentElement.classList.remove("dark");
+      console.log("wite");
+    } else {
+      console.log("aaaaaaaaaaaa")
+      document.documentElement.classList.add("dark");
+    }
+  },);
 
   return (
     <Layout>

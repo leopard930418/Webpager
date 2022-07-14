@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function DarkThemeSwitch({ additional_classes }) {
   const handleToggleTheme = () => {
@@ -17,6 +17,14 @@ function DarkThemeSwitch({ additional_classes }) {
     }
   }, []);
 
+  // var hour = new Date().getHours();
+  // const [isPm, setIsPm] = useState(false);
+  // console.log("Date", hour > 5 && hour < 19);
+  // if (hour > 5 && hour < 19) {
+  //   setIsPm(true)
+  // } else {
+  //   setIsPm(false)
+  // }
   return (
     <div
       className={`form-check form-switch flex items-center  ${additional_classes}`}

@@ -10,6 +10,7 @@ import { TriangleDiv } from "./statics/TriangleDiv";
 import { TriangleDivBottom } from "./statics/TriangleDivBottom";
 import { TriangleDivTop } from "./statics/TriangleDivTop";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { ContactlessOutlined } from "@mui/icons-material";
 
 function ContentsItem({ item, index, noColor }) {
   const router = useRouter();
@@ -128,7 +129,6 @@ function ContentsItem({ item, index, noColor }) {
                   </div>
                 )}
               </div>
-              
             </div>
             <div className=" relative  w-full h-full flex justify-center items-center">
               <img
@@ -141,84 +141,84 @@ function ContentsItem({ item, index, noColor }) {
               />
             </div>
             {isPhoneMode ? (
-                <>
-                  {item.long_description && (
+              <>
+                {item.long_description && (
+                  <div
+                    id={`longdescription-${item.name}`}
+                    className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
+                      isOpen ? "" : "hidden"
+                    }`}
+                  >
+                    <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
+                      {item.long_description.title}
+                    </div>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.long_description.content,
+                      }}
+                      className={
+                        index % 2 === 0
+                          ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                          : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                      }
+                    ></div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <Modal
+                open={openModalpro}
+                onClose={handleCloseModalpro}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box
+                  sx={style}
+                  className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
+                >
+                  <div className="relative">
+                    <div
+                      className="absolute top-0 right-0 scale-150"
+                      onClick={handleCloseModalpro}
+                    >
+                      <img src="assets/closeIcon.svg"></img>
+                    </div>
                     <div
                       id={`longdescription-${item.name}`}
-                      className={`w-[90%] md:max-w-[70%] 	 lg:px-6	py-12   ${
-                        isOpen ? "" : "hidden"
+                      className={`w-full lg:px-6	py-4   ${
+                        openModalpro ? "" : "hidden"
                       }`}
                     >
-                      <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
-                        {item.long_description.title}
+                      <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                        {item.name}
                       </div>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: item.long_description.content,
-                        }}
-                        className={
-                          index % 2 === 0
-                            ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                            : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
-                        }
-                      ></div>
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Modal
-                  open={openModalpro}
-                  onClose={handleCloseModalpro}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box
-                    sx={style}
-                    className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
-                  >
-                    <div className="relative">
-                      <div
-                        className="absolute top-0 right-0 scale-150"
-                        onClick={handleCloseModalpro}
-                      >
-                        <img src="assets/closeIcon.svg"></img>
-                      </div>
-                      <div
-                        id={`longdescription-${item.name}`}
-                        className={`w-full lg:px-6	py-4   ${
-                          openModalpro ? "" : "hidden"
-                        }`}
-                      >
-                        <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
-                          {item.name}
+                      <div className="h-[56vh] overflow-y-auto">
+                        <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                          {item.long_description.title}
                         </div>
-                        <div className="h-[56vh] overflow-y-auto">
-                          <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
-                            {item.long_description.title}
-                          </div>
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: item.long_description.content,
-                            }}
-                            className={
-                              index % 2 === 0
-                                ? " text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
-                                : " text-lg font-normal text-white  tracking-wide  dark:text-gray-300"
-                            }
-                          ></div>
-                          <div className="flex justify-center">
-                            <img
-                              className="h-full w-full sm:w-7/12 object-contain"
-                              // src={item.img_url}
-                              src="assets/problems.webp"
-                            />
-                          </div>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item.long_description.content,
+                          }}
+                          className={
+                            index % 2 === 0
+                              ? " text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
+                              : " text-lg font-normal text-white  tracking-wide  dark:text-gray-300"
+                          }
+                        ></div>
+                        <div className="flex justify-center">
+                          <img
+                            className="h-full w-full sm:w-7/12 object-contain"
+                            // src={item.img_url}
+                            src="assets/problems.webp"
+                          />
                         </div>
                       </div>
                     </div>
-                  </Box>
-                </Modal>
-              )}
+                  </div>
+                </Box>
+              </Modal>
+            )}
           </div>
           <Footer></Footer>
         </>
@@ -268,7 +268,6 @@ function ContentsItem({ item, index, noColor }) {
               >
                 {item.description}
               </p>
-              
 
               {item.long_description && (
                 <div className="w-full mb-5 sm:mb-0 ">
@@ -303,81 +302,81 @@ function ContentsItem({ item, index, noColor }) {
               />
             </div>
             {isPhoneMode ? (
-                <>
-                  {item.long_description && (
+              <>
+                {item.long_description && (
+                  <div
+                    id={`longdescription-${item.name}`}
+                    className={`w-[90%] md:max-w-[70%] 	 px-6	py-12   ${
+                      isOpen ? "" : "hidden"
+                    }`}
+                  >
+                    <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
+                      {item.long_description.title}
+                    </div>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.long_description.content,
+                      }}
+                      className={
+                        index % 2 === 0
+                          ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
+                          : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
+                      }
+                    ></div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <Modal
+                open={openModalpro}
+                onClose={handleCloseModalpro}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box
+                  sx={style}
+                  className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
+                >
+                  <div className="relative">
+                    <div
+                      className="absolute top-0 right-0 scale-150"
+                      onClick={handleCloseModalpro}
+                    >
+                      <img src="assets/closeIcon.svg"></img>
+                    </div>
                     <div
                       id={`longdescription-${item.name}`}
-                      className={`w-[90%] md:max-w-[70%] 	 px-6	py-12   ${
-                        isOpen ? "" : "hidden"
+                      className={`w-full lg:px-6	py-4   ${
+                        openModalpro ? "" : "hidden"
                       }`}
                     >
-                      <div className="  text-2xl my-6  text-left dark:text-gray-200	 ">
-                        {item.long_description.title}
+                      <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
+                        {item.name}
                       </div>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: item.long_description.content,
-                        }}
-                        className={
-                          index % 2 === 0
-                            ? " text-sm font-normal lg:px-6   tracking-wide text-gray-600 dark:text-gray-300 "
-                            : " text-sm font-normal lg:px-6 text-white  tracking-wide  dark:text-gray-300"
-                        }
-                      ></div>
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Modal
-                  open={openModalpro}
-                  onClose={handleCloseModalpro}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box
-                    sx={style}
-                    className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
-                  >
-                    <div className="relative">
-                      <div
-                        className="absolute top-0 right-0 scale-150"
-                        onClick={handleCloseModalpro}
-                      >
-                        <img src="assets/closeIcon.svg"></img>
-                      </div>
-                      <div
-                        id={`longdescription-${item.name}`}
-                        className={`w-full lg:px-6	py-4   ${
-                          openModalpro ? "" : "hidden"
-                        }`}
-                      >
-                        <div className="  text-3xl sm:text-5xl text-left  pb-4 pl-4 dark:text-gray-200	 ">
-                          {item.name}
-                        </div>
 
-                        <div className="h-[56vh] overflow-y-auto">
-                          <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
-                            {item.long_description.title}
-                          </div>
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: item.long_description.content,
-                            }}
-                            className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
-                          ></div>{" "}
-                          <div className="flex justify-center">
-                            <img
-                              className="h-full w-full sm:w-7/12 object-contain"
-                              // src={item.img_url}
-                              src="assets/whyus.webp"
-                            />
-                          </div>
+                      <div className="h-[56vh] overflow-y-auto">
+                        <div className="  text-2xl sm:text-3xl text-left dark:text-gray-200	 ">
+                          {item.long_description.title}
+                        </div>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item.long_description.content,
+                          }}
+                          className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
+                        ></div>{" "}
+                        <div className="flex justify-center">
+                          <img
+                            className="h-full w-full sm:w-7/12 object-contain"
+                            // src={item.img_url}
+                            src="assets/whyus.webp"
+                          />
                         </div>
                       </div>
                     </div>
-                  </Box>
-                </Modal>
-              )}
+                  </div>
+                </Box>
+              </Modal>
+            )}
           </div>
         </div>
       ) : item.name == "mindset" ? (
