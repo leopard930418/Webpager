@@ -13,17 +13,20 @@ const CrispWithNoSSR = dynamic(() => import("../components/crisp"), {
 });
 
 export default function MyApp({ Component, pageProps }) {
-
   useEffect(() => {
-    var hour = new Date().getHours();
-    if (hour > 5 && hour < 19) {
-      document.documentElement.classList.remove("dark");
-      console.log("wite");
-    } else {
-      console.log("aaaaaaaaaaaa")
-      document.documentElement.classList.add("dark");
+    if (!window.isSetted) {
+      var hour = new Date().getHours();
+      if (hour > 5 && hour < 19) {
+        document.documentElement.classList.remove("dark");
+        localStorage.removeItem("theme");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
+
+      window.isSetted = true;
     }
-  },);
+  }, []);
 
   return (
     <Layout>

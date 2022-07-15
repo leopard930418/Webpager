@@ -231,7 +231,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] py-10 sm:py-24 xl:pb-44 lg:pb-32 md:pb-24 pb-16 md:min-w-full " +
+            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] pt-10 sm:pt-24 pb-16 md:min-w-full " +
             (index % 2 === 0 || noColor ? "" : "bg-cover changing_back")
           }
         >
@@ -390,7 +390,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-white dark:bg-[#0f172a]  py-10 sm:py-24  md:min-w-full" +
+            " cannavigate relative bg-white dark:bg-[#0f172a]  pt-10 sm:pt-24  md:min-w-full" +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
@@ -551,7 +551,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] py-10 sm:py-24  md:min-w-full " +
+            " cannavigate relative bg-[#f0f4ff] dark:bg-[#151d33] pt-10 sm:pt-24  md:min-w-full " +
             (index % 2 === 0 || noColor ? "" : "bg-cover changing_back")
           }
         >
@@ -710,7 +710,7 @@ function ContentsItem({ item, index, noColor }) {
           id={`section-${item.name}`}
           key={`section-${index}`}
           className={
-            " cannavigate relative bg-white dark:bg-[#0f172a] py-10 sm:py-24  md:min-w-full " +
+            " cannavigate relative bg-white dark:bg-[#0f172a] pt-10 sm:pt-24  md:min-w-full " +
             (index % 2 === 0 || noColor
               ? "flex-row"
               : "flex-row-reverse bg-cover changing_back")
