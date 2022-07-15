@@ -11,7 +11,7 @@ import { TriangleDivBottom } from "./statics/TriangleDivBottom";
 import { TriangleDivTop } from "./statics/TriangleDivTop";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { ContactlessOutlined } from "@mui/icons-material";
-import Image from "next/image"
+import Image from "next/image";
 
 function ContentsItem({ item, index, noColor }) {
   const router = useRouter();
@@ -76,7 +76,7 @@ function ContentsItem({ item, index, noColor }) {
               <div className="wave"></div>
             </div>
             <div className="absolute top-10 left-0 -z-10">
-              <img src="assets/bubble.webp" loading="lazy" ></img>
+              <img src="assets/bubble.webp" loading="lazy"></img>
             </div>
             {/* <div className="absolute -bottom-72 sm:bottom-11 right-0 w-1/3 sm:w-auto h-1/2 z-10 "> */}
             {/* <div className="absolute top-[45rem] sm:top-[40rem] right-0 w-1/3 sm:w-auto h-1/2 z-10 ">
@@ -179,6 +179,14 @@ function ContentsItem({ item, index, noColor }) {
                   sx={style}
                   className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
                 >
+                  <div className="fixed top-0 flex justify-center w-full h-full">
+                    <img
+                      className="h-full w-full sm:w-7/12 object-contain opacity-30"
+                      // src={item.img_url}
+                      src="assets/problems.webp"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="relative">
                     <div
                       className="absolute top-0 right-0 scale-150"
@@ -209,14 +217,6 @@ function ContentsItem({ item, index, noColor }) {
                               : " text-lg font-normal text-white  tracking-wide  dark:text-gray-300"
                           }
                         ></div>
-                        <div className="flex justify-center">
-                          <img
-                            className="h-full w-full sm:w-7/12 object-contain"
-                            // src={item.img_url}
-                            src="assets/problems.webp"
-                            loading="lazy"
-                          />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -342,6 +342,14 @@ function ContentsItem({ item, index, noColor }) {
                   sx={style}
                   className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
                 >
+                  <div className="fixed top-0 flex justify-center w-full h-full">
+                    <img
+                      className="h-full w-full sm:w-7/12 object-contain opacity-30"
+                      // src={item.img_url}
+                      src="assets/whyus.webp"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="relative">
                     <div
                       className="absolute top-0 right-0 scale-150"
@@ -369,14 +377,6 @@ function ContentsItem({ item, index, noColor }) {
                           }}
                           className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
                         ></div>{" "}
-                        <div className="flex justify-center">
-                          <img
-                            className="h-full w-full sm:w-7/12 object-contain"
-                            // src={item.img_url}
-                            src="assets/whyus.webp"
-                            loading="lazy"
-                          />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -504,6 +504,14 @@ function ContentsItem({ item, index, noColor }) {
                 sx={style}
                 className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
               >
+                <div className="fixed top-0 flex justify-center w-full h-full">
+                  <img
+                    className="h-full w-full sm:w-7/12 object-contain opacity-30"
+                    // src={item.img_url}
+                    src="assets/mindset.webp"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="relative">
                   <div
                     className="absolute top-0 right-0 scale-150"
@@ -531,14 +539,6 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
                       ></div>{" "}
-                      <div className="flex justify-center">
-                        <img
-                          className="h-full w-full sm:w-7/12 object-contain"
-                          // src={item.img_url}
-                          src="assets/mindset.webp"
-                          loading="lazy"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -663,6 +663,14 @@ function ContentsItem({ item, index, noColor }) {
                 sx={style}
                 className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
               >
+                <div className="fixed top-0 flex justify-center w-full h-full">
+                  <img
+                    className="h-full w-full sm:w-7/12 object-contain opacity-30"
+                    // src={item.img_url}
+                    src="assets/work.webp"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="relative">
                   <div
                     className="absolute top-0 right-0 scale-150"
@@ -690,14 +698,6 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
                       ></div>
-                      <div className="flex justify-center scale-75">
-                        <img
-                          className="h-full w-full sm:w-7/12 object-contain"
-                          // src={item.img_url}
-                          src="assets/work.webp"
-                          loading="lazy"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -823,6 +823,14 @@ function ContentsItem({ item, index, noColor }) {
                 sx={style}
                 className="w-11/12 sm:w-4/5 h-5/6 sm:h-3/4 bg-white dark:bg-[#0F172A]"
               >
+                <div className="fixed top-0 flex justify-center w-full h-full">
+                  <img
+                    className="h-full w-full sm:w-7/12 object-contain opacity-30"
+                    // src={item.img_url}
+                    src="assets/solutions.webp"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="relative">
                   <div
                     className="absolute top-0 right-0 scale-150"
@@ -850,14 +858,6 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
                       ></div>
-                      <div className="flex justify-center">
-                        <img
-                          className="h-full w-full sm:w-7/12 object-contain"
-                          // src={item.img_url}
-                          src="assets/solutions.webp"
-                          loading="lazy"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
