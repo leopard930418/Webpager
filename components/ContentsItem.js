@@ -690,7 +690,7 @@ function ContentsItem({ item, index, noColor }) {
                         }}
                         className=" text-lg font-normal tracking-wide  text-gray-600 dark:text-gray-300 "
                       ></div>
-                      <div className="flex justify-center">
+                      <div className="flex justify-center scale-75">
                         <img
                           className="h-full w-full sm:w-7/12 object-contain"
                           // src={item.img_url}
