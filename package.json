@@ -32,6 +32,7 @@
     "react-dom": "18.1.0",
     "react-hotjar": "^5.0.0",
     "react-icons": "^4.3.1",
+    "react-loader-spinner": "^5.1.5",
     "sass": "^1.52.1",
     "styled-components": "^5.3.5",
     "tw-elements": "^1.0.0-alpha12"

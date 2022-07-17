@@ -15,21 +15,24 @@ export default function Welcome() {
     //     </div>
     //   </div>
     // </div>
-    <div className="pt-10 xl:h-screen">
+    <div className="pt-10">
       <div className="font-bold text-center dark:text-gray-200 sm:text-7xl text-3xl">
         <label>
           Welcome to <br /> dcd development
         </label>
       </div>
-      <div className="relative w-full flex justify-center items-center">
-        <img
+      <div
+        className="relative w-full flex justify-center items-center"
+        style={{ aspectRatio: "100 / 70" }}
+      >
+        {/* <img
           src="assets/logo.svg"
           className="absolute w-2/3 sm:w-1/2 right-0 sm:right-12 top-3 sm:-top-5 object-contain opacity-70 scale-90"
-        />
+        /> */}
         <img
-          src="/assets/section-1.webp"
-          className="relative h-full w-5/6 sm:w-7/12 object-contain"
-          layout='fill'
+          src="/assets/welcome.webp"
+          className="relative h-full w-5/6 sm:w-9/12 object-contain"
+          layout="fill"
         />
       </div>
     </div>

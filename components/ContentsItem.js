@@ -59,7 +59,7 @@ function ContentsItem({ item, index, noColor }) {
             id={`section-${item.name}`}
             key={`section-${index}`}
             className={
-              " cannavigate  relative md:min-w-full pt-12 sm:pt-24 " +
+              " cannavigate  relative md:min-w-full pt-6 sm:pt-12 " +
               (index % 2 === 0 || noColor
                 ? "flex-row"
                 : "flex-row-reverse bg-cover changing_back")
@@ -131,17 +131,22 @@ function ContentsItem({ item, index, noColor }) {
                 )}
               </div>
             </div>
-            <div className=" relative  w-full h-full flex justify-center items-center">
+            <div className=" relative flex justify-center items-center">
               <img
                 className="absolute top-20 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
                 src="assets/dotedEffect.webp"
                 loading="lazy"
               ></img>
-              <img
-                className="relative -z-20 px-8 sm:px-0 h-full w-full sm:w-7/12 object-contain"
-                src="assets/problems.webp"
-                loading="lazy"
-              />
+              <div
+                className="relative -z-20 w-full sm:w-7/12 px-0"
+                style={{ aspectRatio: "100 / 74" }}
+              >
+                <img
+                  className=" object-contain"
+                  src="assets/problems.webp"
+                  loading="lazy"
+                />
+              </div>
             </div>
             {isPhoneMode ? (
               <>
@@ -298,6 +303,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-5/6 sm:w-1/2  vertical-align: top;"
               }
+              style={{ aspectRatio: "100 / 67" }}
             >
               <img
                 className={""}
@@ -458,6 +464,8 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
+              style={{ aspectRatio: "100 / 84" }}
+
             >
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
@@ -617,6 +625,8 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
+              style={{ aspectRatio: "100 / 110" }}
+
             >
               <img
                 className={"vertical-align max-w-[90%]  m-auto"}
@@ -778,6 +788,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
+              style={{ aspectRatio: "100 / 80" }}
             >
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}

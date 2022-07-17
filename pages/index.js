@@ -21,11 +21,19 @@ import ContactInfo from "../components/ContactInfo";
 import Welcome from "../components/Welcome";
 import Title from "../components/Title";
 
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+
 function Home() {
   const router = useRouter();
   const [selectedRoute, setselectedRoute] = useState("");
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
-
+  const [open, setOpen] = React.useState(true);
+  useEffect(() => {
+    setInterval(() => {
+      setOpen(false);
+    }, 3000);
+  }, []);
   useEffect(() => {
     hotjar.initialize();
 
@@ -49,6 +57,12 @@ function Home() {
       ></Faq>
 
       <Studie items={t.items4}></Studie> */}
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={open}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <Welcome></Welcome>
       <Content noColor={true} items={t.items}></Content>
       <Content noColor={true} items={t.items3}></Content>
