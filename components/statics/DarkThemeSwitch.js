@@ -9,6 +9,7 @@ function DarkThemeSwitch({ additional_classes }) {
   };
 
   const switchDark = (isSave = true) => {
+    document.getElementById("flexSwitchCheckDefault").checked = true;
     document.documentElement.classList.add("dark");
     if (isSave) {
       localStorage.setItem("theme", "dark");
@@ -27,22 +28,21 @@ function DarkThemeSwitch({ additional_classes }) {
     // restore state
     if (localStorage.getItem("theme")) {
       if (localStorage.getItem("theme") === "dark") {
-        document.getElementById("flexSwitchCheckDefault").checked = true;
         switchDark(false);
       } else {
         switchLight(false);
       }
       // set for day night time
     } else {
-      if (!window.isSetted) {
-        if (checkDayNight()) {
-          switchLight(false);
-        } else {
-          switchDark(false);
-        }
-
-        window.isSetted = true;
+      // if (!window.isSetted) {
+      if (checkDayNight()) {
+        switchLight(false);
+      } else {
+        switchDark(false);
       }
+
+      //   window.isSetted = true;
+      // }
     }
   }, []);
 
