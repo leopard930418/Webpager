@@ -1,19 +1,39 @@
 import { useEffect, useState } from "react";
 
 function DarkThemeSwitch({ additional_classes }) {
+  const switchLight = () => {
+    document.documentElement.classList.remove("dark");
+    localStorage.removeItem("theme");
+  };
+
+  const switchDark = () => {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  };
+
   const handleToggleTheme = () => {
-    //
     if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.removeItem("theme");
+      switchLight();
     } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+      switchDark();
     }
   };
+
   useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      document.getElementById("flexSwitchCheckDefault").checked = true;
+    if (!window.isSetted) {
+      var hour = new Date().getHours();
+      if (hour > 5 && hour < 19) {
+        switchLight();
+      } else {
+        switchDark();
+      }
+
+      window.isSetted = true;
+    } else {
+      if (localStorage.getItem("theme") === "dark") {
+        document.getElementById("flexSwitchCheckDefault").checked = true;
+        switchDark();
+      }
     }
   }, []);
 
