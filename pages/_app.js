@@ -13,6 +13,11 @@ const CrispWithNoSSR = dynamic(() => import("../components/crisp"), {
 });
 
 export default function MyApp({ Component, pageProps }) {
+  () => {
+    document.documentElement.classList.add("dark");
+    console.log("set darked")
+    localStorage.setItem("theme", "dark");
+  };
   useEffect(() => {
     if (!window.isSetted) {
       var hour = new Date().getHours();
