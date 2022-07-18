@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 
 function DarkThemeSwitch({ additional_classes }) {
-  const switchLight = () => {
+  const switchLight = (isSave = true) => {
     document.documentElement.classList.remove("dark");
-    localStorage.removeItem("theme");
+    if (isSave) {
+      localStorage.setItem("theme", "light");
+    }
   };
 
-  const switchDark = () => {
+  const switchDark = (isSave = true) => {
     document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
+    if (isSave) {
+      localStorage.setItem("theme", "dark");
+    }
   };
 
   const handleToggleTheme = () => {
@@ -20,18 +24,24 @@ function DarkThemeSwitch({ additional_classes }) {
   };
 
   useEffect(() => {
-    if (!window.isSetted) {
-      if (checkDayNight()) {
-        switchLight();
-      } else {
-        switchDark();
-      }
-
-      window.isSetted = true;
-    } else {
+    // restore state
+    if (localStorage.getItem("theme")) {
       if (localStorage.getItem("theme") === "dark") {
         document.getElementById("flexSwitchCheckDefault").checked = true;
-        switchDark();
+        switchDark(false);
+      } else {
+        switchLight(false);
+      }
+      // set for day night time
+    } else {
+      if (!window.isSetted) {
+        if (checkDayNight()) {
+          switchLight(false);
+        } else {
+          switchDark(false);
+        }
+
+        window.isSetted = true;
       }
     }
   }, []);
