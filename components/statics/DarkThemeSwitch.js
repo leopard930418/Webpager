@@ -21,8 +21,7 @@ function DarkThemeSwitch({ additional_classes }) {
 
   useEffect(() => {
     if (!window.isSetted) {
-      var hour = new Date().getHours();
-      if (hour > 5 && hour < 19) {
+      if (checkDayNight()) {
         switchLight();
       } else {
         switchDark();
@@ -61,3 +60,8 @@ function DarkThemeSwitch({ additional_classes }) {
 }
 
 export default DarkThemeSwitch;
+
+export const checkDayNight = () => {
+  var hour = new Date().getHours();
+  return hour > 5 && hour < 19;
+};

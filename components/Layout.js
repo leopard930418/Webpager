@@ -3,13 +3,12 @@ import BodyWrapper from "./statics/BodyWrapper";
 
 import Navbar from "./statics/Navbar1";
 
-function Layout({ children }) {
+function Layout({ className = "", children }) {
   return (
-    <div >
+    <div className={className}>
       <Navbar></Navbar>
 
       <BodyWrapper>{children}</BodyWrapper>
-
     </div>
   );
 }
