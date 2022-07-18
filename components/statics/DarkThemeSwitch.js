@@ -34,15 +34,15 @@ function DarkThemeSwitch({ additional_classes }) {
       }
       // set for day night time
     } else {
-      // if (!window.isSetted) {
-      if (checkDayNight()) {
-        switchLight(false);
-      } else {
-        switchDark(false);
-      }
+      if (!window.isSetted) {
+        if (checkDayNight()) {
+          switchLight(false);
+        } else {
+          switchDark(false);
+        }
 
-      //   window.isSetted = true;
-      // }
+        window.isSetted = true;
+      }
     }
   }, []);
 
