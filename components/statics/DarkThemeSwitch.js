@@ -4,7 +4,7 @@ function DarkThemeSwitch({ additional_classes }) {
   const switchLight = (isSave = true) => {
     document.documentElement.classList.remove("dark");
     if (isSave) {
-      localStorage.setItem("theme", "light");
+      sessionStorage.setItem("theme", "light");
     }
   };
 
@@ -12,7 +12,7 @@ function DarkThemeSwitch({ additional_classes }) {
     document.getElementById("flexSwitchCheckDefault").checked = true;
     document.documentElement.classList.add("dark");
     if (isSave) {
-      localStorage.setItem("theme", "dark");
+      sessionStorage.setItem("theme", "dark");
     }
   };
 
@@ -26,8 +26,8 @@ function DarkThemeSwitch({ additional_classes }) {
 
   useEffect(() => {
     // restore state
-    if (localStorage.getItem("theme")) {
-      if (localStorage.getItem("theme") === "dark") {
+    if (sessionStorage.getItem("theme")) {
+      if (sessionStorage.getItem("theme") === "dark") {
         switchDark(false);
       } else {
         switchLight(false);
