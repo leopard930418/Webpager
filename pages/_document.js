@@ -1,18 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
-   
-
   render() {
-    var hour = new Date().getHours();
-    var classname;
-      if (hour > 5 && hour < 19) {
-        classname= true;
-      } else {
-        classname= false;
-      }
     return (
-      <Html className={`${classname ? "":"dark"}`}>
+      <Html>
         <Head>
           <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
