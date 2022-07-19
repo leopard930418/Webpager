@@ -4,7 +4,7 @@ function DarkThemeSwitch({ additional_classes }) {
   const switchLight = (isSave = true) => {
     document.documentElement.classList.remove("dark");
     if (isSave) {
-      sessionStorage.setItem("theme", "light");
+      window.theme = "light";
     }
   };
 
@@ -12,7 +12,7 @@ function DarkThemeSwitch({ additional_classes }) {
     document.getElementById("flexSwitchCheckDefault").checked = true;
     document.documentElement.classList.add("dark");
     if (isSave) {
-      sessionStorage.setItem("theme", "dark");
+      window.theme = "dark";
     }
   };
 
@@ -26,22 +26,18 @@ function DarkThemeSwitch({ additional_classes }) {
 
   useEffect(() => {
     // restore state
-    if (sessionStorage.getItem("theme")) {
-      if (sessionStorage.getItem("theme") === "dark") {
+    if (window.theme) {
+      if (window.theme === "dark") {
         switchDark(false);
       } else {
         switchLight(false);
       }
       // set for day night time
     } else {
-      if (!window.isSetted) {
-        if (checkDayNight()) {
-          switchLight(false);
-        } else {
-          switchDark(false);
-        }
-
-        window.isSetted = true;
+      if (checkDayNight()) {
+        switchLight(false);
+      } else {
+        switchDark(false);
       }
     }
   }, []);
