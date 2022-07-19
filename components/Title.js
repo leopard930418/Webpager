@@ -89,7 +89,7 @@ export default function Title() {
           >
             <img
               src="/assets/title.svg"
-              className=" object-contain"
+              className=" object-contain w-full"
               layout="fill"
               loading="lazy"
             />

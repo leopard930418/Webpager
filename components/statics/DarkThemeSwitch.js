@@ -32,8 +32,8 @@ function DarkThemeSwitch({ additional_classes }) {
       } else {
         switchLight(false);
       }
-      // set for day night time
     } else {
+      // set for day night time
       if (checkDayNight()) {
         switchLight(false);
       } else {

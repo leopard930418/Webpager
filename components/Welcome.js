@@ -23,7 +23,7 @@ export default function Welcome() {
       </div>
       <div
         className="relative w-full flex justify-center items-center"
-        style={{ aspectRatio: "100 / 70" }}
+        style={{ aspectRatio: "100 / 50" }}
       >
         {/* <img
           src="assets/logo.svg"

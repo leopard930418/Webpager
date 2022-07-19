@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   important: true,
-  darkMode: ['class', '[data-mode="dark"]'],
+  darkMode: ['class'],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",

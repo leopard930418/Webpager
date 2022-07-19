@@ -303,7 +303,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-5/6 sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 67" }}
+              style={{ aspectRatio: "100 / 46" }}
             >
               <img
                 className={""}
@@ -464,7 +464,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 84" }}
+              style={{ aspectRatio: "100 / 56" }}
 
             >
               <img
@@ -625,7 +625,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 110" }}
+              style={{ aspectRatio: "100 / 72" }}
 
             >
               <img
@@ -788,7 +788,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 80" }}
+              style={{ aspectRatio: "100 / 55" }}
             >
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
