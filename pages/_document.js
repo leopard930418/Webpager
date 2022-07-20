@@ -4,7 +4,7 @@ import { checkDayNight } from "../components/statics/DarkThemeSwitch";
 
 export default function Document() {
   return (
-    <Html>
+    <Html className={checkDayNight() ? "" : "dark"}>
       <Head>
         <script
           src="https://code.jquery.com/jquery-3.6.0.min.js"
