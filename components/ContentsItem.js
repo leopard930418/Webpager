@@ -133,7 +133,7 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div className=" relative flex justify-center items-center">
               <img
-                className="absolute top-20 sm:top-0 right-0 w-1/3 sm:2-auto z-10"
+                className="absolute top-20 sm:top-32 right-0 w-1/3 z-10"
                 src="assets/dotedEffect.webp"
                 loading="lazy"
               ></img>
@@ -464,7 +464,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 56" }}
+              style={{ aspectRatio: "100 / 49" }}
 
             >
               <img
@@ -625,7 +625,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 72" }}
+              style={{ aspectRatio: "100 / 64" }}
 
             >
               <img
@@ -788,7 +788,7 @@ function ContentsItem({ item, index, noColor }) {
               className={
                 " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 55" }}
+              style={{ aspectRatio: "100 / 49S" }}
             >
               <img
                 className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}

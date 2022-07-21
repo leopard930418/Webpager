@@ -15,11 +15,11 @@ export default function LanguageSelector({ additional_classes }) {
   };
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <div className="flex">
+      <div className="flex border border-black dark:border-white rounded-3xl px-3">
         <Menu.Button
           className={`inline-flex  w-full py-2 mt-4 lg:mt-0 text-sm font-medium text-gray-500 dark:text-gray-200  ${additional_classes}`}
         >
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -32,7 +32,7 @@ export default function LanguageSelector({ additional_classes }) {
               stroke-linejoin="round"
               d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
             />
-          </svg>
+          </svg> */}
           {router.locale}
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>

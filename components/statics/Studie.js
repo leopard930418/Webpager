@@ -139,7 +139,7 @@ function Studie({ items }) {
   }, [industries, category]);
 
   return (
-    <div className={"relative mt-5 min-h-[100vh]"}>
+    <div className={"relative mt-5 min-h-[100vh] px-2 md:px-16"}>
       {/*<div className={'mt'}></div>*/}
       <div
         className={
@@ -219,7 +219,7 @@ function Studie({ items }) {
               return (
                 <div
                   className={
-                    " text-lg font-medium tracking-wide text-gray-600 dark:text-gray-300 docOverview"
+                    " text-lg font-medium tracking-wide text-[#0C1224] dark:text-gray-300 docOverview"
                   }
                   dangerouslySetInnerHTML={{
                     __html: item.long_description.content,
@@ -243,7 +243,7 @@ function Studie({ items }) {
                 >
                   <div
                     className={
-                      "doc text-lg font-normal  	tracking-wide text-gray-600 dark:text-gray-300"
+                      "doc text-lg font-normal  	tracking-wide text-[#0C1224] dark:text-gray-300"
                     }
                     dangerouslySetInnerHTML={{
                       __html: item.long_description.content,

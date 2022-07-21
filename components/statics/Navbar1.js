@@ -12,7 +12,9 @@ import LanguageSelector from "./LanguageSelector";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-function Navbar() {
+const Navbar = ({
+  initialTheme,
+}) => {
   const router = useRouter();
 
   const [selectedRoute, setselectedRoute] = useState("");
@@ -125,7 +127,7 @@ function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-50 bg-white text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-md navbar navbar-expand-md navbar-light md:px-7 xl2:px-48 dark:bg-gray-900"
+      className="sticky top-0 z-50 bg-white text-gray-500 hover:text-gray-700 focus:text-gray-700  navbar navbar-expand-md navbar-light md:px-7 xl2:px-48 dark:bg-gray-900"
     >
       {({ open }) => (
         <>
@@ -197,7 +199,7 @@ function Navbar() {
                   id={item.href.replace("#", "") + "temp"}
                   className={classNames(
                     item.current
-                      ? " text-white dark:text-gray-200"
+                      ? " text-blue-700 dark:text-gray-200"
                       : "text-gray-500 dark:text-gray-400  ",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
@@ -222,6 +224,7 @@ function Navbar() {
                 </span>
                 <DarkThemeSwitch
                   additional_classes={" inline-block mr-0 "}
+                  initialTheme={ initialTheme }
                 ></DarkThemeSwitch>
               </div>
             </div>

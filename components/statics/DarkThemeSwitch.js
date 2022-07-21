@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 
-function DarkThemeSwitch({ additional_classes }) {
+function DarkThemeSwitch({ additional_classes, initialTheme }) {
+
+  useEffect(() => {
+    if (!!initialTheme) {
+      document.getElementById("flexSwitchCheckDefault").checked = initialTheme === 'dark';
+    }
+  }, [ initialTheme ])
+
   const switchLight = (isSave = true) => {
     document.documentElement.classList.remove("dark");
     if (isSave) {
@@ -23,24 +30,6 @@ function DarkThemeSwitch({ additional_classes }) {
       switchDark();
     }
   };
-
-  useEffect(() => {
-    // restore state
-    if (window.theme) {
-      if (window.theme === "dark") {
-        switchDark(false);
-      } else {
-        switchLight(false);
-      }
-    } else {
-      // set for day night time
-      if (checkDayNight()) {
-        switchLight(false);
-      } else {
-        switchDark(false);
-      }
-    }
-  }, []);
 
   // var hour = new Date().getHours();
   // const [isPm, setIsPm] = useState(false);
