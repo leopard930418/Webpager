@@ -81,7 +81,7 @@ const en = {
   items: [
     {
       name: "problems",
-      title: "Challenges in the Development Process",
+      title: "Challenges in The Development Process",
       description:
         "Development is a complex process. Throughout the process, you are often confronted with technical and non-technical challenges. The biggest challenge is finding skilled people who understand what needs to be done and the specific business requirements. In addition to finding the right people, a few other issues make it increasingly challenging to get the best possible results in IT. However, expert and dedicated development teams can directly address these challenges.",
       img_url: "assets/back1.png",

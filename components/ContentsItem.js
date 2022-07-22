@@ -103,14 +103,14 @@ function ContentsItem({ item, index, noColor }) {
                 <p
                   className={
                     index % 2 === 0 || noColor
-                      ? "w-full sm:w-2/3 text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
-                      : "w-full sm:w-2/3 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
+                      ? "w-full lg:w-3/4 text-sm xl:text-lg font-title_font_family font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 "
+                      : "w-full sm:w-3/4 text-lg font-normal  my-2	tracking-wide text-white dark:text-gray-300"
                   }
                 >
                   {item.description}
                 </p>
                 {item.long_description && (
-                  <div className="w-full mb-5 sm:mb-0 ">
+                  <div className="w-full mb-5 ">
                     <Button
                       // onClick={() => handleToggle(item)}
                       onClick={
@@ -279,7 +279,7 @@ function ContentsItem({ item, index, noColor }) {
               </p>
 
               {item.long_description && (
-                <div className="w-full mb-5 sm:mb-0 ">
+                <div className="w-full mb-5">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={
@@ -440,7 +440,7 @@ function ContentsItem({ item, index, noColor }) {
                 {item.description}
               </p>
               {item.long_description && (
-                <div className=" w-full mb-5 sm:mb-0">
+                <div className=" w-full mb-5">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={
@@ -601,7 +601,7 @@ function ContentsItem({ item, index, noColor }) {
                 {item.description}
               </p>
               {item.long_description && (
-                <div className="w-full mb-5 sm:mb-0">
+                <div className="w-full mb-5">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={
@@ -764,7 +764,7 @@ function ContentsItem({ item, index, noColor }) {
                 {item.description}
               </p>
               {item.long_description && (
-                <div className=" w-full mb-5 sm:mb-0">
+                <div className=" w-full mb-5">
                   <Button
                     // onClick={() => handleToggle(item)}
                     onClick={

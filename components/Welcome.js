@@ -16,7 +16,7 @@ export default function Welcome() {
     //   </div>
     // </div>
     <div className="pt-10">
-      <div className="font-semibold text-center dark:text-gray-200 sm:text-8xl text-3xl">
+      <div className="font-semibold text-center dark:text-gray-200 text-3xl md:text-5xl lg:text-8xl  pb-4 sm:pb-12">
         <label>
           Welcome to <br /> dcd development
         </label>

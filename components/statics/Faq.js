@@ -4,7 +4,7 @@ import Accordion1 from "./Accordion";
 function Faq({ items, accordion_items }) {
   if (!items) items = [];
   return (
-    <div className="lg:px-24 pt-1 pb-24   sm:px-4 ">
+    <div className="lg:px-24 pt-1  sm:px-4 ">
       {items.map((item, index) => {
 
         return (

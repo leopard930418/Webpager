@@ -11,17 +11,17 @@ function Footer2() {
         variant="middle"
         className="bg-gray-400 dark:bg-white dark:bg-opacity-20"
       ></Divider>
-      <div className="bg-white  h-1/2 w-full flex  md:flex-row flex-col justify-around items-center sm:items-start sm:p-20 dark:bg-[#0f172a]">
+      <div className="bg-white  h-1/2 w-full flex  md:flex-row flex-col justify-around items-center sm:items-start lg:p-20 dark:bg-[#0f172a]">
         <div className="p-5 ">
           <p className="flex flex-col text-gray-800  dark:text-gray-300  font-bold text-3xl">
             <img
-              className="block  mx-auto   h-40 w-auto"
+              className="block  mx-auto   h-20 lg:h-40 w-auto"
               src="/assets/logo.svg"
               alt="Workflow"
               loading="lazy"
 
             />
-            <span className="pl-2 font-normal  text-2xl text-transparent bg-clip-text bg-gray-700 dark:bg-white">
+            <span className="pl-2 pt-2 font-medium  text-xl lg:text-2xl text-transparent bg-clip-text bg-gray-700 dark:bg-white text-center">
               DCD DEVELOPMENT
             </span>
           </p>
@@ -34,7 +34,7 @@ function Footer2() {
         </div>
         <div className="p-5">
           <ul>
-            <p className="text-center sm:text-left  text-gray-700  dark:text-gray-200 font-normal text-2xl pb-4">
+            <p className="text-center sm:text-left font-bold text-[#0C1224] dark:text-gray-200  text-2xl pb-4">
               Company
             </p>
             <li className="text-center sm:text-left text-gray-500  dark:text-gray-300   text-md pb-2  hover:text-blue-600 cursor-pointer">
@@ -53,7 +53,7 @@ function Footer2() {
         </div>
         <div className="p-5">
           <ul>
-            <p className="text-center sm:text-left  text-gray-700  dark:text-gray-200 font-normal text-2xl pb-4">
+            <p className="text-center sm:text-left   text-[#0C1224]  dark:text-gray-200 font-bold text-2xl pb-4">
               Contact us
             </p>
             <li className="text-center sm:text-left text-gray-500   dark:text-gray-300  text-md pb-2  hover:text-blue-600 cursor-pointer">
@@ -75,7 +75,7 @@ function Footer2() {
         </div>
         <div className="p-5">
           <ul>
-            <p className="text-center sm:text-left  text-gray-700  dark:text-gray-200 font-normal text-2xl pb-4">
+            <p className="text-center sm:text-left   text-[#0C1224]  dark:text-gray-200 font-bold text-2xl pb-4">
               Support
             </p>
             <li className="text-center sm:text-left text-gray-500  dark:text-gray-300   text-md pb-2  hover:text-blue-600 cursor-pointer">

@@ -1,6 +1,7 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 import { WindowRounded } from "@mui/icons-material";
+import { Backdrop, CircularProgress } from "@mui/material";
 import dynamic from "next/dynamic";
 import React, { useEffect, useMemo, useState } from "react";
 import Layout from "../components/Layout";
@@ -17,26 +18,33 @@ const CrispWithNoSSR = dynamic(() => import("../components/crisp"), {
 export default function MyApp({ Component, pageProps }) {
   // const darkmode = localStorage.getItem("theme")
   // console.log("aaaaaaaaaaaaaa",window.theme)
-  const [ initialTheme, setInitialTheme ] = useState( null )
+  const [initialTheme, setInitialTheme] = useState(null);
 
   useEffect(() => {
-    setInitialTheme(window.theme || (checkDayNight() ? 'light' : 'dark'))
-  }, [])
+    setInitialTheme(window.theme || (checkDayNight() ? "light" : "dark"));
+  }, []);
 
   useEffect(() => {
     if (!!initialTheme) {
-      if (initialTheme === 'dark') {
+      if (initialTheme === "dark") {
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
       }
     }
-  }, [ initialTheme ])
+  }, [initialTheme]);
 
-  return (
-    !initialTheme
-    ? <>Loading ...</>
-    : <Layout initialTheme={ initialTheme }>
+  return !initialTheme ? (
+    <>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={true}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    </>
+  ) : (
+    <Layout initialTheme={initialTheme}>
       <CrispWithNoSSR />
       {/* {window.theme != null ? <Component {...pageProps} /> : ""} */}
       <Component {...pageProps} />

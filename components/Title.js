@@ -25,7 +25,7 @@ export default function Title() {
               Etiam aliquam in arcu eget egestas. s
             </p>
 
-            <div className=" w-full mb-5 sm:mb-0">
+            <div className=" w-full mb-5">
               <Button
                 className="btnShadow z-10 font-bold text-white bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl shadow-md "
                 text="CONTACT US"
@@ -71,7 +71,7 @@ export default function Title() {
             felis at, auctor accumsan est. Sed sit amet sodales lacus. Etiam
             aliquam in arcu eget egestas. s
           </p>
-          <div className="pb-12 w-full mb-5 sm:mb-0">
+          <div className="pb-12 w-full mb-5 md:mb-0">
             <Button
               className="btnShadow z-10 font-bold text-white bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl shadow-md h-[50px] "
               text="CONTACT US"
