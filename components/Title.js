@@ -33,7 +33,7 @@ export default function Title() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center w-full lg:w-7/12 space-y-8 sm:space-y-0 space-x-0 sm:space-x-8 px-4 md:pr-12 xl:pr-24">
+        <div className="flex flex-col sm:flex-row items-center justify-center w-full lg:w-7/12 space-y-8 md:space-y-0 space-x-0 md:space-x-8 px-4 md:pr-12 xl:pr-24">
           <div className="flex flex-col rounded-2xl  justify-center items-center bg-white dark:bg-[#151d33] w-full sm:w-1/2 px-8 py-20 shadow-xl dark:shadow-none">
             <img
               className="w-1/3"
