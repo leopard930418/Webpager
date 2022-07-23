@@ -286,7 +286,7 @@ function Studie({ items }) {
           <div
             id="previewer"
             className={
-              " hidden lg:block scrollbar overflow-y-auto  px-5 w-[30%] cursor-pointer bg-white dark:bg-[#0F172A]"
+              " hidden lg:block scrollbar overflow-y-auto  p-5 w-[30%] cursor-pointer bg-white dark:bg-[#0F172A]"
             }
           >
             <div className="force-overflow"></div>
@@ -306,13 +306,13 @@ function Studie({ items }) {
           <div
             id="doc"
             className={
-              " overflow-y-auto scrollbar px-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
+              " overflow-y-auto scrollbar p-5 w-[100%] lg:w-[70%] bg-white dark:bg-[#0F172A]"
             }
           >
             {itemArr.map((item) => {
               return (
                 <div
-                  className={"px-5 bg-white dark:bg-[#0F172A] shadow rounded"}
+                  className={"px-5 bg-white dark:bg-[#0F172A]"}
                 >
                   <div
                     className={
