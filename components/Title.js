@@ -7,7 +7,7 @@ export default function Title() {
     <div className="relative w-full bg-white dark:bg-[#0f172a] pt-12">
       {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
       <TriangleDivBottom
-        className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[50px] md:-top-24 lg:-top-36 xl:-top-48"
+        className="w-full h-[40px] md:h-16 lg:h-20 xl:h-24 absolute  -top-[40px] md:-top-16 lg:-top-20 xl:-top-24"
         direction="right"
         upDown={false}
       />

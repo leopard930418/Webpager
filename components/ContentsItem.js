@@ -66,7 +66,7 @@ function ContentsItem({ item, index, noColor }) {
             }
           >
             <TriangleDiv
-              className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  bottom-0 translate-y-0.5"
+              className="w-full h-[40px] md:h-16 lg:h-20 xl:h-24 absolute  bottom-0 translate-y-0.5"
               color="#151d33"
               direction="left"
               upDown={false}
@@ -243,7 +243,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div> */}
           <TriangleDivTop
-            className="w-full h-[60px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[60px] md:-top-24 lg:-top-36 xl:-top-48 translate-y-0.5"
+            className="w-full h-[40px] md:h-16 lg:h-20 xl:h-24 absolute  -top-[40px] md:-top-16 lg:-top-20 xl:-top-24 translate-y-0.5"
             direction="left"
             upDown={false}
           />
@@ -258,7 +258,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 md:pl-12 xl:pl-24 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pl-12 xl:pl-24 pb-0 sm:pb-20 lg:pb-0 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -301,7 +301,7 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div
               className={
-                " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-5/6 sm:w-1/2  vertical-align: top;"
+                " flex-start object-fit: scale-down; m-auto md:m-0 w-5/6 sm:w-1/2  vertical-align: top;"
               }
               style={{ aspectRatio: "100 / 46" }}
             >
@@ -405,7 +405,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
-            className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[50px] md:-top-24 lg:-top-36 xl:-top-48 "
+            className="w-full h-[40px] md:h-16 lg:h-20 xl:h-24 absolute  -top-[40px] md:-top-16 lg:-top-20 xl:-top-24 "
             direction="right"
             upDown={false}
           />
@@ -420,7 +420,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 md:pr-8 xl:pr-24  w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pr-8 xl:pr-24 pb-0 sm:pb-20 lg:pb-0 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -462,13 +462,13 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div
               className={
-                " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
+                " flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
               style={{ aspectRatio: "100 / 49" }}
 
             >
               <img
-                className={"vertical-align max-w-[90%]  m-auto"}
+                className={"vertical-align max-w-[90%]  m-auto sm:mt-24 md:mt-16 lg:m-auto"}
                 // src={item.img_url}
                 src="assets/mindset.webp"
                 loading="lazy"
@@ -566,7 +566,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_top w-0 h-0 top-[-10vh] sm:top-[-20vh]  dark:border-b-[#151d33]"></div> */}
           <TriangleDivTop
-            className="w-full h-[60px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[60px] md:-top-24 lg:-top-36 xl:-top-48 translate-y-0.5"
+            className="w-full h-[40px] md:h-16 lg:h-20 xl:h-24 absolute  -top-[40px] md:-top-16 lg:-top-20 xl:-top-24 translate-y-0.5"
             direction="left"
             upDown={false}
           />
@@ -581,7 +581,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 md:pl-12 xl:pl-24 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pl-12 xl:pl-24 pb-0 sm:pb-20 lg:pb-0 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -623,13 +623,13 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div
               className={
-                " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
+                " flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
               style={{ aspectRatio: "100 / 64" }}
 
             >
               <img
-                className={"vertical-align max-w-[90%]  m-auto"}
+                className={"vertical-align max-w-[90%]  m-auto sm:mt-24 md:mt-16 lg:m-auto"}
                 // src={item.img_url}
                 src="assets/work.webp"
                 loading="lazy"
@@ -729,7 +729,7 @@ function ContentsItem({ item, index, noColor }) {
           {/* <div className="absolute z-0 flex flex-col w-full h-1/3 bg-[#0f172a] left-0 top-[-70px] -skew-y-[6deg]"></div> */}
           {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
           <TriangleDivBottom
-            className="w-full h-[50px] md:h-24 lg:h-36 xl:h-48 absolute  -top-[50px] md:-top-24 lg:-top-36 xl:-top-48 translate-y-0.5"
+            className="w-full h-[40px] md:h-16 lg:h-20 xl:h-24 absolute  -top-[40px] md:-top-16 lg:-top-20 xl:-top-24 translate-y-0.5"
             direction="right"
             upDown={false}
           />
@@ -744,7 +744,7 @@ function ContentsItem({ item, index, noColor }) {
                 : "flex-row-reverse bg-cover ")
             }
           >
-            <div className=" z-10 px-4 md:pr-12 xl:pr-24 w-full sm:w-1/2 ">
+            <div className=" z-10 px-4 md:pr-12 xl:pr-24 pb-0 sm:pb-20 lg:pb-0 w-full sm:w-1/2 ">
               <label
                 className={
                   index % 2 === 0 || noColor
@@ -786,12 +786,12 @@ function ContentsItem({ item, index, noColor }) {
             </div>
             <div
               className={
-                " align-items: flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
+                " flex flex-start object-fit: scale-down; m-auto md:m-0 w-full sm:w-1/2  vertical-align: top;"
               }
-              style={{ aspectRatio: "100 / 49S" }}
+              style={{ aspectRatio: "100 / 49" }}
             >
               <img
-                className={"vertical-align max-w-[90%]  m-auto scale-x-[-1]"}
+                className={"vertical-align  m-auto sm:mt-24 md:mt-16 lg:m-auto"}
                 // src={item.img_url}
                 src="assets/solutions.webp"
                 loading="lazy"
