@@ -629,7 +629,7 @@ function ContentsItem({ item, index, noColor }) {
 
             >
               <img
-                className={"vertical-align max-w-[90%]  m-auto sm:mt-24 md:mt-12 lg:m-auto"}
+                className={"vertical-align max-w-[90%]  m-auto sm:mt-16 md:mt-12 lg:m-auto"}
                 // src={item.img_url}
                 src="assets/work.webp"
                 loading="lazy"
