@@ -99,7 +99,7 @@
 
 #previewer::-webkit-scrollbar
 {
-  width: 6px;
+  width: 4px;
   background-color: #F5F5F5;
 }
 
@@ -714,7 +714,7 @@
   h1{
     display: block;
     font-size: 2em;
-    margin-top: 0;
+    margin-top: 0.67em;
     margin-bottom: 0.67em;
     margin-left: 0;
     margin-right: 0;
@@ -819,3 +819,11 @@
   background: black; 
   border-radius: 5px;
 }
+
+
+.css-a3l6o-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: none !important;
+ }
+ .css-a3l6o-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+  border-bottom: none !important;
+ }

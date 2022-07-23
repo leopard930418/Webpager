@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import Content from "../Content";
+import { styled } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
+
 import fr from "../../locales/fr";
 import nl from "../../locales/nl";
 import en from "../../locales/en";
 import { useRouter } from "next/router";
-import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  NativeSelect,
+  Select,
+} from "@mui/material";
 
 function Studie({ items }) {
   const router = useRouter();
@@ -137,7 +147,38 @@ function Studie({ items }) {
 
     setItemArr(temp);
   }, [industries, category]);
-
+  const BootstrapInput = styled(InputBase)(({ theme }) => ({
+    "label + &": {
+      marginTop: theme.spacing(3),
+    },
+    "& .MuiInputBase-input": {
+      borderRadius: 4,
+      position: "relative",
+      backgroundColor: theme.palette.background.paper,
+      border: "1px solid #ced4da",
+      fontSize: 16,
+      padding: "10px 26px 10px 12px",
+      transition: theme.transitions.create(["border-color", "box-shadow"]),
+      // Use the system font instead of the default Roboto font.
+      fontFamily: [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(","),
+      "&:focus": {
+        borderRadius: 4,
+        borderColor: "#80bdff",
+        boxShadow: "0 0 0 0.2rem rgba(0,123,255,.25)",
+      },
+    },
+  }));
   return (
     <div className={"relative mt-5 min-h-[100vh] px-2 md:px-16"}>
       {/*<div className={'mt'}></div>*/}
@@ -147,7 +188,7 @@ function Studie({ items }) {
         }
       >
         <div className={" flex  justify-center  items-center py-4 space-x-8"}>
-          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+          {/* <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
             <InputLabel
               id="demo-simple-select-standard-label"
               className="text-black dark:text-white"
@@ -186,6 +227,38 @@ function Studie({ items }) {
               <MenuItem value={"unset"}>unset</MenuItem>
               <MenuItem value={"Fullstack"}>Fullstack</MenuItem>
             </Select>
+          </FormControl> */}
+          <FormControl sx={{ m: 1 }} variant="standard">
+            <InputLabel htmlFor="demo-customized-select-native">
+              {filterObj.industries === "unset"
+                ? "industries"
+                : filterObj.industries}{" "}
+            </InputLabel>
+            <NativeSelect
+              id="demo-customized-select-native"
+              value={industries}
+              onChange={handleChange1}
+              input={<BootstrapInput />}
+            >
+              {/* <option aria-label="None" value="" /> */}
+              <option value={"unset"}>unset</option>
+              <option value={"Marketing"}>Marketing</option>
+            </NativeSelect>
+          </FormControl>
+          <FormControl sx={{ m: 1 }} variant="standard">
+            <InputLabel htmlFor="demo-customized-select-native">
+              {filterObj.category === "unset" ? "category" : filterObj.category}
+            </InputLabel>
+            <NativeSelect
+              id="demo-customized-select-native"
+              value={category}
+              onChange={handleChange2}
+              input={<BootstrapInput />}
+            >
+              {/* <option aria-label="None" value="" /> */}
+              <option value={"unset"}>unset</option>
+              <option value={"Fullstack"}>Fullstack</option>
+            </NativeSelect>
           </FormControl>
         </div>
         {/*<span><img className={'relative max-h-[50px]  -align-right'} src="assets/eye.png" alt=""/></span>*/}
@@ -193,7 +266,9 @@ function Studie({ items }) {
       <div
         id="overlay"
         onClick={closeOverlay}
-        className={" x absolute overlay flex justify-center items-center bg-white dark:bg-[#0F172A]"}
+        className={
+          " x absolute overlay flex justify-center items-center bg-white dark:bg-[#0F172A]"
+        }
       >
         <img
           id="icon"
@@ -237,9 +312,7 @@ function Studie({ items }) {
             {itemArr.map((item) => {
               return (
                 <div
-                  className={
-                    "px-5 bg-white dark:bg-[#0F172A] shadow rounded"
-                  }
+                  className={"px-5 bg-white dark:bg-[#0F172A] shadow rounded"}
                 >
                   <div
                     className={
