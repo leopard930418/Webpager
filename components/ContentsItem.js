@@ -753,6 +753,7 @@ function ContentsItem({ item, index, noColor }) {
                 }
               >
                 {item.title}
+                {console.log(">>>>>", item.title)}
               </label>
               <p
                 className={

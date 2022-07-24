@@ -1,8 +1,9 @@
 import Button from "./statics/Button";
 import React from "react";
 import { TriangleDivBottom } from "./statics/TriangleDivBottom";
+import Router from "next/router";
 
-export default function Title() {
+export default function Title({ items }) {
   return (
     <div className="relative w-full bg-white dark:bg-[#0f172a] pt-12">
       {/* <div className="absolute triangle_bottom w-0 h-0 top-[-10vh] sm:top-[-20vh]  border-b-white dark:border-b-[#0f172a]"></div> */}
@@ -15,20 +16,17 @@ export default function Title() {
         <div className={"flex flex-col w-full lg:w-5/12"}>
           <div className=" z-10 px-4 md:pl-12 xl:pl-24 ">
             <label className="text-black font-semibold text-2xl  md:text-3xl xl:text-5xl  md:text-left dark:text-gray-200">
-              This is A Title
+              {items[0].title}
             </label>
             <p className="text-sm xl:text-lg font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
-              aggagaggagLorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nunc viverra porta enim quis faucibus. Etiam nisl ante, cursus et
-              nisi sit amet, posuere iaculis lacus. Etiam odio nisi, laoreet
-              quis felis at, auctor accumsan est. Sed sit amet sodales lacus.
-              Etiam aliquam in arcu eget egestas. s
+              {items[0].description}
             </p>
 
             <div className=" w-full mb-5">
               <Button
                 className="btnShadow z-10 font-bold text-white bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl shadow-md "
                 text="CONTACT US"
+                onClick={()=>{Router.push('#section-contact')}}
               ></Button>
             </div>
           </div>
@@ -42,7 +40,7 @@ export default function Title() {
               loading="lazy"
             />
             <p className="text-lg text-center font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
-              This is A Piece Of Text That Need To Be Filled with Real Text But
+              {items[0].subdescription1}
             </p>
           </div>
           <div className="flex flex-col rounded-2xl  justify-center items-center bg-white dark:bg-[#151d33] w-full sm:w-1/2 px-8 py-20 shadow-xl dark:shadow-none">
@@ -53,7 +51,7 @@ export default function Title() {
               loading="lazy"
             />
             <p className="text-lg text-center font-normal  my-4	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300">
-              This is A Piece Of Text That Need To Be Filled with Real Text But
+            {items[0].subdescription2}
             </p>
           </div>
         </div>
@@ -62,19 +60,17 @@ export default function Title() {
       <div className="flex  justify-center flex-col pt-10 pb-8">
         <div className="flex flex-col items-center font-semibold text-center dark:text-gray-200 pt-10">
           <label className="text-black w-full sm:w-1/2 font-semibold text-center dark:text-gray-200 text-2xl md:text-3xl xl:text-5xl ">
-            This is A Title
+            {items[0].title}
           </label>
           <p className="w-full sm:w-3/4 text-sm xl:text-lg font-normal  my-2	tracking-wide text-opacity-70 dark:text-opacity-70 text-gray-800 dark:text-gray-300 px-4 sm:px-8">
-            aggagaggagLorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc viverra porta enim quis faucibus. Etiam nisl ante, cursus et
-            nisi sit amet, posuere iaculis lacus. Etiam odio nisi, laoreet quis
-            felis at, auctor accumsan est. Sed sit amet sodales lacus. Etiam
-            aliquam in arcu eget egestas. s
+            {items[0].description}
           </p>
           <div className="pb-12 w-full mb-5 md:mb-0">
             <Button
               className="btnShadow z-10 font-bold text-white bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC]  rounded-3xl shadow-md h-[50px] "
               text="CONTACT US"
+              onClick={()=>{Router.push('#section-contact')}}
+
             ></Button>
           </div>
         </div>

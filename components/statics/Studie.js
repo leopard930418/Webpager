@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import Content from "../Content";
-import { styled } from "@mui/material/styles";
+import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import fr from "../../locales/fr";
 import nl from "../../locales/nl";
@@ -12,12 +13,56 @@ import {
   Box,
   FormControl,
   InputLabel,
+  Menu,
   MenuItem,
   NativeSelect,
   Select,
 } from "@mui/material";
 
 function Studie({ items }) {
+  const StyledMenu = styled((props) => (
+    <Menu
+      elevation={0}
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "right",
+      }}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    "& .MuiPaper-root": {
+      borderRadius: 6,
+      marginTop: theme.spacing(1),
+      minWidth: 180,
+      color:
+        theme.palette.mode === "light"
+          ? "rgb(55, 65, 81)"
+          : theme.palette.grey[300],
+      boxShadow:
+        "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+      "& .MuiMenu-list": {
+        padding: "4px 0",
+      },
+      "& .MuiMenuItem-root": {
+        "& .MuiSvgIcon-root": {
+          fontSize: 18,
+          color: theme.palette.text.secondary,
+          marginRight: theme.spacing(1.5),
+        },
+        "&:active": {
+          backgroundColor: alpha(
+            theme.palette.primary.main,
+            theme.palette.action.selectedOpacity
+          ),
+        },
+      },
+    },
+  }));
+
   const router = useRouter();
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
 
@@ -127,11 +172,13 @@ function Studie({ items }) {
   const [industries, setIndustries] = useState("unset");
   const [category, setCategory] = useState("unset");
 
-  const handleChange1 = (event) => {
-    setIndustries(event.target.value);
+  const handleChange1 = (value) => () => {
+    handleClose();
+    setIndustries(value);
   };
-  const handleChange2 = (event) => {
-    setCategory(event.target.value);
+  const handleChange2 = (value) => () => {
+    handleClose();
+    setCategory(value);
   };
 
   useEffect(() => {
@@ -179,6 +226,14 @@ function Studie({ items }) {
       },
     },
   }));
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <div className={"relative mt-5 min-h-[100vh] px-2 md:px-16"}>
       {/*<div className={'mt'}></div>*/}
@@ -228,7 +283,7 @@ function Studie({ items }) {
               <MenuItem value={"Fullstack"}>Fullstack</MenuItem>
             </Select>
           </FormControl> */}
-          <FormControl sx={{ m: 1 }} variant="standard">
+          {/* <FormControl sx={{ m: 1 }} variant="standard">
             <InputLabel htmlFor="demo-customized-select-native">
               {filterObj.industries === "unset"
                 ? "industries"
@@ -240,7 +295,6 @@ function Studie({ items }) {
               onChange={handleChange1}
               input={<BootstrapInput />}
             >
-              {/* <option aria-label="None" value="" /> */}
               <option value={"unset"}>unset</option>
               <option value={"Marketing"}>Marketing</option>
             </NativeSelect>
@@ -255,11 +309,74 @@ function Studie({ items }) {
               onChange={handleChange2}
               input={<BootstrapInput />}
             >
-              {/* <option aria-label="None" value="" /> */}
               <option value={"unset"}>unset</option>
               <option value={"Fullstack"}>Fullstack</option>
             </NativeSelect>
-          </FormControl>
+          </FormControl> */}
+          <div>
+            <button
+              id="demo-customized-button"
+              aria-controls={open ? "demo-customized-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              variant="contained"
+              disableElevation
+              onClick={handleClick}
+              className="px-6 py-4 text-white rounded-full bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] "
+              endIcon={<KeyboardArrowDownIcon />}
+            >
+              Industries
+              <KeyboardArrowDownIcon />
+            </button>
+            <StyledMenu
+              id="demo-customized-menu"
+              MenuListProps={{
+                "aria-labelledby": "demo-customized-button",
+              }}
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleChange1("unset")} disableRipple>
+                unset
+              </MenuItem>
+              <MenuItem onClick={handleChange1("Marketing")} disableRipple>
+                Marketing
+              </MenuItem>
+            </StyledMenu>
+          </div>
+          <div>
+            <button
+              id="demo-customized-button"
+              aria-controls={open ? "demo-customized-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              variant="contained"
+              disableElevation
+              onClick={handleClick}
+              className="px-6 py-4 text-white rounded-full bg-gradient-to-r from-[#19F18F] via-[#4EC1F6] to-[#E582FC] "
+              endIcon={<KeyboardArrowDownIcon />}
+            >
+              Category
+              <KeyboardArrowDownIcon />
+            </button>
+            <StyledMenu
+              id="demo-customized-menu"
+              MenuListProps={{
+                "aria-labelledby": "demo-customized-button",
+              }}
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleChange2("unset")} disableRipple>
+                unset
+              </MenuItem>
+              <MenuItem onClick={handleChange2("Fullstack")} disableRipple>
+                Fullstack
+              </MenuItem>
+            </StyledMenu>
+          </div>
         </div>
         {/*<span><img className={'relative max-h-[50px]  -align-right'} src="assets/eye.png" alt=""/></span>*/}
       </div>
@@ -311,9 +428,7 @@ function Studie({ items }) {
           >
             {itemArr.map((item) => {
               return (
-                <div
-                  className={"px-5 bg-white dark:bg-[#0F172A]"}
-                >
+                <div className={"px-5 bg-white dark:bg-[#0F172A]"}>
                   <div
                     className={
                       "doc text-lg font-normal  	tracking-wide text-[#0C1224] dark:text-gray-300"

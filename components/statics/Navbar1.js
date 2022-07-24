@@ -118,11 +118,11 @@ const Navbar = ({
       href: "#faq",
       current: selectedRoute.endsWith("#faq"),
     },
-    // {
-    //   name: "CONTACTS",
-    //   href: "#section-contact",
-    //   current: selectedRoute.endsWith("#section-contact"),
-    // },
+    {
+      name: "CONTACTS",
+      href: "#section-contact",
+      current: selectedRoute.endsWith("#section-contact"),
+    },
   ];
   return (
     <Disclosure

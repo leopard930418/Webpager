@@ -28,6 +28,7 @@ function Home() {
   const router = useRouter();
   const [selectedRoute, setselectedRoute] = useState("");
   const t = router.locale === "fr" ? fr : router.locale === "nl-NL" ? nl : en;
+  console.log("leoaprd test router", router.locale);
   const [open, setOpen] = React.useState(true);
   useEffect(() => {
     setInterval(() => {
@@ -66,12 +67,15 @@ function Home() {
       <Welcome></Welcome>
       <Content noColor={true} items={t.items}></Content>
       <Content noColor={true} items={t.items3}></Content>
+      {console.log("leopard test", t, "aaaaaaaaa", t.items3)}
       <Content noColor={true} items={t.items5}></Content>
       <Content noColor={true} items={t.items2}></Content>
       <Content noColor={true} items={t.items6}></Content>
-      <Title></Title>
+      <Title items={t.items7}></Title>
+      {
+console.log("title test", t.items7)
+      } 
       <Studie items={t.items4}></Studie>
-
       <FaqSection></FaqSection>
       <ContactInfo></ContactInfo>
       <Footer2></Footer2>

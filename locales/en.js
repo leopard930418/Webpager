@@ -1037,6 +1037,19 @@ const en = {
       },
     },
   ],
+  items7: [
+    {
+      name: "Title",
+      title: "This is Title",
+      description:
+        "aggagaggagLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra porta enim quis faucibus. Etiam nisl ante, cursus et nisi sit amet, posuere iaculis lacus. Etiam odio nisi, laoreet quis felis at, auctor accumsan est. Sed sit amet sodales lacus. Etiam aliquam in arcu eget egestas. s",
+      subdescription1:
+        "This is A Piece Of Text That Need To Be Filled with Real Text But",
+      subdescription2:
+        "This is A Piece Of Text That Need To Be Filled with Real Text But",
+     
+    },
+  ],
   read_more: "READ MORE",
   read_less: "READ LESS",
   contact_us: "",
